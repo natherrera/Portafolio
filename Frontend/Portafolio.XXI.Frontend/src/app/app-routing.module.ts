@@ -1,4 +1,3 @@
-import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { Homepage1Component } from './pages/homepage1/homepage1.component';
@@ -23,38 +22,33 @@ import { GeolocatorComponent } from './pages/geolocator/geolocator.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthorizatedGuard } from "../utils/mock-core/guards/authorizated.guard";
 
-const routes: Routes = [
-          // {path: '', component: HomeComponent},
-          {
-              path: '',
-              component: Homepage4Component,
-              canActivate: [AuthorizatedGuard]
-          },
-          { path: 'homepage1', component: Homepage1Component },
-          { path: 'homepage2', component: Homepage2Component },
-          { path: 'homepage3', component: Homepage3Component },
-          { path: 'homepage4', component: Homepage4Component },
-          { path: 'blog', component: BlogComponent },
-          { path: 'blog-style-2', component: Blogstyle2Component },
-          { path: 'blog-details', component: BlogdetailsComponent },
-          { path: 'ex-deals', component: ExdealsComponent },
-          { path: 'about', component: AboutComponent },
-          { path: 'restaurant', component: RestaurantComponent },
-          { path: 'restaurant-style-1', component: Restaurantstyle1Component },
-          { path: 'restaurant-style-2', component: Restaurantstyle2Component },
-          { path: 'add-restaurant', component: AddrestaurantComponent },
-          { path: 'listview', component: ListviewComponent },
-          { path: 'login', component: LoginComponent },
-          { path: 'register', component: RegisterComponent },
-          { path: 'checkout', component: CheckoutComponent },
-          { path: 'orderdetails', component: OrderdetailsComponent },
-          { path: 'geolocator', component: GeolocatorComponent },
-          { path: 'contact', component: ContactComponent }
-      ];
+const appRoutes: Routes = [
+  // {path: '', component: HomeComponent},
+  {
+    path: 'home',
+    component: Homepage4Component,
+    canActivate: [AuthorizatedGuard]
+  },
+  { path: 'homepage1', component: Homepage1Component },
+  { path: 'homepage2', component: Homepage2Component },
+  { path: 'homepage3', component: Homepage3Component },
+  { path: 'homepage4', component: Homepage4Component },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog-style-2', component: Blogstyle2Component },
+  { path: 'blog-details', component: BlogdetailsComponent },
+  { path: 'ex-deals', component: ExdealsComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'restaurant', component: RestaurantComponent },
+  { path: 'restaurant-style-1', component: Restaurantstyle1Component },
+  { path: 'restaurant-style-2', component: Restaurantstyle2Component },
+  { path: 'add-restaurant', component: AddrestaurantComponent },
+  { path: 'listview', component: ListviewComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'orderdetails', component: OrderdetailsComponent },
+  { path: 'geolocator', component: GeolocatorComponent },
+  { path: 'contact', component: ContactComponent }
+];
 
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const Routing = RouterModule.forRoot(appRoutes);

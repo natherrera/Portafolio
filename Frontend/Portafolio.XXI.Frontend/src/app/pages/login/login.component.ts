@@ -41,13 +41,16 @@ export class LoginComponent implements OnInit
     {
       this.authenticationService.login(new LoginObject(this.loginForm.value)).subscribe(
         data => this.correctLogin(data),
-        // error => this.error = JSON.parse(error._body)
+        error => {
+          console.error("error")
+        }
       )
     }
   }
 
   private correctLogin(data: Session){
+    console.log("aqui")
     this.storageService.setCurrentSession(data);
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
 }

@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {CoreModule} from "../utils/mock-core/core.module";
+import { Routing } from './app-routing.module';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Homepage1Component } from './pages/homepage1/homepage1.component';
@@ -36,11 +42,8 @@ import { RestaurantleftsidebarComponent } from './layouts/restaurantleftsidebar/
 import { RestaurantrightsidebarComponent } from './layouts/restaurantrightsidebar/restaurantrightsidebar.component';
 import { Advertisementbanner1Component } from './layouts/advertisementbanner1/advertisementbanner1.component';
 import { Advertisementbanner2Component } from './layouts/advertisementbanner2/advertisementbanner2.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AuthorizatedGuard } from "../utils/mock-core/guards/authorizated.guard";
-import { StorageService } from "../services/storage.service";
+
 
 @NgModule({
   declarations: [
@@ -80,18 +83,19 @@ import { StorageService } from "../services/storage.service";
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule,
+    Routing,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    CoreModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     Location, {
       provide: LocationStrategy,
       useClass: PathLocationStrategy
-    },
-    AuthorizatedGuard,
-    StorageService
+    }
   ],
   bootstrap: [AppComponent]
 })
