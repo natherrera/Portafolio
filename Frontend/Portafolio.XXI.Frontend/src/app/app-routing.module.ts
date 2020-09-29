@@ -23,7 +23,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AuthorizatedGuard } from "../utils/mock-core/guards/authorizated.guard";
 
 const appRoutes: Routes = [
-  // {path: '', component: HomeComponent},
+  {
+    path: '', 
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   {
     path: 'home',
     component: Homepage4Component,
