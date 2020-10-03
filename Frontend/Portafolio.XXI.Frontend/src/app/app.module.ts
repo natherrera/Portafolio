@@ -9,6 +9,7 @@ import { Routing } from './app-routing.module';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 
 import { AppComponent } from './app.component';
@@ -89,7 +90,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatDialogModule,
     FormsModule,
     CoreModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatInputModule
   ],
   providers: [
     Location, {

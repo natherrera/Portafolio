@@ -14,29 +14,29 @@
           <div class="section-2 user-page main-padding">
             <div class="login-sec">
               <div class="login-box">
-                <form>
+                <form id="registration-form" #rForm="ngForm" [formGroup]="registrationForm" (ngSubmit)="submitRegistration()" novalidate>
                   <h4 class="text-light-black fw-600">Crea tu cuenta</h4>
                   <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-6">
                       <div class="form-group">
                         <label class="text-light-white fs-14">Nombre</label>
-                        <input type="text" name="#" class="form-control form-control-submit" required>
+                        <input type="text" name="#" class="form-control form-control-submit" formControlName="name" [ngStyle]="{'border-color': error && 'red' }" required>
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-6">
                       <div class="form-group">
                         <label class="text-light-white fs-14">Apellido</label>
-                        <input type="text" name="#" class="form-control form-control-submit"required>
+                        <input type="text" name="#" class="form-control form-control-submit" formControlName="lastname" [ngStyle]="{'border-color': error && 'red' }" required>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
                         <label class="text-light-white fs-14">Email</label>
-                        <input type="email" name="#" class="form-control form-control-submit" required>
+                        <input type="email" name="#" class="form-control form-control-submit" formControlName="email" [ngStyle]="{'border-color': error && 'red' }" required>
                       </div>
                       <div class="form-group">
                         <label class="text-light-white fs-14">Contraseña</label>
-                        <input type="password" id="password-field" name="#" class="form-control form-control-submit" required>
+                        <input type="password" id="password-field" name="#" class="form-control form-control-submit"  formControlName="password" [ngStyle]="{'border-color': error && 'red' }" required>
                         <div data-name="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></div>
                       </div>
                       <!-- <div class="form-group checkbox-reset">
@@ -44,7 +44,7 @@
                           <input type="checkbox" name="#"> <span class="checkmark"></span> Keep me signed in</label>
                       </div> -->
                       <div class="form-group">
-                        <button type="submit" class="btn-second btn-submit full-width">Crear</button>
+                        <button type="submit" class="btn-second btn-submit full-width" form="registration-form">Crear</button>
                       </div>
                       <!-- <div class="form-group text-center"> <span>or</span>
                       </div>

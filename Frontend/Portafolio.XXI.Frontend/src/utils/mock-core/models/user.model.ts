@@ -1,9 +1,11 @@
+import { Profile } from './profile.model';
+
 export class User
 {
-    public id: number;
+    public token: string;
     public name: string;
-    public surname: string;
+    public lastname: string;
     public email: string;
-    public username: string;
     public password?: string;
+    public profile: Profile;
 }

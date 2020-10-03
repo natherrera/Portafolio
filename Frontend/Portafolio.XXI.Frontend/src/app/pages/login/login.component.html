@@ -18,18 +18,23 @@
                 <h4 class="text-light-black fw-600">Iniciar sesión</h4>
                 <div class="row">
                   <div class="col-12">
-                    <!-- <p class="text-light-black">Have a corporate username? <a routerLink="/add-restaurant">Click
+                    <!-- <p class="text-light-black">Have a corporate email? <a routerLink="/add-restaurant">Click
                         here</a>
                     </p> -->
                     <div class="form-group">
                       <label class="text-light-white fs-14">Usuario</label>
-                      <input type="username" name="#" class="form-control form-control-submit" formControlName="username" required>
+                      <input type="email" name="#" class="form-control form-control-submit"
+                        formControlName="email" [ngStyle]="{'border-color': error && 'red' }" required>
+                        <mat-hint style="color: red;" *ngIf="submitted && error?.code == 1 && !loginForm.controls.email.hasError('required')">{{error.message}}</mat-hint>
+                        <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.email.hasError('required')">Campo requerido</mat-hint>
                     </div>
                     <div class="form-group">
                       <label class="text-light-white fs-14">Contraseña</label>
-                      <input type="password" id="password-field" name="#" class="form-control form-control-submit" formControlName="password"
-                        required>
+                      <input type="password" id="password-field" name="#" class="form-control form-control-submit"
+                    formControlName="password" [ngStyle]="{'border-color': error && 'red' }" required>
                       <div data-name="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></div>
+                      <mat-hint style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</mat-hint>
+                      <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.password.hasError('required')">Campo requerido</mat-hint>
                     </div>
                     <!-- <div class="form-group checkbox-reset">
                       <label class="custom-checkbox mb-0">
@@ -41,8 +46,8 @@
                         <p>Entrar</p>
                       </button>
                     </div>
-                    <!-- <div class="form-group text-center"> <span>or</span></div> -->
-                      <!-- <div class="form-group">
+                    <div class="form-group text-center"> <a style="color: #333; text-decoration: underline" routerLink="/register">Crear una cuenta</a></div>
+                    <!-- <div class="form-group">
                         <button type="submit" class="btn-second btn-facebook full-width">
                           <img src="assets/img/facebook-logo.svg" alt="btn logo">Continue with Facebook</button>
                       </div>
@@ -50,11 +55,13 @@
                         <button type="submit" class="btn-second btn-google full-width">
                           <img src="assets/img/google-logo.png" alt="btn logo">Continue with Google</button>
                       </div> -->
-                      <div class="form-group text-center mb-0"> <a routerLink="/register">Crear una cuenta</a>
-                      </div>
+                    <!-- <div class="form-group text-center mb-0"> <a routerLink="/register">Crear una cuenta</a>
+                    </div> -->
                   </div>
                 </div>
               </form>
+
+
             </div>
           </div>
         </div>

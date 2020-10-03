@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from "../../../services/storage.service";
 import { User } from "../../../utils/mock-core/models/user.model";
-import { AuthenticationService } from "../../../providers/AuthProvider/authentication.service";
+import { AuthenticationService } from "../../../services/authentication.service";
 
 @Component({
   selector: 'app-navbar',
