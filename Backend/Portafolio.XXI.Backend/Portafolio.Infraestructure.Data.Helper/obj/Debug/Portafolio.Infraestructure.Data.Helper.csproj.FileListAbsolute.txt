@@ -1,0 +1,11 @@
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.dll.config
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\obj\Debug\Portafolio.Infraestructure.Data.Helper.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\obj\Debug\Portafolio.Infraestructure.Data.Helper.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\bin\Portafolio.Infraestructure.Data.Helper.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\obj\Debug\Portafolio.Infraestructure.Data.Helper.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\obj\Debug\Portafolio.Infraestructure.Data.Helper.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Helper\obj\Debug\Portafolio.Infraestructure.Data.Helper.pdb

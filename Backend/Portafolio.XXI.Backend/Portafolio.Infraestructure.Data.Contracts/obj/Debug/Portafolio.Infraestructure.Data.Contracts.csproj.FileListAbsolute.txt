@@ -1,0 +1,19 @@
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Aplication.DTO.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Aplication.DTO.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.csprojResolveAssemblyReference.cache
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.csproj.CopyComplete
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.Infraestructure.Data.Contracts\obj\Debug\Portafolio.Infraestructure.Data.Contracts.pdb
