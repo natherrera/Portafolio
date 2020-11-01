@@ -34,6 +34,7 @@ export class RestaurantComponent implements OnInit {
         this.wishList.push(product);
       };
     });
+    this.setSubtotal(product.valor, 'sumar');
   }
 
   private deleteProductWishList(id: number){
@@ -43,6 +44,7 @@ export class RestaurantComponent implements OnInit {
 
     this.wishList.map((e) => {
       if(e.id === id) {
+        this.setSubtotal(e.valor, 'restar');
         if(e.cantidad > 1) {
           e.cantidad -= 1
         } else {
