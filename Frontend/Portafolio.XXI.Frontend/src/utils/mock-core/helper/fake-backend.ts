@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
-import { User } from "../models/user.model";
 import { USERS } from "../../mock-responses/users/usersResponse";
+import { orders } from "../../mock-responses/orders/ordersResponse";
+import { products } from "../../mock-responses/orders/productsResponse";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor
@@ -24,39 +25,6 @@ export class FakeBackendInterceptor implements HttpInterceptor
       .pipe(delay(500))
       .pipe(dematerialize());
 
-    // .pipe(mergeMap(() =>
-    //   {
-
-    //     if (request.url.endsWith('/api/authenticate/login') && request.method === 'POST')
-    //     {
-    //       let params = request.body;
-
-    //       let found: User = USERS.find((user: User) => { return (params.username === user.username); });
-    //       if (found)
-    //       {
-    //         if (params.password === found.password)
-    //         {
-    //           return of(new HttpResponse({ status: 200, body: { token: 'fake-token-jwt', user: found } }));
-    //         } else
-    //         {
-    //           return throwError({ code: 2, message: 'La contraseña no cohincide' });
-    //         }
-    //       } else
-    //       {
-    //         return throwError({ code: 1, message: 'Usuario no existe' });
-    //       }
-
-    //     }
-
-    //     if (request.url.endsWith('/api/authenticate/logout') && request.method === 'POST')
-    //     {
-    //       return of(new HttpResponse({ status: 200, body: true }));
-    //     }
-
-    //     return next.handle(request);
-
-    //   }))
-
     function handleRoute()
     {
       switch (true)
@@ -65,18 +33,38 @@ export class FakeBackendInterceptor implements HttpInterceptor
           return authenticate();
         case url.endsWith('/api/authenticate/logout') && method === 'POST':
           return logout();
+
         case url.endsWith('api/users/register') && method === 'POST':
           return register();
         case url.endsWith('api/users') && method === 'GET':
           return getUsers();
         case url.match(/\/api\/users\/delete\/\d+$/) && method === 'DELETE':
           return deleteUser();
+
+        case url.endsWith('api/orders') && method === 'GET':
+          return getOrders();
+        case url.match(/\/api\/orders\/\d+$/) && method === 'GET':
+          return getOrderById();
+        case url.endsWith('api/orders/create') && method === 'POST':
+          return createOrder();
+        case url.match(/\/api\/orders\/delete\/\d+$/) && method === 'DELETE':
+          return deleteOrder();
+
+        case url.endsWith('api/products') && method === 'GET':
+          return getProducts();
+        case url.match(/\/api\/products\/\d+$/) && method === 'GET':
+            return getProductsById();
+        case url.endsWith('api/products/create') && method === 'POST':
+          return createProduct();
+        case url.match(/\/api\/products\/delete\/\d+$/) && method === 'DELETE':
+          return deleteProduct();
+
         default:
-          // pass through any requests not handled above
           return next.handle(request);
       }
     }
 
+    // AUTENTICACION
     function authenticate()
     {
       const { password, email } = body;
@@ -100,6 +88,50 @@ export class FakeBackendInterceptor implements HttpInterceptor
       return of(new HttpResponse({ status: 200, body: true }));
     }
 
+
+
+    // ORDENES
+
+    function getOrders()
+    {
+      return ok(orders);
+    }
+
+    function getOrderById()
+    {
+      const order = orders.filter(x => x.id === idFromUrl());
+      return ok(order);
+    }
+
+    function createOrder()
+    {
+      const { id } = body;
+      let found = orders.find(x => x.id === id);
+      if (found)
+      {
+        return error(3, 'La orden ingresada ya se encuentra registrado')
+      }
+
+      orders.push({...body});
+      localStorage.setItem('orders', JSON.stringify(orders));
+
+      return ok();
+    }
+
+    function deleteOrder()
+    {
+      const filteredOrders = orders.filter(x => x.id !== idFromUrl());
+      localStorage.setItem('orders', JSON.stringify(filteredOrders));
+      return ok();
+    }
+
+    // USUARIO
+    function getUsers()
+    {
+      if (!isLoggedIn()) return unauthorized();
+      return ok(users);
+    }
+
     function register()
     {
       const { password, email } = body;
@@ -115,18 +147,46 @@ export class FakeBackendInterceptor implements HttpInterceptor
       return ok();
     }
 
-    function getUsers()
-    {
-      if (!isLoggedIn()) return unauthorized();
-      return ok(users);
-    }
-
     function deleteUser()
     {
       if (!isLoggedIn()) return unauthorized();
 
       users = users.filter(x => x.id !== idFromUrl());
       localStorage.setItem('users', JSON.stringify(users));
+      return ok();
+    }
+
+    // PRODUCTO
+    function getProducts()
+    {
+      return ok(products);
+    }
+
+    function createProduct()
+    {
+      const { id } = body;
+      let found = products.find(x => x.id === id);
+      if (found)
+      {
+        return error(3, 'El producto ingresado ya se encuentra registrado');
+      }
+
+      products.push({...body});
+      localStorage.setItem('products', JSON.stringify(products));
+
+      return ok();
+    }
+
+    function getProductsById()
+    {
+      const product = products.filter(x => x.id === idFromUrl());
+      return ok(product);
+    }
+
+    function deleteProduct()
+    {
+      const filteredProducts = products.filter(x => x.id !== idFromUrl());
+      localStorage.setItem('products', JSON.stringify(filteredProducts));
       return ok();
     }
 

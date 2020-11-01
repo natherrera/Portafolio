@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from "@angular/router";
-import { LoginObject } from "../../../providers/AuthProvider/login-object.model";
 import { AuthenticationService } from "../../../services/authentication.service";
 import { StorageService } from "../../../services/storage.service";
 import { Session } from "../../../utils/mock-core/models/session.model";
-
-
-
 
 @Component({
   selector: 'app-login',
@@ -55,7 +51,6 @@ export class LoginComponent implements OnInit
 
   private correctLogin(data: Session){
 
-    console.log("aqui")
     this.storageService.setCurrentSession(data);
     this.router.navigate(['/home']);
   }

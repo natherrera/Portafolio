@@ -22,7 +22,7 @@
                         here</a>
                     </p> -->
                     <div class="form-group">
-                      <label class="text-light-white fs-14">Usuario</label>
+                      <label class="text-light-white fs-14">Email</label>
                       <input type="email" name="#" class="form-control form-control-submit"
                         formControlName="email" [ngStyle]="{'border-color': error && 'red' }" required>
                         <mat-hint style="color: red;" *ngIf="submitted && error?.code == 1 && !loginForm.controls.email.hasError('required')">{{error.message}}</mat-hint>
@@ -32,7 +32,7 @@
                       <label class="text-light-white fs-14">Contraseña</label>
                       <input type="password" id="password-field" name="#" class="form-control form-control-submit"
                     formControlName="password" [ngStyle]="{'border-color': error && 'red' }" required>
-                      <div data-name="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></div>
+                      <!-- <div data-name="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></div> -->
                       <mat-hint style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</mat-hint>
                       <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.password.hasError('required')">Campo requerido</mat-hint>
                     </div>

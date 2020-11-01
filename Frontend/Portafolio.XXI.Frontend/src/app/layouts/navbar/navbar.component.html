@@ -153,8 +153,7 @@
                                     <img src="assets/img/user-1.png" class="rounded-circle" alt="userimg"> <span>Hola, {{user.name}}</span>
                                 </a>
                                 <div class="user-dropdown">
-                                    <!-- <ul>
-                                        <li>
+                                        <!--  <ul> <li>
                                             <a routerLink="/orderdetails">
                                                 <div class="icon"><i class="flaticon-rewind"></i>
                                                 </div> <span class="details">Past Orders</span>
@@ -189,20 +188,40 @@
                                                 <div class="icon"><i class="flaticon-diamond"></i>
                                                 </div> <span class="details">Perks</span>
                                             </a>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <a href="javascript:void(0)">
                                                 <div class="icon"><i class="flaticon-user"></i>
-                                                </div> <span class="details">Account</span>
+                                                </div> <span class="details">Config</span>
                                             </a>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <a href="javascript:void(0)">
                                                 <div class="icon"><i class="flaticon-board-games-with-roles"></i>
                                                 </div> <span class="details">Help</span>
                                             </a>
-                                        </li>
-                                    </ul> -->
+                                        </li> </ul>-->
+
+                                        <ul >
+                                            <li *ngIf="profile === 'admin'">
+                                                <a href="javascript:void(0)">
+                                                    <div class="icon"><i class="flaticon-user"></i>
+                                                    </div> <span class="details"> Panel  de administrador</span>
+                                                </a>
+                                            </li>
+                                            <li *ngIf="profile === 'cajero'">
+                                                <a routerLink="/orderdetails">
+                                                    <div class="icon"><i class="flaticon-takeaway"></i>
+                                                    </div> <span class="details">Crear pedido</span>
+                                                </a>
+                                            </li>
+                                            <li *ngIf="profile === 'cliente'">
+                                                <a routerLink="/restaurant">
+                                                    <div class="icon"><i class="flaticon-takeaway"></i>
+                                                    </div> <span class="details">Realizar pedido</span>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     <!-- <div class="user-footer"> <span class="text-light-black">Not Jhon?</span> <a href="javascript:void(0)">Sign Out</a> -->
                                     <div class="user-footer"><a href="javascript:void(0)" (click)="logout()">Cerrar sesión</a>
                                     </div>

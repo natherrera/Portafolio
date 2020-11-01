@@ -11,12 +11,15 @@ import { AuthenticationService } from "../../../services/authentication.service"
 export class NavbarComponent implements OnInit
 {
   public user: User;
+  public profile: string;
   constructor (private storageService: StorageService,
     private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void
   {
     this.user = this.storageService.getCurrentUser();
+    this.profile = this.user.profile.type;
+    console.log(this.profile)
   }
 
   public logout(): void{

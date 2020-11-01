@@ -83,12 +83,12 @@ import { ContactComponent } from './pages/contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
     Routing,
     BrowserAnimationsModule,
     HttpClientModule,
     MatDialogModule,
     FormsModule,
+    ReactiveFormsModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MatInputModule

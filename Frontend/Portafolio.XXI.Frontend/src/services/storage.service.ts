@@ -19,6 +19,10 @@ export class StorageService {
     this.localStorageService.setItem('currentUser', JSON.stringify(session));
   }
 
+  setCurrentProducts(products: any): void {
+    this.localStorageService.setItem('products', JSON.stringify(products));
+  }
+
   loadSessionData(): Session{
     var sessionStr = this.localStorageService.getItem('currentUser');
     return (sessionStr) ? <Session> JSON.parse(sessionStr) : null;
