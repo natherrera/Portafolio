@@ -30,9 +30,28 @@
                         </div> -->
                         <div class="cart-detail-box">
                             <div class="card">
-                                <div class="card-header padding-15 fw-700">Your Order</div>
+                                <div class="card-header padding-15 fw-700">Pedido</div>
                                 <div class="card-body no-padding" id="scrollstyle-4">
-                                    <div class="cat-product-box">
+                                    <div class="cat-product-box"  *ngFor="let product of wishList">
+                                        <div class="cat-product">
+                                            <div class="cat-name">
+                                                <a href="#">
+                                                    <p class="text-light-green fw-700"><span class="text-dark-white">{{product.cantidad}}</span> {{product.nombreProducto}}</p>
+                                                    <!-- <span class="text-light-white fw-700">small, chilli chicken</span> -->
+                                                </a>
+                                            </div>
+                                            <div class="delete-btn">
+                                                <a href="javascript:void(0);" class="text-dark-white" (click)="deleteProductWishList(product)"> <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                            <div class="price">
+                                                <a href="#" class="text-dark-white fw-500">
+                                                    ${{product.total}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="cat-product-box">
                                         <div class="cat-product">
                                             <div class="cat-name">
                                                 <a href="#">
@@ -82,33 +101,16 @@
                         </a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="cat-product-box">
-                                        <div class="cat-product">
-                                            <div class="cat-name">
-                                                <a href="#">
-                                                    <p class="text-light-green fw-700"><span class="text-dark-white">1</span> Chilli Chicken Pizza</p> <span class="text-light-white fw-700">small, chilli chicken</span>
-                                                </a>
-                                            </div>
-                                            <div class="delete-btn">
-                                                <a href="#" class="text-dark-white"> <i class="far fa-trash-alt"></i>
-                                                </a>
-                                            </div>
-                                            <div class="price"> <a href="#" class="text-dark-white fw-500">
-                          $2.25
-                        </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> -->
                                     <div class="item-total">
-                                        <div class="total-price border-0"> <span class="text-dark-white fw-700">Items subtotal:</span>
-                                            <span class="text-dark-white fw-700">$9.00</span>
+                                        <div class="total-price border-0"> <span class="text-dark-white fw-700">Total:</span>
+                                            <span class="text-dark-white fw-700">${{subTotal}}</span>
                                         </div>
-                                        <div class="empty-bag padding-15 fw-700"> <a href="#">Empty bag</a>
-                                        </div>
+                                        <!-- <div class="empty-bag padding-15 fw-700"> <a href="#">Empty bag</a>
+                                        </div> -->
                                     </div>
                                 </div>
-                                <div class="card-footer padding-15"> <a routerLink="/checkout" class="btn-first green-btn text-custom-white full-width fw-500">Proceed to Checkout</a>
+                                <div class="card-footer padding-15"> <a routerLink="/checkout" class="btn-first green-btn text-custom-white full-width fw-500">Ir a pagar</a>
                                 </div>
                             </div>
                         </div>

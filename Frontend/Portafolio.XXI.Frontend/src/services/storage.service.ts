@@ -23,6 +23,10 @@ export class StorageService {
     this.localStorageService.setItem('products', JSON.stringify(products));
   }
 
+  setCurrentOrder(order: any): void {
+    this.localStorageService.setItem('order', JSON.stringify(order));
+  }
+
   loadSessionData(): Session{
     var sessionStr = this.localStorageService.getItem('currentUser');
     return (sessionStr) ? <Session> JSON.parse(sessionStr) : null;
