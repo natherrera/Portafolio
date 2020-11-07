@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 
 import { AppComponent } from './app.component';
@@ -45,6 +46,8 @@ import { RestaurantrightsidebarComponent } from './layouts/restaurantrightsideba
 import { Advertisementbanner1Component } from './layouts/advertisementbanner1/advertisementbanner1.component';
 import { Advertisementbanner2Component } from './layouts/advertisementbanner2/advertisementbanner2.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PanelCajeroComponent } from './pages/panelCajero/panelCajero.component';
+import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component';
 
 
 @NgModule({
@@ -80,7 +83,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     RestaurantrightsidebarComponent,
     Advertisementbanner1Component,
     Advertisementbanner2Component,
-    ContactComponent
+    ContactComponent,
+    PanelCajeroComponent,
+    PanelCocinaComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +98,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [
     Location, {

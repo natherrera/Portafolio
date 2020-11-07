@@ -1,10 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { products } from 'src/utils/mock-responses/orders/productsResponse';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { StorageService } from '../../../services/storage.service';
 import { FormBuilder, Validators } from "@angular/forms";
-declare var $: any;
-
 
 @Component({
   selector: 'app-restaurant',
