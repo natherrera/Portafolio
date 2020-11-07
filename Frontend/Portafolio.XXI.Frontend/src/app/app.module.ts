@@ -10,6 +10,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -91,7 +92,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ReactiveFormsModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [
     Location, {

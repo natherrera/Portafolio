@@ -137,9 +137,66 @@
         <div class="row">
             <div class="col-xl-3 col-lg-3">
                 <!-- <app-restaurantleftsidebar></app-restaurantleftsidebar> -->
+
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class="row">
+                    <!-- . -->
+                    <div class="col-lg-12 restaurent-meal-head mb-md-40">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="section-header-left">
+                                    <h3 class="text-light-black header-title">
+                                        <a class="card-link text-light-black
+                                        no-margin" data-toggle="collapse" href="#collapseCero">
+                                            Preparemos el pedido
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div id="collapseCero" class="collapse show">
+                                <div class=" no-padding" >
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Opciones de atención
+                                                </label>
+                                                <mat-form-field appearance="fill">
+                                                    <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required>
+                                                        <mat-option *ngFor="let opcion of tipoOrdenList" [value]="opcion.value">
+                                                            {{opcion.viewValue}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" *ngIf="tipoAtencion === 'local'">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Mesas disponibles
+                                                </label>
+                                                <mat-form-field appearance="fill">
+                                                    <mat-select (selectionChange)="handleChangeMesa($event)" required>
+                                                        <mat-option *ngFor="let mesa of mesasDisponibles" [value]="mesa.id">
+                                                            {{mesa.mesa}} - {{mesa.ubicacion}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" style="float:none;margin:auto;"
+                                            *ngIf="tipoAtencion === 'local'">
+                                            <div class="padding-15"> <a href="javascript:void"
+                                                    class="btn-first green-btn text-custom-white full-width fw-500">Pedir
+                                                    atención a mesa</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- . -->
+
                     <!-- <div class="col-lg-12">
                             <div class="promocodeimg mb-xl-20 p-relative">
                                 <img src="assets/img/banner.jpg" class="img-fluid full-width" alt="promocode">
@@ -160,8 +217,7 @@
                                 <div class="section-header-left">
                                     <h3 class="text-light-black header-title">
                                         <a class="card-link text-light-black
-                                        no-margin" data-toggle="collapse"
-                                            href="#collapseOne">
+                                        no-margin" data-toggle="collapse" href="#collapseOne">
                                             Menú Principal
                                         </a>
                                     </h3>
@@ -177,8 +233,10 @@
                                                         <div class="restaurent-product-title-box">
                                                             <div class="restaurent-product-box">
                                                                 <div class="restaurent-product-title">
-                                                                    <h6 class="mb-2 text-light-black fw-600" data-toggle="modal"
-                                                                        data-target="#restaurent-popup">{{dish.nombreProducto}}</h6>
+                                                                    <h6 class="mb-2 text-light-black fw-600"
+                                                                        data-toggle="modal"
+                                                                        data-target="#restaurent-popup">
+                                                                        {{dish.nombreProducto}}</h6>
                                                                     <!-- <p class="text-light-white">600-700 Cal.</p> -->
                                                                 </div>
                                                                 <!-- <div class="restaurent-product-label"> <span
@@ -230,13 +288,13 @@
                                                                 <img src="assets/img/svg/010-heart.svg" alt="tag">
                                                             </span> -->
                                                             <div class="restaurent-product-price">
-                                                                <h6 class="text-success fw-600 no-margin">${{dish.valor}}</h6>
+                                                                <h6 class="text-success fw-600 no-margin">
+                                                                    ${{dish.valor}}</h6>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="restaurent-product-img">
-                                                        <img src={{dish.imagen}} class="img-fluid"
-                                                            alt="#">
+                                                        <img src={{dish.imagen}} class="img-fluid" alt="#">
                                                     </div>
                                                 </div>
                                             </div>
@@ -269,7 +327,8 @@
                                                                     <h6 class="mb-2" data-toggle="modal"
                                                                         data-target="#restaurent-popup"><a
                                                                             href="javascript:void(0)"
-                                                                            class="text-light-black fw-600">{{drink.nombreProducto}}</a></h6>
+                                                                            class="text-light-black fw-600">{{drink.nombreProducto}}</a>
+                                                                    </h6>
                                                                     <!-- <p class="text-light-white">600-700 Cal.</p> -->
                                                                 </div>
                                                                 <!-- <div class="restaurent-product-label"> <span
@@ -321,13 +380,13 @@
                                                                 <img src="assets/img/svg/013-heart-1.svg" alt="tag">
                                                             </span> -->
                                                             <div class="restaurent-product-price">
-                                                                <h6 class="text-success fw-600 no-margin">${{drink.valor}}</h6>
+                                                                <h6 class="text-success fw-600 no-margin">
+                                                                    ${{drink.valor}}</h6>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="restaurent-product-img">
-                                                        <img src={{drink.imagen}} class="img-fluid"
-                                                            alt="#">
+                                                        <img src={{drink.imagen}} class="img-fluid" alt="#">
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,7 +399,9 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3">
-                <app-restaurantrightsidebar [wishList]="wishList" [subTotal]="subTotal" [deleteProductWishList]="deleteProductWishList"></app-restaurantrightsidebar>
+                <app-restaurantrightsidebar [wishList]="wishList" [subTotal]="subTotal"
+                    [deleteProductWishList]="deleteProductWishList" [message]="message" route="/checkout">
+                </app-restaurantrightsidebar>
             </div>
         </div>
     </div>
@@ -891,4 +952,4 @@
     </section> -->
 <!-- offer near -->
 
-<app-footer2></app-footer2>
+<!-- <app-footer2></app-footer2> -->

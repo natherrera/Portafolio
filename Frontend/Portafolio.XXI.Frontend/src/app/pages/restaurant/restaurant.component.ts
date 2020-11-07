@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { products } from 'src/utils/mock-responses/orders/productsResponse';
 import { ProductService } from '../../../services/product.service';
 import { StorageService } from '../../../services/storage.service';
+import { FormBuilder, Validators } from "@angular/forms";
+declare var $: any;
 
 
 @Component({
@@ -13,19 +15,38 @@ export class RestaurantComponent implements OnInit
 {
   [x: string]: any;
 
+  public message: string;
   public products: any;
   public drinks: any;
   public dishes: any;
   public subTotal: number = 0;
   public error: { code: number, message: string } = null;
   public loading = false;
+  public tipoAtencion: string;
+  public mesa: string;
   public wishList: Array<any> = [];
+  selectedTypeAttention: string;
+  tipoOrdenList: Array<Object> = [{value:'local',viewValue:'Atención en el local'}, {value:'retiro',viewValue:'Retiro en tienda'}];
+  mesasDisponibles: Array<Object> = [{id: "1", mesa: "1", ubicacion: "entrada", estado: true},{id: "2", mesa: "2", ubicacion: "pasillo", estado: true},{id: "3", mesa: "3", ubicacion: "pasillo", estado: true},{id: "4", mesa: "4", ubicacion: "ventana", estado: true}]
 
-  constructor (private productService: ProductService, private storageService: StorageService,) { }
+
+
+  constructor (private productService: ProductService, private storageService: StorageService, public fb: FormBuilder) { }
 
   ngOnInit(): void
   {
     this.getProducts();
+  }
+
+  public handleError = (controlName: string, errorName: string) => {
+    return this.setOrdenForm.controls[controlName].hasError(errorName);
+  }
+
+  handleChangeTipoAtencion = (e) => {
+   this.tipoAtencion = e.value;
+  }
+  handleChangeMesa = (e) => {
+    this.mesa = e.value;
   }
 
   handleClickProduct = (producto: any) =>
@@ -51,6 +72,7 @@ export class RestaurantComponent implements OnInit
       };
     } else
     {
+      this.message = "";
       producto.cantidad = 1;
       producto.total = producto.valor;
       this.wishList.push(producto);
@@ -58,7 +80,7 @@ export class RestaurantComponent implements OnInit
     this.subTotal += producto.valor;
   }
 
-  deleteProductWishList = (producto: any) : void =>
+  deleteProductWishList = (producto: any): void =>
   {
     this.wishList.map((e) =>
     {

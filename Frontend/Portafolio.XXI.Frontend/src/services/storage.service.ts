@@ -22,6 +22,13 @@ export class StorageService {
   setCurrentProducts(products: any): void {
     this.localStorageService.setItem('products', JSON.stringify(products));
   }
+  setCurrentAttention(orderTable: any): void {
+    this.localStorageService.setItem('solicitudAtencion', JSON.stringify(orderTable));
+  }
+
+  getCurrentAttention(): void {
+    return this.localStorageService.getItem('solicitudAtencion');
+  }
 
   setCurrentOrder(order: any): void {
     this.localStorageService.setItem('order', JSON.stringify(order));

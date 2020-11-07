@@ -12,30 +12,24 @@ export class RestaurantrightsidebarComponent implements OnInit {
 
   constructor(private storageService: StorageService, private router: Router) { }
 
+  @Input() message: string;
   @Input() wishList: any;
   @Input() subTotal: number;
+  @Input() route: string;
   @Input() deleteProductWishList: (args: any) => void;
 
   ngOnInit(): void {
   }
 
-  // deleteProductWishList = (product: any) => {
-
-  //   this.wishList.map((e) => {if(e.id === product.id){
-  //     if(e.cantidad > 1) {
-  //       e.cantidad -= 1;
-  //     } else {
-  //       this.wishList = this.wishList.filter(i => i !== e )
-  //     }
-  //   }})
-
-  //   this.subTotal -= product.valor;
-  // }
-
-  private handleClickConfirm(data: any, route: string){
-
-    this.storageService.setCurrentOrder(data);
-    this.router.navigate([route]);
+  handleClickConfirm(){
+    console.log('click to confirm');
+    if(this.wishList.length > 0) {
+      this.message = "";
+      this.storageService.setCurrentOrder(this.wishList);
+      this.router.navigate([this.route]);
+    } else {
+      this.message = "No hay productos";
+    }
 
   }
 

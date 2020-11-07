@@ -1,3 +1,15 @@
-.user-dropdown ul>li {
-    width: 100% !important;
+.user-dropdown ul > li {
+  width: 100% !important;
+}
+
+.validation-message {
+  font-size: 11px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 11px;
+  color: red;
+}
+
+.mat-select, .mat-option {
+  font-family: 'Poppins', sans-serif !important;
 }
