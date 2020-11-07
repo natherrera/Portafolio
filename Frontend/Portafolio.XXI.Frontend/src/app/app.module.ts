@@ -48,6 +48,7 @@ import { Advertisementbanner2Component } from './layouts/advertisementbanner2/ad
 import { ContactComponent } from './pages/contact/contact.component';
 import { PanelCajeroComponent } from './pages/panelCajero/panelCajero.component';
 import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component';
+import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component'
     Advertisementbanner2Component,
     ContactComponent,
     PanelCajeroComponent,
-    PanelCocinaComponent
+    PanelCocinaComponent,
+    PanelMeseroComponent,
   ],
   imports: [
     BrowserModule,
