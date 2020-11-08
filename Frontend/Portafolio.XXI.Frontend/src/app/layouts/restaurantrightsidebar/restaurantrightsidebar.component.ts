@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StorageService } from 'src/services/storage.service';
 import { Router } from "@angular/router";
-import { products } from 'src/utils/mock-responses/orders/productsResponse';
+import { products } from 'src/utils/mock-responses/producto/productsResponse';
 
 @Component({
   selector: 'app-restaurantrightsidebar',

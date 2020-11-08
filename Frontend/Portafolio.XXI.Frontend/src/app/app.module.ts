@@ -55,6 +55,7 @@ import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component'
 import { DialogContentMesaComponent } from './pages/panelMesero/DialogContentMesa/dialogContentMesa.component';
 import { DialogContentCocinaComponent } from './pages/panelMesero/DialogContentCocina/dialogContentCocina.component';
 import { DialogContentPagoComponent } from './pages/panelMesero/DialogContentPago/dialogContentPago.component';
+import { DialogContentPedidoComponent } from './pages/panelMesero/DialogContentPedido/dialogContentPedido.component';
 
 
 @NgModule({
@@ -96,7 +97,8 @@ import { DialogContentPagoComponent } from './pages/panelMesero/DialogContentPag
     PanelMeseroComponent,
     DialogContentMesaComponent,
     DialogContentCocinaComponent,
-    DialogContentPagoComponent
+    DialogContentPagoComponent,
+    DialogContentPedidoComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
-import { products } from "../../mock-responses/orders/productsResponse";
+import { products } from "../../mock-responses/producto/productsResponse";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor

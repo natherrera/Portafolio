@@ -2,6 +2,7 @@
 <section class="section-padding restaurent-meals bg-light-theme">
     <div class="container-fluid padding-30">
       <mat-tab-group animationDuration="0ms">
+        <!-- TABLA GESTION MESAS -->
         <mat-tab label="Gestión de mesas">
           <div>
               <table mat-table [dataSource]="dataSourceMesas" class="mat-elevation-z8">
@@ -61,6 +62,7 @@
                 </table>
           </div>
         </mat-tab>
+        <!-- TABLA GESTION COCINA -->
         <mat-tab label="Gestión Cocina">
           <div>
             <table mat-table [dataSource]="dataSourceCocina" class="mat-elevation-z8">
@@ -132,6 +134,7 @@
             </table>
           </div>
         </mat-tab>
+        <!-- TABLA GESTION PAGO -->
         <mat-tab label="Gestion Pago">
           <div>
             <table mat-table [dataSource]="dataSourcePago" class="mat-elevation-z8">
@@ -215,6 +218,39 @@
             </table>
           </div>
         </mat-tab>
+        <!-- TABLA GESTION PEDIDO -->
+        <mat-tab label="Gestion Pedido">
+          <div>
+        <table mat-table
+       [dataSource]="dataSourcePedido" multiTemplateDataRows
+       class="mat-elevation-z8">
+          <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumnsPedido">
+            <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+          </ng-container>
+
+          <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+          <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumnsPedido.length">
+              <div class="example-element-detail"
+                  [@detailExpand]="element == expandedElementPedido ? 'expanded' : 'collapsed'">
+                <div class="example-element-description">
+                  {{element.comestibles | json}}
+                </div>
+              </div>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumnsPedido"></tr>
+          <tr mat-row *matRowDef="let element; columns: displayedColumnsPedido;"
+              class="example-element-row"
+              [class.example-expanded-row]="expandedElementPedido === element"
+              (click)="expandedElementPedido = expandedElementPedido === element ? null : element">
+          </tr>
+          <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+        </table>
+      </div>
+      </mat-tab>
       </mat-tab-group>
     </div>
 </section>
