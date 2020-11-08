@@ -384,7 +384,7 @@ img {
     height: auto;
     border-radius: 3px;
 }
-table th,
+/* table th,
 table td {
     border: 1px solid #ccc;
     padding: 15px;
@@ -392,7 +392,7 @@ table td {
 table {
     border: 1px solid #ccc;
     padding: 15px;
-}
+} */
 .fs-12 {
     font-size: 12px;
 }

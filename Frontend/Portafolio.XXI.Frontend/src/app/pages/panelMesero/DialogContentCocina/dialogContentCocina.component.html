@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Modificar estado orden</h1>
+<div mat-dialog-content>
+  <p>Mesa: {{data.mesa}}</p>
+  <p> Hora entrada orden: {{data.hora}}</p>
+  <mat-form-field>
+    <mat-label>Estado del pedido</mat-label>
+    <mat-select [(ngModel)]="estadoPedido">
+      <mat-option value="En proceso">En proceso</mat-option>
+      <mat-option value="Listo">Listo</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="handleClickModificar()">Modificar</button>
+</div>
+

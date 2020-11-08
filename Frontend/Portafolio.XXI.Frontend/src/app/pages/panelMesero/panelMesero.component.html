@@ -1,8 +1,220 @@
 <app-navbar></app-navbar>
 <section class="section-padding restaurent-meals bg-light-theme">
-    <div class="container-fluid">
-        <div class="row">
-            <p>Panel Mesero</p>
-        </div>
+    <div class="container-fluid padding-30">
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Gestión de mesas">
+          <div>
+              <table mat-table [dataSource]="dataSourceMesas" class="mat-elevation-z8">
+                  <!-- Checkbox Column -->
+                  <ng-container matColumnDef="select">
+                    <th mat-header-cell *matHeaderCellDef>
+                      <mat-checkbox (change)="$event ? masterToggle(dataSourceMesas) : null"
+                                    [checked]="selection.hasValue() && isAllSelected(dataSourceMesas)"
+                                    [indeterminate]="selection.hasValue() && !isAllSelected(dataSourceMesas)"
+                                    [aria-label]="checkboxLabel(dataSourceMesas)">
+                      </mat-checkbox>
+                    </th>
+                    <td mat-cell *matCellDef="let row">
+                      <mat-checkbox (click)="$event.stopPropagation()"
+                                    (change)="$event ? selection.toggle(row) : null"
+                                    [checked]="selection.isSelected(row)"
+                                    [aria-label]="checkboxLabel(row, dataSourceMesas)">
+                      </mat-checkbox>
+                    </td>
+                  </ng-container>
+
+                  <!-- Id Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                  </ng-container>
+
+                  <!-- Mesa Column -->
+                  <ng-container matColumnDef="mesa">
+                    <th mat-header-cell *matHeaderCellDef> Mesa </th>
+                    <td mat-cell *matCellDef="let element"> {{element.mesa}} </td>
+                  </ng-container>
+
+                  <!-- Ubicación Column -->
+                  <ng-container matColumnDef="ubicacion">
+                    <th mat-header-cell *matHeaderCellDef> Ubicación </th>
+                    <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
+                  </ng-container>
+
+                  <!-- Estado Column -->
+                  <ng-container matColumnDef="estado">
+                    <th mat-header-cell *matHeaderCellDef> Estado </th>
+                    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+                  </ng-container>
+
+                  <!-- Modificar Column -->
+                  <ng-container matColumnDef="modificar">
+                    <th mat-header-cell *matHeaderCellDef> Modificar Estado </th>
+                    <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary" (click)="openDialog('mesa', element)">Modificar</button>
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumnsMesas"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumnsMesas;"
+                      (click)="selection.toggle(row)">
+                  </tr>
+                </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="Gestión Cocina">
+          <div>
+            <table mat-table [dataSource]="dataSourceCocina" class="mat-elevation-z8">
+              <!-- Checkbox Column -->
+              <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                  <mat-checkbox (change)="$event ? masterToggle(dataSourceCocina) : null"
+                                [checked]="selection.hasValue() && isAllSelected(dataSourceCocina)"
+                                [indeterminate]="selection.hasValue() && !isAllSelected(dataSourceCocina)"
+                                [aria-label]="checkboxLabel(dataSourceCocina)">
+                  </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-checkbox (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)"
+                                [aria-label]="checkboxLabel(row, dataSourceCocina)">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+
+              <!-- Id Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+
+              <!-- Mesa Column -->
+              <ng-container matColumnDef="mesa">
+                <th mat-header-cell *matHeaderCellDef> Mesa </th>
+                <td mat-cell *matCellDef="let element"> {{element.mesa}} </td>
+              </ng-container>
+
+              <!-- Id cliente Column -->
+              <ng-container matColumnDef="idCliente">
+                <th mat-header-cell *matHeaderCellDef> Id Cliente </th>
+                <td mat-cell *matCellDef="let element"> {{element.idCliente}} </td>
+              </ng-container>
+
+              <!-- Fecha Column -->
+              <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+              </ng-container>
+
+              <!-- Hora Column -->
+              <ng-container matColumnDef="hora">
+                <th mat-header-cell *matHeaderCellDef> Hora </th>
+                <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
+              </ng-container>
+
+              <!-- Estado Column -->
+              <ng-container matColumnDef="estadoPreparacion">
+                <th mat-header-cell *matHeaderCellDef> Estado </th>
+                <td mat-cell *matCellDef="let element"> {{element.estadoPreparacion}} </td>
+              </ng-container>
+
+              <!-- Modificar Column -->
+              <ng-container matColumnDef="modificar">
+                <th mat-header-cell *matHeaderCellDef> Modificar Estado </th>
+                <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary" (click)="openDialog('cocina', element)">Modificar</button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsCocina"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsCocina;"
+                  (click)="selection.toggle(row)">
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="Gestion Pago">
+          <div>
+            <table mat-table [dataSource]="dataSourcePago" class="mat-elevation-z8">
+              <!-- Checkbox Column -->
+              <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                  <mat-checkbox (change)="$event ? masterToggle(dataSourcePago) : null"
+                                [checked]="selection.hasValue() && isAllSelected(dataSourcePago)"
+                                [indeterminate]="selection.hasValue() && !isAllSelected(dataSourcePago)"
+                                [aria-label]="checkboxLabel(dataSourcePago)">
+                  </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                  <mat-checkbox (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)"
+                                [aria-label]="checkboxLabel(row, dataSourcePago)">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+
+              <!-- Id Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+
+              <!-- Mesa Column -->
+              <ng-container matColumnDef="mesa">
+                <th mat-header-cell *matHeaderCellDef> Mesa </th>
+                <td mat-cell *matCellDef="let element"> {{element.mesa}} </td>
+              </ng-container>
+
+              <!-- Tipo pago Column -->
+              <ng-container matColumnDef="tipoPago">
+                <th mat-header-cell *matHeaderCellDef> Tipo pago </th>
+                <td mat-cell *matCellDef="let element"> {{element.tipoPago}} </td>
+              </ng-container>
+
+              <!-- Id cliente Column -->
+              <ng-container matColumnDef="idCliente">
+                <th mat-header-cell *matHeaderCellDef> Id cliente </th>
+                <td mat-cell *matCellDef="let element"> {{element.idCliente}} </td>
+              </ng-container>
+
+              <!-- Fecha Column -->
+              <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+              </ng-container>
+
+              <!-- Hora Column -->
+              <ng-container matColumnDef="hora">
+                <th mat-header-cell *matHeaderCellDef> Hora </th>
+                <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
+              </ng-container>
+
+              <!-- Total Column -->
+              <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef> Total </th>
+                <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+              </ng-container>
+
+
+              <!-- Estado Column -->
+              <ng-container matColumnDef="estado">
+                <th mat-header-cell *matHeaderCellDef> Estado </th>
+                <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+              </ng-container>
+
+              <!-- Modificar Column -->
+              <ng-container matColumnDef="modificar">
+                <th mat-header-cell *matHeaderCellDef> Modificar </th>
+                <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary" (click)="openDialog('pago', element)">Modificar</button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsPago"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsPago;" (click)="selection.toggle(row)">
+              </tr>
+            </table>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
 </section>

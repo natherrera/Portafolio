@@ -210,9 +210,21 @@
                                                 </a>
                                             </li>
                                             <li *ngIf="profile === 'cajero'">
-                                                <a routerLink="/orderdetails">
+                                                <a routerLink="/panelCajero">
                                                     <div class="icon"><i class="flaticon-takeaway"></i>
-                                                    </div> <span class="details">Crear pedido</span>
+                                                    </div> <span class="details">Panel de caja</span>
+                                                </a>
+                                            </li>
+                                            <li *ngIf="profile === 'cajero'">
+                                                <a routerLink="/panelCocina">
+                                                    <div class="icon"><i class="flaticon-takeaway"></i>
+                                                    </div> <span class="details">Panel de cocina</span>
+                                                </a>
+                                            </li>
+                                            <li *ngIf="profile === 'mesero'">
+                                                <a routerLink="/panelMesero">
+                                                    <div class="icon"><i class="flaticon-takeaway"></i>
+                                                    </div> <span class="details">Panel de pedidos</span>
                                                 </a>
                                             </li>
                                             <li *ngIf="profile === 'cliente'">

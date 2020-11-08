@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Modificar estado y forma de pago</h1>
+<div mat-dialog-content>
+  <p>Mesa: {{data.mesa}}</p>
+  <p>Ubicación: {{data.ubicacion}}</p>
+  <mat-form-field>
+    <mat-label>Tipo de pago</mat-label>
+    <mat-select [(ngModel)]="tipoPago">
+      <mat-option value="Tarjeta">Tarjeta</mat-option>
+      <mat-option value="Efectivo">Efectivo</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Estado</mat-label>
+    <mat-select [(ngModel)]="estado">
+      <mat-option value="Solicita cuenta">Solicita cuenta</mat-option>
+      <mat-option value="En espera">En espera</mat-option>
+      <mat-option value="Pagada">Pagada</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="handleClickModificar()">Modificar</button>
+</div>

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Modificar disponibilidad mesa</h1>
+<div mat-dialog-content>
+  <p>Mesa: {{data.mesa}}</p>
+  <p>Ubicación: {{data.ubicacion}}</p>
+  <mat-form-field>
+    <mat-label>Disponibilidad</mat-label>
+    <mat-select [(ngModel)]="disponibilidad">
+      <mat-option value="Ocupada">Ocupada</mat-option>
+      <mat-option value="Disponible">Disponible</mat-option>
+      <mat-option value="Reservada">Reservada</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="handleClickModificar()">Modificar</button>
+</div>

@@ -13,3 +13,11 @@
 .mat-select, .mat-option {
   font-family: 'Poppins', sans-serif !important;
 }
+
+table {
+  width: 100%;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}

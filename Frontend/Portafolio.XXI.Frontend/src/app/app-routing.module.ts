@@ -21,10 +21,13 @@ import { OrderdetailsComponent } from './pages/orderdetails/orderdetails.compone
 import { GeolocatorComponent } from './pages/geolocator/geolocator.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthorizatedGuard } from "../utils/mock-core/guards/authorizated.guard";
+import { PanelCajeroComponent } from './pages/panelCajero/panelCajero.component';
+import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component';
+import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component';
 
 const appRoutes: Routes = [
   {
-    path: '', 
+    path: '',
     redirectTo: 'login',
     pathMatch: 'full'
   },
@@ -52,7 +55,10 @@ const appRoutes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'orderdetails', component: OrderdetailsComponent },
   { path: 'geolocator', component: GeolocatorComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'panelCajero', component: PanelCajeroComponent },
+  { path: 'panelMesero', component: PanelMeseroComponent },
+  { path: 'panelCocina', component: PanelCocinaComponent },
 ];
 
 export const Routing = RouterModule.forRoot(appRoutes);

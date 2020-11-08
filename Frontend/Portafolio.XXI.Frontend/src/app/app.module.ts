@@ -12,6 +12,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 import { AppComponent } from './app.component';
@@ -49,6 +52,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PanelCajeroComponent } from './pages/panelCajero/panelCajero.component';
 import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component';
 import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component';
+import { DialogContentMesaComponent } from './pages/panelMesero/DialogContentMesa/dialogContentMesa.component';
+import { DialogContentCocinaComponent } from './pages/panelMesero/DialogContentCocina/dialogContentCocina.component';
+import { DialogContentPagoComponent } from './pages/panelMesero/DialogContentPago/dialogContentPago.component';
 
 
 @NgModule({
@@ -88,6 +94,9 @@ import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component'
     PanelCajeroComponent,
     PanelCocinaComponent,
     PanelMeseroComponent,
+    DialogContentMesaComponent,
+    DialogContentCocinaComponent,
+    DialogContentPagoComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +110,10 @@ import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component'
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MatInputModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [
     Location, {
