@@ -1,0 +1,28 @@
+<table mat-table
+[dataSource]="dataSourcePedido" multiTemplateDataRows
+class="mat-elevation-z8">
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumnsPedido">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+    </ng-container>
+
+    <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+    <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumnsPedido.length">
+        <div class="example-element-detail"
+            [@detailExpand]="element == expandedElementPedido ? 'expanded' : 'collapsed'">
+        <div class="example-element-description">
+            {{element.comestibles | json}}
+        </div>
+        </div>
+    </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsPedido"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumnsPedido;"
+        class="example-element-row"
+        [class.example-expanded-row]="expandedElementPedido === element"
+        (click)="expandedElementPedido = expandedElementPedido === element ? null : element">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>

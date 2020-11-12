@@ -49,14 +49,15 @@ import { RestaurantrightsidebarComponent } from './layouts/restaurantrightsideba
 import { Advertisementbanner1Component } from './layouts/advertisementbanner1/advertisementbanner1.component';
 import { Advertisementbanner2Component } from './layouts/advertisementbanner2/advertisementbanner2.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { PanelCajeroComponent } from './pages/panelCajero/panelCajero.component';
-import { PanelCocinaComponent } from './pages/panelCocina/panelCocina.component';
-import { PanelMeseroComponent } from './pages/panelMesero/panelMesero.component';
-import { DialogContentMesaComponent } from './pages/panelMesero/DialogContentMesa/dialogContentMesa.component';
-import { DialogContentCocinaComponent } from './pages/panelMesero/DialogContentCocina/dialogContentCocina.component';
-import { DialogContentPagoComponent } from './pages/panelMesero/DialogContentPago/dialogContentPago.component';
-import { DialogContentPedidoComponent } from './pages/panelMesero/DialogContentPedido/dialogContentPedido.component';
-
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DialogContentMesaComponent } from './pages/dashboard/modalVistas/DialogContentMesa/dialogContentMesa.component';
+import { DialogContentCocinaComponent } from './pages/dashboard/modalVistas/DialogContentCocina/dialogContentCocina.component';
+import { DialogContentPagoComponent } from './pages/dashboard/modalVistas/DialogContentPago/dialogContentPago.component';
+import { DialogContentPedidoComponent } from './pages/dashboard/modalVistas/DialogContentPedido/dialogContentPedido.component';
+import { VistamesasComponent } from './pages/dashboard/tablaVistas/vistaMesas/vistaMesas.component';
+import { VistacocinaComponent } from './pages/dashboard/tablaVistas/vistaCocina/vistaCocina.component';
+import { VistapagoComponent } from './pages/dashboard/tablaVistas/vistaPago/vistaPago.component';
+import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/vistaPedido.component';
 
 @NgModule({
   declarations: [
@@ -92,13 +93,15 @@ import { DialogContentPedidoComponent } from './pages/panelMesero/DialogContentP
     Advertisementbanner1Component,
     Advertisementbanner2Component,
     ContactComponent,
-    PanelCajeroComponent,
-    PanelCocinaComponent,
-    PanelMeseroComponent,
+    DashboardComponent,
     DialogContentMesaComponent,
     DialogContentCocinaComponent,
     DialogContentPagoComponent,
-    DialogContentPedidoComponent
+    DialogContentPedidoComponent,
+    VistamesasComponent,
+    VistacocinaComponent,
+    VistapagoComponent,
+    VistapedidoComponent
   ],
   imports: [
     BrowserModule,

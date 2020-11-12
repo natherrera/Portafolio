@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<section class="section-padding restaurent-meals bg-light-theme">
+  <div class="container-fluid padding-30">
+    <mat-tab-group animationDuration="0ms">
+      <!-- TABLA GESTION MESAS -->
+      <mat-tab label="Gestión de mesas">
+        <div>
+          <app-vistamesas></app-vistamesas>
+        </div>
+      </mat-tab>
+      <!-- TABLA GESTION COCINA -->
+      <mat-tab label="Gestión Cocina">
+        <div>
+          <app-vistacocina></app-vistacocina>
+        </div>
+      </mat-tab>
+      <!-- TABLA GESTION PAGO -->
+      <mat-tab label="Gestion Pago">
+        <div>
+          <app-vistapago></app-vistapago>
+        </div>
+      </mat-tab>
+      <!-- TABLA GESTION PEDIDO -->
+      <mat-tab label="Gestion Pedido">
+        <div>
+          <app-vistapedido></app-vistapedido>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</section>
