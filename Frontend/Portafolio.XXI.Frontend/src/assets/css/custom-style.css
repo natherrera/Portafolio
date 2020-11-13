@@ -21,3 +21,13 @@ table {
 .mat-tab-group {
   margin-bottom: 48px;
 }
+
+.button-container {
+  width: 100%;
+  text-align: right;
+}
+
+.button-container a {
+  margin: 1em .5em 0;
+  min-width: 9em;
+}

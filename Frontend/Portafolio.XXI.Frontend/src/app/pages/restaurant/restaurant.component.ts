@@ -22,6 +22,7 @@ export class RestaurantComponent implements OnInit
   public tipoAtencion: string;
   public mesa: string;
   public wishList: Array<any> = [];
+  public orden: any = {};
   selectedTypeAttention: string;
   tipoOrdenList: Array<Object> = [{value:'local',viewValue:'Atención en el local'}, {value:'retiro',viewValue:'Retiro en tienda'}];
   mesasDisponibles: Array<Object> = [{id: "1", mesa: "1", ubicacion: "entrada", estado: true},{id: "2", mesa: "2", ubicacion: "pasillo", estado: true},{id: "3", mesa: "3", ubicacion: "pasillo", estado: true},{id: "4", mesa: "4", ubicacion: "ventana", estado: true}]
@@ -41,9 +42,12 @@ export class RestaurantComponent implements OnInit
 
   handleChangeTipoAtencion = (e) => {
    this.tipoAtencion = e.value;
+   this.orden.tipoAtencion = e.value;
+   console.log(this.orden);
   }
   handleChangeMesa = (e) => {
     this.mesa = e.value;
+    this.orden.mesa = e.value;
   }
 
   handleClickProduct = (producto: any) =>
