@@ -3,7 +3,8 @@ import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 
-import {DialogContentPedidoComponent} from '../../modalVistas/DialogContentPedido/dialogContentPedido.component';
+import {DialogModificarComponent} from '../../modalVistas/DialogPedido/modificar/dialogModificar.component';
+import {DialogVerComponent} from '../../modalVistas/DialogPedido/ver/dialogVer.component';
 import { PEDIDO_DATA } from '../../../../../utils/mock-responses/pedidos/pedidosResponse';
 import { Pedido } from '../../../../../utils/mock-core/models/pedido.model';
 import {animate, state, style, transition, trigger} from '@angular/animations';
@@ -21,9 +22,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class VistapedidoComponent implements OnInit
 {
-  displayedColumnsPedido: string[] = ['select', 'id', 'mesa', 'tipoEntrega', 'idCliente', 'fecha','hora', 'estadoPreparacion','subtotal', 'total'];
+  displayedColumnsPedido: string[] = ['select', 'id', 'mesa', 'tipoEntrega', 'idCliente', 'fecha','hora', 'estadoPreparacion','subtotal', 'total', 'modificar', 'ver'];
   dataSourcePedido = new MatTableDataSource<Pedido>(PEDIDO_DATA);
-  expandedElementPedido: string[] = ['Comestibles', 'Bebestibles'];
 
   selection = new SelectionModel<Pedido>(true, []);
 
@@ -34,8 +34,22 @@ export class VistapedidoComponent implements OnInit
   {
   }
 
-  openDialog(tipo: string, element: any) {
-    let DialogContentComponent = DialogContentPedidoComponent;
+  openDialog(element: any, type: string) {
+    let DialogContentComponent;
+    switch (type) {
+      case 'modificar':
+        DialogContentComponent = DialogModificarComponent;
+        console.log('modificar');
+        break;
+
+        case 'ver':
+          DialogContentComponent = DialogVerComponent;
+          console.log('ver');
+          break;
+
+      default:
+        break;
+    }
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
     dialogRef.afterClosed().subscribe(result => {
       // console.log('Resultado de modal de ' + tipo + ':', result)

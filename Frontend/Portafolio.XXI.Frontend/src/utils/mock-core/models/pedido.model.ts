@@ -13,7 +13,9 @@ export interface Pedido {
 }
 
 export interface DetalleProducto {
-    idProducto: string;
+    idProducto: number;
+    nombreProducto: string;
     cantidad: number;
+    total: number;
 }
 

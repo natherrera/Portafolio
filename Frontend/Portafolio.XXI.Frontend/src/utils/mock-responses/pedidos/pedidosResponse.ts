@@ -2,135 +2,165 @@ import { Pedido } from './../../mock-core/models/pedido.model';
 
 export const PEDIDO_DATA: Pedido[] = [
     {
-       "id":"",
-       "mesa":"",
-       "tipoEntrega":"",
-       "idCliente":"",
-       "fecha":"",
-       "hora":"",
-       "estadoPreparacion":"",
+       "id":"1",
+       "mesa":"2",
+       "tipoEntrega":"Retiro",
+       "idCliente":"3",
+       "fecha":"20/11/2020",
+       "hora":"09:00",
+       "estadoPreparacion":"En preparacion",
        "comestibles":[
           {
-             "idProducto": "1",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           },
           {
-             "idProducto": "2",
-             "cantidad":1
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "bebestibles":[
           {
-             "idProducto": "3",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "subtotal":23000,
        "total":345984
     },
     {
-       "id":"",
-       "mesa":"",
-       "tipoEntrega":"",
-       "idCliente":"",
-       "fecha":"",
-       "hora":"",
-       "estadoPreparacion":"",
+      "id":"2",
+      "mesa":"2",
+      "tipoEntrega":"Retiro",
+      "idCliente":"3",
+      "fecha":"20/11/2020",
+      "hora":"09:00",
+      "estadoPreparacion":"En preparacion",
        "comestibles":[
           {
-             "idProducto": "1",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           },
           {
-             "idProducto": "2",
-             "cantidad":1
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "bebestibles":[
           {
-             "idProducto": "3",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "subtotal":23000,
        "total":345984
     },
     {
-       "id":"",
-       "mesa":"",
-       "tipoEntrega":"",
-       "idCliente":"",
-       "fecha":"",
-       "hora":"",
-       "estadoPreparacion":"",
+      "id":"3",
+      "mesa":"2",
+      "tipoEntrega":"Retiro",
+      "idCliente":"3",
+      "fecha":"20/11/2020",
+      "hora":"09:00",
+      "estadoPreparacion":"En preparacion",
        "comestibles":[
           {
-             "idProducto": "1",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           },
           {
-             "idProducto": "2",
-             "cantidad":1
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "bebestibles":[
           {
-             "idProducto": "3",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "subtotal":23000,
        "total":345984
     },
     {
-       "id":"",
-       "mesa":"",
-       "tipoEntrega":"",
-       "idCliente":"",
-       "fecha":"",
-       "hora":"",
-       "estadoPreparacion":"",
+      "id":"4",
+      "mesa":"2",
+      "tipoEntrega":"Retiro",
+      "idCliente":"3",
+      "fecha":"20/11/2020",
+      "hora":"09:00",
+      "estadoPreparacion":"En preparacion",
        "comestibles":[
           {
-             "idProducto": "1",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           },
           {
-             "idProducto": "2",
-             "cantidad":1
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "bebestibles":[
           {
-             "idProducto": "3",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "subtotal":23000,
        "total":345984
     },
     {
-       "id":"",
-       "mesa":"",
-       "tipoEntrega":"",
-       "idCliente":"",
-       "fecha":"",
-       "hora":"",
-       "estadoPreparacion":"",
+      "id":"5",
+      "mesa":"2",
+      "tipoEntrega":"Retiro",
+      "idCliente":"3",
+      "fecha":"20/11/2020",
+      "hora":"09:00",
+      "estadoPreparacion":"En preparacion",
        "comestibles":[
           {
-             "idProducto":"1",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           },
           {
-             "idProducto":"2",
-             "cantidad":1
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "bebestibles":[
           {
-             "idProducto":"3",
-             "cantidad":2
+            "idProducto": 1,
+            "nombreProducto": "Test",
+            "cantidad": 2,
+            "total": 23000
           }
        ],
        "subtotal":23000,

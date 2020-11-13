@@ -2,12 +2,12 @@ import { Component, OnInit, Inject} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialogContentPedido.component',
-  templateUrl: './dialogContentPedido.component.html',
+  selector: 'app-dialogModificar.component',
+  templateUrl: './dialogModificar.component.html',
 })
-export class DialogContentPedidoComponent implements OnInit
+export class DialogModificarComponent implements OnInit
 {
-  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogContentPedidoComponent>)
+  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogModificarComponent>)
   { }
 
   tipoPago: string = this.data.tipoPago;

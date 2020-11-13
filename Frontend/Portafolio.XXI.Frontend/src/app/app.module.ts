@@ -53,11 +53,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DialogContentMesaComponent } from './pages/dashboard/modalVistas/DialogContentMesa/dialogContentMesa.component';
 import { DialogContentCocinaComponent } from './pages/dashboard/modalVistas/DialogContentCocina/dialogContentCocina.component';
 import { DialogContentPagoComponent } from './pages/dashboard/modalVistas/DialogContentPago/dialogContentPago.component';
-import { DialogContentPedidoComponent } from './pages/dashboard/modalVistas/DialogContentPedido/dialogContentPedido.component';
 import { VistamesasComponent } from './pages/dashboard/tablaVistas/vistaMesas/vistaMesas.component';
 import { VistacocinaComponent } from './pages/dashboard/tablaVistas/vistaCocina/vistaCocina.component';
 import { VistapagoComponent } from './pages/dashboard/tablaVistas/vistaPago/vistaPago.component';
 import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/vistaPedido.component';
+import { DialogModificarComponent } from './pages/dashboard/modalVistas/DialogPedido/modificar/dialogModificar.component';
+import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/ver/dialogVer.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/
     DialogContentMesaComponent,
     DialogContentCocinaComponent,
     DialogContentPagoComponent,
-    DialogContentPedidoComponent,
+    DialogModificarComponent,
+    DialogVerComponent,
     VistamesasComponent,
     VistacocinaComponent,
     VistapagoComponent,
