@@ -6,12 +6,38 @@
       <div class="col-lg-1"></div>
 
       <div class="col-lg-10">
+
+        <section class="recent-order" style="margin-bottom: 1.5em;">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-header-left">
+                <h3 class="text-light-black header-title title">¿Qué quieres hacer hoy?</h3>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-xl-20 card-picture">
+                <img src="assets/img/banner/order-2.jpg" class="img-fluid full-width" alt="image">
+                <div class="category-type overlay padding-15">
+                  <button class="category-btn" routerLink="/restaurant">Nuevo pedido</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-xl-20 card-picture">
+                <img src="assets/img/banner/reserva.jpg" class="img-fluid full-width" alt="image">
+                <div class="category-type overlay padding-15">
+                  <button class="category-btn" routerLink="/contact">Nueva reserva</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="container-bg">
           <div class="col-12">
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card-metricas">
-                  <span class="box-text">Mesas disponibles</span>
+                  <span class="box-text">Pedidos en proceso</span>
                   <span class="box-nro">10</span>
                 </div>
               </div>
@@ -23,7 +49,7 @@
               </div>
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card-metricas">
-                  <span class="box-text">Pedidos hoy</span>
+                  <span class="box-text">Total pedidos hoy</span>
                   <span class="box-nro">10</span>
                 </div>
               </div>
@@ -41,28 +67,30 @@
             <div class="row">
               <div class="col-xl-2 col-lg-3 mb-md-40">
                 <ul class="step-steps steps-2">
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'pedidos')}" > <a (click)="currentPage = 'pedidos'"
-                      class="add-res-tab">Pedidos</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'pedidos')}"> <a
+                      (click)="currentPage = 'pedidos'" class="add-res-tab">Pedidos</a>
                   </li>
-                  <li class="add-res-tab"  [ngClass]="{'active' : (currentPage === 'mesas')}"> <a (click)="currentPage = 'mesas'" class="add-res-tab">Mesas</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'mesas')}"> <a
+                      (click)="currentPage = 'mesas'" class="add-res-tab">Mesas</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}"> <a (click)="currentPage = 'productos'"
-                      class="add-res-tab">Productos</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}"> <a
+                      (click)="currentPage = 'productos'" class="add-res-tab">Productos</a>
                   </li>
 
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}"> <a (click)="currentPage = 'cocina'"
-                      class="add-res-tab">Cocina</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}"> <a
+                      (click)="currentPage = 'cocina'" class="add-res-tab">Cocina</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}"> <a (click)="currentPage = 'personal'"
-                      class="add-res-tab">Personal</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}"> <a
+                      (click)="currentPage = 'personal'" class="add-res-tab">Personal</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}"> <a (click)="currentPage = 'insumos'" class="add-res-tab">Insumos</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}"> <a
+                      (click)="currentPage = 'insumos'" class="add-res-tab">Insumos</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}"> <a (click)="currentPage = 'reservas'"
-                      class="add-res-tab">Reservas</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}"> <a
+                      (click)="currentPage = 'reservas'" class="add-res-tab">Reservas</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}"> <a (click)="currentPage = 'caja'"
-                      class="add-res-tab">Caja</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}"> <a
+                      (click)="currentPage = 'caja'" class="add-res-tab">Caja</a>
                   </li>
                 </ul>
               </div>

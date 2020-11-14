@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<section class="section-padding contact-top bg-light-theme">
+<!-- <section class="section-padding contact-top bg-light-theme">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -22,46 +22,69 @@
             </div>
         </div>
     </div>
-</section>
-<section class="section-padding contact-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header-left title">
-                    <h3 class="text-light-black header-title">Get In Touch</h3>
+</section> -->
+<div class="inner-wrapper">
+    <div class="container-fluid no-padding">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="main-banner">
+                    <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width main-img" alt="banner">
+                    <!-- <div class="overlay-2 main-padding">
+                        <img src="assets/img/logo-2.jpg" class="img-fluid" alt="logo">
+                    </div> -->
+                    <!-- <img src="assets/img/banner/burger.png" class="footer-img" alt="footer-img"> -->
                 </div>
-                <form (submit)="sendEmail($event)">
-                    <div class="row clearfix">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="from_name" class="form-control form-control-submit" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="to_email" class="form-control form-control-submit" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="to_phone" class="form-control form-control-submit" placeholder="Phone No." required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="to_subject" class="form-control form-control-submit" placeholder="Subject" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea name="message_html" class="form-control form-control-submit" placeholder="Message" required></textarea>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-2 main-page main-padding">
+                    <div class="top-nav">
+                        <h5><a routerLink="/restaurant" class="text-light-green fw-700">Hacer un pedido</a></h5>
+                        <!-- <h5><a routerLink="/login" class="text-light-green fw-700">Sign in</a></h5> -->
+                    </div>
+                    <div class="login-box">
                         <div class="col-12">
-                            <button type="submit" class="btn-second btn-submit">Submit</button>
+                            <h1 class="text-light-black fw-700">En Siglo XXI siempre puedes reservar</h1>
+                            <div class="input-group row">
+                                <div class="form-group">
+                                    <input type="text" name="from_name" class="form-control form-control-submit"
+                                        placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="to_email" class="form-control form-control-submit"
+                                        placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="to_phone" class="form-control form-control-submit"
+                                        placeholder="Telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="to_subject" class="form-control form-control-submit"
+                                        placeholder="Cantidad de personas" required>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn-second btn-submit" type="button">Reservar</button>
+                                </div>
+                                <div class="input-group2 col-xl-8">
+                                    <!-- <input type="search" class="form-control form-control-submit" placeholder="Enter street address or zip code" value="1246 57th St, Brooklyn, NY, 11219"> -->
+
+                                    <!-- <div class="input-group-prepend">
+                                        <button class="input-group-text text-light-green"><i
+                                                class="fab fa-telegram-plane"></i>
+                                        </button>
+                                    </div> -->
+                                </div>
+                                <div class="input-group-append">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            
         </div>
     </div>
-</section>
-<div class="contact-map">
-    <iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
 </div>
-    <app-footer2></app-footer2>
+<!--  -->
+<!-- <div class="contact-map">
+    <iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+</div> -->
+<!-- <app-footer2></app-footer2> -->

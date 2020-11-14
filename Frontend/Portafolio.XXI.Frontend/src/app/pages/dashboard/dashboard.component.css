@@ -41,3 +41,15 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example-element-description-attribution {
   opacity: 0.5;
 }
+
+.card-picture {
+  overflow: hidden;
+  height: 26em;
+  border-radius: 12px;
+}
+
+.category-btn {
+  position: relative;
+  left: 1em;
+  background-color: #64b5f6 !important;
+}
