@@ -53,7 +53,7 @@ const appRoutes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'orderdetails', component: OrderdetailsComponent },
   { path: 'geolocator', component: GeolocatorComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'reservas', component: ContactComponent },
   { path: 'dashboard', component: DashboardComponent },
 ];
 

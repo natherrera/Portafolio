@@ -53,3 +53,7 @@ tr.example-element-row:not(.example-expanded-row):active {
   left: 1em;
   background-color: #64b5f6 !important;
 }
+
+.mat-tab-body-content {
+  overflow: inherit !important;
+}

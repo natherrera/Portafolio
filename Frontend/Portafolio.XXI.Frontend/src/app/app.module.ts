@@ -15,6 +15,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 
 import { AppComponent } from './app.component';
@@ -59,6 +61,11 @@ import { VistapagoComponent } from './pages/dashboard/tablaVistas/vistaPago/vist
 import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/vistaPedido.component';
 import { DialogModificarComponent } from './pages/dashboard/modalVistas/DialogPedido/modificar/dialogModificar.component';
 import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/ver/dialogVer.component';
+import { VistaproductoComponent } from './pages/dashboard/tablaVistas/vistaProducto/vistaproducto.component';
+import { VistapersonalComponent } from './pages/dashboard/tablaVistas/vistaPersonal/vistapersonal.component';
+import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
+import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
+import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
 
 @NgModule({
   declarations: [
@@ -100,13 +107,18 @@ import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/v
     DialogContentPagoComponent,
     DialogModificarComponent,
     DialogVerComponent,
+    DialogContentProductoComponent,
     VistamesasComponent,
     VistacocinaComponent,
     VistapagoComponent,
-    VistapedidoComponent
+    VistapedidoComponent,
+    VistaproductoComponent,
+    VistapersonalComponent,
+    VistainsumosComponent,
+    VistareservasComponent,
   ],
   imports: [
-    BrowserModule,
+BrowserModule,
     Routing,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -120,7 +132,9 @@ import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/v
     MatTableModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [
     Location, {

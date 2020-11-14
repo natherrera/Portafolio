@@ -59,9 +59,49 @@
     </mat-tab>
     <!-- TABLA GESTION COCINA -->
     <mat-tab label="Crear mesa">
-      <div>
-        crear mesa
-      </div>
+      <form id="crearMesa-form" #cmForm="ngForm" [formGroup]="crearMesaForm" (ngSubmit)="crearMesa()"
+      novalidate>
+        <div class="row">
+          <div class="col-12" style="margin-top: 1em">
+            <!-- <h5 class="text-light-black fw-700">General Information</h5> -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Nombre mesa<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreMesa">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Ubicación
+              </label>
+              <br>
+              <mat-form-field appearance="fill">
+                  <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                  <mat-select formControlName="ubicacion" required>
+                      <mat-option  value="1">
+                          Terraza
+                      </mat-option>
+                      <mat-option  value="2">
+                          Interior
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Capacidad</label>
+              <input type="number" name="#" class="form-control form-control-submit" formControlName="capacidad">
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <button type="submit" class="btn-second btn-submit">Crear mesa</button>
+          </div>
+        </div>
+      </form>
     </mat-tab>
   </mat-tab-group>
 </div>

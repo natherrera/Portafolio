@@ -5,22 +5,35 @@ import {MatDialog} from '@angular/material/dialog';
 import {DialogContentMesaComponent} from '../../modalVistas/DialogContentMesa/dialogContentMesa.component';
 import { MESAS_DATA } from '../../../../../utils/mock-responses/mesas/mesasResponse';
 import { Mesas } from '../../../../../utils/mock-core/models/mesas.model';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { StorageService } from 'src/services/storage.service';
 
 @Component({
   selector: 'app-vistamesas',
   templateUrl: './vistaMesas.component.html',
+  styleUrls: ['./vistamesas.component.css']
 })
 export class VistamesasComponent implements OnInit
 {
   displayedColumnsMesas: string[] = ['select', 'id', 'mesa', 'ubicacion', 'estado', 'modificar'];
   dataSourceMesas = new MatTableDataSource<Mesas>(MESAS_DATA);
   selection = new SelectionModel<Mesas>(true, []);
-
-  constructor (public dialog: MatDialog) { }
+  public crearMesaForm: FormGroup;
+  constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
 
 
   ngOnInit(): void
   {
+    this.crearMesaForm = this.formBuilder.group({
+      nombreMesa: ['', Validators.required],
+      ubicacion: ['', Validators.required],
+      capacidad: ['', Validators.required]
+    })
+  }
+
+  public crearMesa()
+  {
+    console.log('crear mesa');
   }
 
   openDialog(tipo: string, element: any) {
