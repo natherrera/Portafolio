@@ -65,7 +65,19 @@ table {
 
 .container-bg {
   display: flex;
-border-radius: 3px;
-background: #eee;
-margin-bottom: 20px;
+  border-radius: 3px;
+  background: #eee;
+  margin-bottom: 20px;
+}
+
+#add-restaurent-tab .steps-2 > li.done a.add-res-tab,
+#add-restaurent-tab .steps-2 > li.active a.add-res-tab {
+  color: black !important;
+  background: #b4ffff !important;
+  border-color: #b4ffff !important;
+}
+
+#add-restaurent-tab .steps-2 > li > a.add-res-tab {
+  padding: 6px 16px !important;
+  font-size: 13px !important;
 }

@@ -49,6 +49,10 @@
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}"> <a (click)="currentPage = 'productos'"
                       class="add-res-tab">Productos</a>
                   </li>
+
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}"> <a (click)="currentPage = 'cocina'"
+                      class="add-res-tab">Cocina</a>
+                  </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}"> <a (click)="currentPage = 'personal'"
                       class="add-res-tab">Personal</a>
                   </li>
@@ -57,6 +61,9 @@
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}"> <a (click)="currentPage = 'reservas'"
                       class="add-res-tab">Reservas</a>
                   </li>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}"> <a (click)="currentPage = 'caja'"
+                      class="add-res-tab">Caja</a>
+                  </li>
                 </ul>
               </div>
               <div class="col-xl-10 col-lg-8">
@@ -64,37 +71,36 @@
                   <div class="step-tab-panel active" id="steppanel1">
                     <div class="general-sec">
                       <!-- GESTION TABLAS -->
-
-                      <!-- <section class="section-padding restaurent-meals bg-light-theme"> -->
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'pedidos'">
-                        <mat-tab-group animationDuration="0ms">
-                          <!-- TABLA GESTION MESAS -->
-                          <mat-tab label="Gestión de mesas">
-                            <div>
-                              <app-vistamesas></app-vistamesas>
-                            </div>
-                          </mat-tab>
-                          <!-- TABLA GESTION COCINA -->
-                          <mat-tab label="Gestión Cocina">
-                            <div>
-                              <app-vistacocina></app-vistacocina>
-                            </div>
-                          </mat-tab>
-                          <!-- TABLA GESTION PAGO -->
-                          <mat-tab label="Gestion Pago">
-                            <div>
-                              <app-vistapago></app-vistapago>
-                            </div>
-                          </mat-tab>
-                          <!-- TABLA GESTION PEDIDO -->
-                          <mat-tab label="Gestion Pedido">
-                            <div>
-                              <app-vistapedido></app-vistapedido>
-                            </div>
-                          </mat-tab>
-                        </mat-tab-group>
+                        <app-vistapedido></app-vistapedido>
                       </div>
-                      <!-- </section> -->
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'mesas'">
+                        <app-vistamesas></app-vistamesas>
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'productos'">
+
+                      </div>
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'cocina'">
+                        <app-vistacocina></app-vistacocina>
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'personal'">
+
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'insumos'">
+
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'reservas'">
+
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'caja'">
+                        <app-vistapago></app-vistapago>
+                      </div>
 
                       <!-- GESTION TABLAS -->
                     </div>
