@@ -10,8 +10,10 @@
   color: red;
 }
 
-.mat-select, .mat-option {
-  font-family: 'Poppins', sans-serif !important;
+*,
+.mat-select,
+.mat-option {
+  font-family: "Poppins", sans-serif !important;
 }
 
 table {
@@ -28,6 +30,42 @@ table {
 }
 
 .button-container a {
-  margin: 1em .5em 0;
+  margin: 1em 0.5em 0;
   min-width: 9em;
+}
+
+.card-metricas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 6px;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  text-align: right;
+  padding: 0 1em;
+}
+
+.card-metricas .box-text {
+  color: #999 !important;
+  font-size: 14px !important;
+  padding-top: 10px;
+  margin: 0;
+}
+.card-metricas .box-nro {
+  font-size: 1.5625rem !important;
+  color: #3c4858 !important;
+}
+
+.container-bg {
+  display: flex;
+border-radius: 3px;
+background: #eee;
+margin-bottom: 20px;
 }

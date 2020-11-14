@@ -8,11 +8,12 @@ import { Component, OnInit} from '@angular/core';
 
 export class DashboardComponent implements OnInit
 {
-
+  currentPage: string;
   constructor () { }
 
   ngOnInit(): void
   {
+    this.currentPage = 'pedidos';
   }
 
 
