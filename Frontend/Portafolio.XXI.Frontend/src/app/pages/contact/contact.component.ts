@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { StorageService } from 'src/services/storage.service';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -8,21 +10,33 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public reservaForm: FormGroup;
+  nombre: string;
+  email: string;
+  telefono: string;
+  cantidadPersonas: number;
+  reserva: any = {};
+  public error: {code: number, message: string} = null;
 
-  public sendEmail(e: Event) {
-    e.preventDefault();
-    emailjs.sendForm('smtp_server', 'template_8uQnFG6N_clone', e.target as HTMLFormElement, 'user_XWPdjpTv0DgrQb9FN3tWr')
-      .then((result: EmailJSResponseStatus) => {
-        alert("This form has been submitted.");
-        location.href = '#'
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+  constructor(private formBuilder: FormBuilder,
+    private storageService: StorageService,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.reservaForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      nombre: ['', Validators.required],
+      cantidadPersonas: ['', Validators.required],
+      telefono: ['', Validators.required],
+    })
+  }
+
+  public submitReserva()
+  {
+    if (this.reservaForm.valid)
+    {
+      this.storageService.setCurrentReserva(this.reservaForm.value);
+    }
   }
 
 }

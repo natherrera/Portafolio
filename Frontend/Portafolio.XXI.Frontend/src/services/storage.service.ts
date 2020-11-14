@@ -30,6 +30,14 @@ export class StorageService {
     return this.localStorageService.getItem('solicitudAtencion');
   }
 
+  setCurrentReserva(reserva: any): void {
+    this.localStorageService.setItem('reserva', JSON.stringify(reserva));
+  }
+
+  getCurrentReserva(): void {
+    return this.localStorageService.getItem('reserva');
+  }
+
   setCurrentOrder(order: any): void {
     this.localStorageService.setItem('order', JSON.stringify(order));
   }

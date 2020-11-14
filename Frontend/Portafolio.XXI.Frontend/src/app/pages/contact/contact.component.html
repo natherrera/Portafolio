@@ -45,36 +45,31 @@
                         <div class="col-12">
                             <h1 class="text-light-black fw-700">En Siglo XXI siempre puedes reservar</h1>
                             <div class="input-group row">
-                                <div class="form-group">
-                                    <input type="text" name="from_name" class="form-control form-control-submit"
-                                        placeholder="Nombre" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="to_email" class="form-control form-control-submit"
-                                        placeholder="Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="to_phone" class="form-control form-control-submit"
-                                        placeholder="Telefono" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="to_subject" class="form-control form-control-submit"
-                                        placeholder="Cantidad de personas" required>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn-second btn-submit" type="button">Reservar</button>
-                                </div>
-                                <div class="input-group2 col-xl-8">
-                                    <!-- <input type="search" class="form-control form-control-submit" placeholder="Enter street address or zip code" value="1246 57th St, Brooklyn, NY, 11219"> -->
-
-                                    <!-- <div class="input-group-prepend">
-                                        <button class="input-group-text text-light-green"><i
-                                                class="fab fa-telegram-plane"></i>
-                                        </button>
-                                    </div> -->
-                                </div>
-                                <div class="input-group-append">
-                                </div>
+                                <form id="reserva-form" #rForm="ngForm" [formGroup]="reservaForm" (ngSubmit)="submitReserva()"
+                                    novalidate>
+                                    <div class="form-group">
+                                        <input type="text" name="#" class="form-control form-control-submit" [ngStyle]="{'border-color': error && 'red' }"
+                                            placeholder="Nombre" formControlName="nombre" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="#" class="form-control form-control-submit"
+                                        formControlName="email"
+                                            placeholder="Email" [ngStyle]="{'border-color': error && 'red' }" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="#" class="form-control form-control-submit"
+                                        formControlName="telefono" [ngStyle]="{'border-color': error && 'red' }"
+                                            placeholder="Telefono" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="#" class="form-control form-control-submit"
+                                        formControlName="cantidadPersonas" [ngStyle]="{'border-color': error && 'red' }"
+                                            placeholder="Cantidad de personas" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn-second btn-submit" type="submit" form="reserva-form">Reservar</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
