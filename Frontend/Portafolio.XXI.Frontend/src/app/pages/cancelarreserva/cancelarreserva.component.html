@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<section class="final-order section-padding bg-light-theme">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="main-box padding-20" *ngIf="estadoProceso">
+                <div class="row mb-xl-20">
+                    <div class="col-md-6">
+                        <div class="right-side-content">
+                            <div class="section-header-left title">
+                                <h3 class="text-light-black header-title">Tu cancelación ha sido exitosa</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" style="margin-top: 2em">
+                                    <button type="submit" routerLink="/restaurant"  class="btn-second btn-submit">Volver a inicio</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="advertisement-img">
+                            <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width"
+                                alt="advertisement-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-box padding-20" *ngIf="!estadoProceso">
+                <div class="row mb-xl-20">
+                    <div class="col-md-6">
+                        <div class="right-side-content">
+                            <div class="section-header-left title">
+                                <h3 class="text-light-black header-title">Cancela tu reserva</h3>
+                            </div>
+                            <form id="cancelar-form" #cForm="ngForm" [formGroup]="cancelarForm"
+                            (ngSubmit)="cancelar()" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="text-light-black fw-700">Correo electrónico
+                                        </label>
+                                        <input type="email" class="form-control form-control-submit" formControlName="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12" style="margin-top: 2em">
+                                    <button type="submit" form="cancelar-form" (click)="cancelar()" class="btn-second btn-submit">Cancelar reserva</button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="advertisement-img">
+                            <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width"
+                                alt="advertisement-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+</section>

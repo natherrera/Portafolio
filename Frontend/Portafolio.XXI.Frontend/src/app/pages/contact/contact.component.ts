@@ -33,6 +33,7 @@ export class ContactComponent implements OnInit
   telefono: string;
   cantidadPersonas: number;
   fecha: string;
+  fechareserva: string;
   hora: string;
   esTotem: number = 0;
   reserva: any = [];
@@ -40,6 +41,7 @@ export class ContactComponent implements OnInit
   maxDate: Date;
   dayMax: string;
   dayMin: string;
+  estadoReserva: boolean = false;
   public error: { code: number, message: string } = null;
 
   constructor (private formBuilder: FormBuilder,
@@ -71,7 +73,8 @@ export class ContactComponent implements OnInit
       this.reserva = this.reservaForm.value;
       this.reserva.esTotem = this.esTotem;
       this.reserva.fecha = moment(this.fecha).format('L');
-      console.log(this.reserva, ': this.reserva')
+      this.estadoReserva = true;
+      this.fechareserva = moment(this.fecha).format('LLLL')
       this.storageService.setCurrentReserva(this.reservaForm.value);
     }
   }

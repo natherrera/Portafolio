@@ -22,6 +22,7 @@ import { GeolocatorComponent } from './pages/geolocator/geolocator.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AuthorizatedGuard } from "../utils/mock-core/guards/authorizated.guard";
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserva.component';
 
 const appRoutes: Routes = [
   {
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
   { path: 'geolocator', component: GeolocatorComponent },
   { path: 'reservas', component: ContactComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'cancelar-reserva', component: CancelarreservaComponent },
 ];
 
 export const Routing = RouterModule.forRoot(appRoutes);

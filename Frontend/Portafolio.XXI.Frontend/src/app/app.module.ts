@@ -68,6 +68,7 @@ import { VistapersonalComponent } from './pages/dashboard/tablaVistas/vistaPerso
 import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
+import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserva.component';
 
 @NgModule({
   declarations: [
@@ -118,6 +119,7 @@ import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/Di
     VistapersonalComponent,
     VistainsumosComponent,
     VistareservasComponent,
+    CancelarreservaComponent
   ],
   imports: [
 BrowserModule,

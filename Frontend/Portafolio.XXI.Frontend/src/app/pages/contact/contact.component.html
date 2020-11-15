@@ -1,29 +1,30 @@
 <app-navbar></app-navbar>
-<!-- <section class="section-padding contact-top bg-light-theme">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-sm-6">
-                <div class="contact-info-box mb-md-40">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h6 class="text-theme fw-600">13th Street. 47 W 13th St,<br>  New York, NY 10011, USA</h6>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="contact-info-box mb-md-40">
-                    <i class="fas fa-phone-alt"></i>
-                    <h6 class="text-theme fw-600"><a href="#" class="text-theme">(+347) 123 4567 890</a><br>  Mon-Sat 9:00am-5:00pm</h6>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="contact-info-box">
-                    <i class="fas fa-envelope"></i>
-                    <h6 class="text-theme fw-600"><a href="#" class="text-theme">info@domain.com</a><br>  24 X 7 online support</h6>
+<div class="container-fluid" *ngIf="estadoReserva">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="main-box padding-20">
+                <div class="row mb-xl-20">
+                    <div class="col-md-6">
+                        <div class="right-side-content">
+                            <h1 class="fw-600">Tu reserva ha sido exitosa</h1>
+                            <h3 class="fw-400">Te esperamos el {{fechareserva}}</h3>
+                            <a routerLink="/cancelar" class="btn-second btn-submit">Cancelar reserva</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="advertisement-img">
+                            <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width"
+                                alt="advertisement-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-1"></div>
     </div>
-</section> -->
-<div class="inner-wrapper">
+</div>
+<div class="inner-wrapper" *ngIf="!estadoReserva">
     <div class="container-fluid no-padding">
         <div class="row no-gutters">
             <div class="col-md-4">
@@ -38,7 +39,7 @@
             <div class="col-md-8">
                 <div class="section-2 main-page main-padding">
                     <div class="top-nav">
-                        <h5><a routerLink="/restaurant" class="text-light-green fw-700">Hacer un pedido</a></h5>
+                        <!-- <h5><a routerLink="/restaurant" class="text-light-green fw-700">Hacer un pedido</a></h5> -->
                         <!-- <h5><a routerLink="/login" class="text-light-green fw-700">Sign in</a></h5> -->
                     </div>
                     <div class="login-box">
