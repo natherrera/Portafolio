@@ -26,7 +26,7 @@
 <div class="inner-wrapper">
     <div class="container-fluid no-padding">
         <div class="row no-gutters">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="main-banner">
                     <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width main-img" alt="banner">
                     <!-- <div class="overlay-2 main-padding">
@@ -35,7 +35,7 @@
                     <!-- <img src="assets/img/banner/burger.png" class="footer-img" alt="footer-img"> -->
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="section-2 main-page main-padding">
                     <div class="top-nav">
                         <h5><a routerLink="/restaurant" class="text-light-green fw-700">Hacer un pedido</a></h5>
@@ -45,29 +45,69 @@
                         <div class="col-12">
                             <h1 class="text-light-black fw-700">En Siglo XXI siempre puedes reservar</h1>
                             <div class="input-group row">
-                                <form id="reserva-form" #rForm="ngForm" [formGroup]="reservaForm" (ngSubmit)="submitReserva()"
-                                    novalidate>
-                                    <div class="form-group">
-                                        <input type="text" name="#" class="form-control form-control-submit" [ngStyle]="{'border-color': error && 'red' }"
-                                            placeholder="Nombre" formControlName="nombre" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" name="#" class="form-control form-control-submit"
-                                        formControlName="email"
-                                            placeholder="Email" [ngStyle]="{'border-color': error && 'red' }" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="#" class="form-control form-control-submit"
-                                        formControlName="telefono" [ngStyle]="{'border-color': error && 'red' }"
-                                            placeholder="Telefono" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="#" class="form-control form-control-submit"
-                                        formControlName="cantidadPersonas" [ngStyle]="{'border-color': error && 'red' }"
-                                            placeholder="Cantidad de personas" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn-second btn-submit" type="submit" form="reserva-form">Reservar</button>
+                                <form id="reserva-form" #rForm="ngForm" [formGroup]="reservaForm"
+                                    (ngSubmit)="submitReserva()" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Nombre completo
+                                                </label>
+                                                <input type="text" name="#" class="form-control form-control-submit"
+                                                    [ngStyle]="{'border-color': error && 'red' }"
+                                                    formControlName="nombre" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Correo electrónico
+                                                </label>
+                                                <input type="email" name="#" class="form-control form-control-submit"
+                                                    formControlName="email"
+                                                    [ngStyle]="{'border-color': error && 'red' }" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Telefono
+                                                </label>
+                                                <input type="text" name="#" class="form-control form-control-submit"
+                                                    formControlName="telefono" [ngStyle]="{'border-color': error && 'red' }"
+                                                     required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Cantidad de personas
+                                                </label>
+                                                <input type="number" name="#" class="form-control form-control-submit"
+                                                    formControlName="cantidadPersonas"
+                                                    [ngStyle]="{'border-color': error && 'red' }"
+                                                     required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Hora
+                                                </label>
+                                                <input type="time" class="form-control form-control-submit" formControlName="hora" id="appt" name="appt" min="09:00" max="18:00" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="text-light-black fw-700">Fecha
+                                                </label>
+                                                <br>
+                                                <mat-form-field class="example-full-width" appearance="fill">
+                                                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="fecha">
+                                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                    <mat-datepicker #picker></mat-datepicker>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn-second btn-submit" type="submit"
+                                                form="reserva-form">Reservar</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
