@@ -28,29 +28,17 @@ export class RestaurantrightsidebarComponent implements OnInit {
   }
 
 
-  getTimeDate = () => {
-    moment.locale('es');
-    this.orden.fecha = moment().format('L');
-    this.orden.hora = moment().format('LT');
-  }
-
   handleClickConfirm(){
     if(this.wishList.length > 0) {
-      const usuario = this.storageService.getCurrentUser();
       this.message = "";
-      this.orden.id = 123434;
       this.orden.pedido = this.wishList;
-      this.orden.usuario = usuario.name;
-      this.getTimeDate();
       this.orden.subtotal = this.subTotal;
-      this.orden.propina = this.subTotal * 0.1;
-      console.log(this.orden)
+      // this.orden.propina = this.subTotal * 0.1;
       this.storageService.setCurrentOrder(this.orden);
       this.router.navigate([this.route]);
     } else {
       this.message = "No hay productos";
     }
-
   }
 
 }

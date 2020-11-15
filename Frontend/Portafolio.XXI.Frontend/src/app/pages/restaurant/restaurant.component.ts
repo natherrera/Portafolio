@@ -43,8 +43,8 @@ export class RestaurantComponent implements OnInit
   handleChangeTipoAtencion = (e) => {
    this.tipoAtencion = e.value;
    this.orden.tipoAtencion = e.value;
-   console.log(this.orden);
   }
+
   handleChangeMesa = (e) => {
     this.mesa = e.value;
     this.orden.mesa = e.value;

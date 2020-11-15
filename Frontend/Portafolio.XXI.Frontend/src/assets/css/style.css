@@ -3074,10 +3074,10 @@ footer .footer-links .appimg {
     left: 8px;
 }
 .payment-option-tab .credit-card.card-front:before {
-    background-image: url(../img/card-front.jpg);
+    background-image: url(../img/banner/credit-card.jpg);
 }
 .payment-option-tab .credit-card.card-back:before {
-    background-image: url(../img/card-back.jpg);
+    background-image: url(../img/banner/credit-card-back.jpg);
 }
 .payment-option-tab .credit-card.gift-card:before {
     background-image: url(../img/gift-box.png);

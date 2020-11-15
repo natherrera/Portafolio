@@ -89,9 +89,8 @@
                         <div class="u-line mb-xl-20">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h5 class="text-light-black fw-600 title">Pedido<span><a class="fs-12">Orden # {{orden.id}} </a></span></h5>
-                                    <p class="title text-light-white">{{orden.fecha}} - {{orden.hora}} <span class="text-light-black"></span>
-                                    </p>
+                                    <h5 class="text-light-black fw-600 title">Pedido<span><a class="fs-12"></a></span></h5>
+
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="checkout-product" *ngFor="let product of products">
@@ -132,17 +131,17 @@
                                     <!-- <div class="item"> <span class="text-light-white">Tax and fees:</span>
                                         <span class="text-light-white">$30.5</span>
                                     </div> -->
-                                    <div class="item"> <span class="text-light-white">Propina:</span>
-                                        <span class="text-light-white">${{orden.propina}}</span>
-                                    </div>
+                                    <!-- <div class="item"> <span class="text-light-white">Propina sugerida:</span> -->
+                                        <!-- <span class="text-light-white">${{orden.propina}}</span> -->
+                                    <!-- </div> -->
                                 </div>
                                 <div class="total-price padding-tb-10">
-                                    <h5 class="title text-light-black fw-700">Total: <span>${{orden.propina + orden.subtotal}}</span></h5>
+                                    <h5 class="title text-light-black fw-700">Total: <span>${{orden.subtotal}}</span></h5>
                                 </div>
                             </div>
                             <div class="button-container">
-                                <a routerLink="/orderdetails" class="btn-first white-btn ">Modificar</a>
-                                <a routerLink="/restaurant" class="btn-first btn-submit">Confirmar y pagar</a>
+                                <a (click)="redirect('/restaurant')" style="font-weight: bold !important;" class="btn-first white-btn">Modificar</a>
+                                <a (click)="redirect('/checkout')" class="btn-first btn-confirmar">Confirmar y pagar</a>
                             </div>
 
                         </div>
