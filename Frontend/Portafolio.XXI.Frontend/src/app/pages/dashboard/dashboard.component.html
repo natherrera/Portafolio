@@ -14,7 +14,7 @@
                 <h3 class="text-light-black header-title title">¿Qué quieres hacer hoy?</h3>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6" *ngIf="profile === 'administrador' || profile === 'mesero'">
               <div class="mb-xl-20 card-picture">
                 <img src="assets/img/banner/order-2.jpg" class="img-fluid full-width" alt="image">
                 <div class="category-type overlay padding-15">
@@ -22,7 +22,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6" *ngIf="profile === 'administrador' || profile === 'mesero'">
               <div class="mb-xl-20 card-picture">
                 <img src="assets/img/banner/reserva.jpg" class="img-fluid full-width" alt="image">
                 <div class="category-type overlay padding-15">
@@ -71,25 +71,25 @@
                       (click)="currentPage = 'pedidos'" class="add-res-tab">Pedidos</a>
                   </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'mesas')}"> <a
-                      (click)="currentPage = 'mesas'" class="add-res-tab">Mesas</a>
+                      (click)="currentPage = 'mesas'" class="add-res-tab" *ngIf="profile === 'administrador' || profile === 'mesero'">Mesas</a>
                   </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}"> <a
-                      (click)="currentPage = 'productos'" class="add-res-tab">Productos</a>
+                      (click)="currentPage = 'productos'" class="add-res-tab" *ngIf="profile === 'administrador' || profile === 'cocina'">Productos</a>
                   </li>
 
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}"> <a
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}" *ngIf="profile === 'administrador' || profile === 'cocina'"> <a
                       (click)="currentPage = 'cocina'" class="add-res-tab">Cocina</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}"> <a
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}" *ngIf="profile === 'administrador'"> <a
                       (click)="currentPage = 'personal'" class="add-res-tab">Personal</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}"> <a
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}" *ngIf="profile === 'administrador' || profile === 'cocina'" > <a
                       (click)="currentPage = 'insumos'" class="add-res-tab">Insumos</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}"> <a
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}" *ngIf="profile === 'administrador' || profile === 'mesero'"> <a
                       (click)="currentPage = 'reservas'" class="add-res-tab">Reservas</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}"> <a
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}" *ngIf="profile === 'administrador' || profile === 'cajero'"> <a
                       (click)="currentPage = 'caja'" class="add-res-tab">Caja</a>
                   </li>
                 </ul>

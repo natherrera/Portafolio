@@ -1,29 +1,37 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="estadoReserva">
-    <div class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
-            <div class="main-box padding-20">
-                <div class="row mb-xl-20">
-                    <div class="col-md-6">
-                        <div class="right-side-content">
-                            <h1 class="fw-600">Tu reserva ha sido exitosa</h1>
-                            <h3 class="fw-400">Te esperamos el {{fechareserva}}</h3>
-                            <a routerLink="/cancelar" class="btn-second btn-submit">Cancelar reserva</a>
+<section class="final-order section-padding bg-light-theme" *ngIf="estadoReserva">
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="main-box padding-20">
+                    <div class="row mb-xl-20">
+                        <div class="col-md-6">
+                            <div class="right-side-content">
+                                <div class="section-header-left title">
+                                    <h3 class="text-light-black header-title">Tu reserva ha sido exitosa</h3>
+                                    <h5 class="fw-400">Te esperamos el {{fechareserva}}</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="margin-top: 2em">
+                                        <button type="submit" routerLink="/cancelar-reserva"  class="btn-second btn-submit">Cancelar reserva</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="advertisement-img">
-                            <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width"
-                                alt="advertisement-img">
+                        <div class="col-md-6">
+                            <div class="advertisement-img">
+                                <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width"
+                                    alt="advertisement-img">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-1"></div>
         </div>
-        <div class="col-lg-1"></div>
     </div>
-</div>
+</section>
 <div class="inner-wrapper" *ngIf="!estadoReserva">
     <div class="container-fluid no-padding">
         <div class="row no-gutters">

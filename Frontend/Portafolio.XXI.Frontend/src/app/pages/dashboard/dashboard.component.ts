@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { StorageService } from "../../../services/storage.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +9,16 @@ import { Component, OnInit} from '@angular/core';
 
 export class DashboardComponent implements OnInit
 {
+  user: any;
+  profile: any;
   currentPage: string;
-  constructor () { }
+  constructor (private storageService: StorageService) { }
 
   ngOnInit(): void
   {
     this.currentPage = 'pedidos';
+    this.user = this.storageService.getCurrentUser();
+    this.profile = this.user.profile.type;
   }
 
 

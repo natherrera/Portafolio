@@ -19,9 +19,24 @@ export class StorageService {
     this.localStorageService.setItem('currentUser', JSON.stringify(session));
   }
 
+  insertProduct(product: any):void {
+    // NOTE: DELETE
+    product.id = Math.round(Math.random() * 10);
+    product.valor = 10000;
+    //NOTE: DELETE
+    var productList = JSON.parse(localStorage.getItem('products'));
+    productList.push(product);
+    localStorage.setItem('products', JSON.stringify(productList));
+  }
+
   setCurrentProducts(products: any): void {
     this.localStorageService.setItem('products', JSON.stringify(products));
   }
+
+  getCurrentProducts() {
+    return this.localStorageService.getItem('products');
+  }
+
   setCurrentAttention(orderTable: any): void {
     this.localStorageService.setItem('solicitudAtencion', JSON.stringify(orderTable));
   }

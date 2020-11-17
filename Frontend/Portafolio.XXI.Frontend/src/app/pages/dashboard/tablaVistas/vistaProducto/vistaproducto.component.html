@@ -1,5 +1,5 @@
 <mat-tab-group animationDuration="0ms">
-  <mat-tab label="Gestión producto">
+  <mat-tab label="Gestión producto" (click)="getProducts()">
     <table mat-table [dataSource]="dataSourceProducto" class="mat-elevation-z8">
       <!-- Checkbox Column -->
       <ng-container matColumnDef="select">
@@ -55,9 +55,8 @@
     </table>
   </mat-tab>
   <mat-tab label="Crear Producto">
-    <!-- <form id="crearProducto-form" #cmForm="ngForm" [formGroup]="crearProductoForm" (ngSubmit)="crearProducto()"
-      novalidate> -->
-    <form>
+    <form id="crearProducto-form" #cmForm="ngForm" [formGroup]="crearProductoForm" (ngSubmit)="crearProducto()"
+      novalidate>
       <div class="row">
         <div class="col-12" style="margin-top: 1em">
         </div>

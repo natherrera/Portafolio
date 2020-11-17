@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { AuthenticationService } from "../../../services/authentication.service";
 import { StorageService } from "../../../services/storage.service";
 import { Session } from "../../../utils/mock-core/models/session.model";
+import { products } from '../../../utils/mock-responses/producto/productsResponse';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,8 @@ export class LoginComponent implements OnInit
 
   public loginForm: FormGroup;
   public submitted: Boolean = false;
+  public profile: any;
+  public user: any;
   public error: {code: number, message: string} = null;
   public loading = false;
 
@@ -50,8 +53,18 @@ export class LoginComponent implements OnInit
   }
 
   private correctLogin(data: Session){
-
     this.storageService.setCurrentSession(data);
-    this.router.navigate(['/home']);
+    this.user = this.storageService.getCurrentUser();
+    this.storageService.setCurrentProducts(products);
+    this.profile = this.user.profile.type;
+    switch (this.profile) {
+      case 'cliente':
+        this.router.navigate(['/restaurant']);
+        break;
+
+        default:
+          this.router.navigate(['/dashboard']);
+        break;
+    }
   }
 }
