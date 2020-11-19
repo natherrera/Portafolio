@@ -69,6 +69,9 @@ import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumo
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
 import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserva.component';
+import { VistapruebaComponent } from './pages/dashboard/tablaVistas/vistaPrueba/vistaprueba.component';
+import { DialogModificarPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/modificar/dialogModificarPrueba.component';
+import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/ver/dialogVerPrueba.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +112,9 @@ import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserv
     DialogContentCocinaComponent,
     DialogContentPagoComponent,
     DialogModificarComponent,
+    DialogModificarPruebaComponent,
     DialogVerComponent,
+    DialogVerPruebaComponent,
     DialogContentProductoComponent,
     VistamesasComponent,
     VistacocinaComponent,
@@ -119,10 +124,11 @@ import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserv
     VistapersonalComponent,
     VistainsumosComponent,
     VistareservasComponent,
+    VistapruebaComponent,
     CancelarreservaComponent
   ],
   imports: [
-BrowserModule,
+    BrowserModule,
     Routing,
     BrowserAnimationsModule,
     HttpClientModule,

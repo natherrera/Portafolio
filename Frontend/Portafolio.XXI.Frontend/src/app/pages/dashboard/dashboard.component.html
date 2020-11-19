@@ -70,13 +70,12 @@
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'pedidos')}"> <a
                       (click)="currentPage = 'pedidos'" class="add-res-tab">Pedidos</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'mesas')}"> <a
-                      (click)="currentPage = 'mesas'" class="add-res-tab" *ngIf="profile === 'administrador' || profile === 'mesero'">Mesas</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'mesas')}" *ngIf="profile === 'administrador' || profile === 'mesero'"> <a
+                      (click)="currentPage = 'mesas'" class="add-res-tab" >Mesas</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}"> <a
-                      (click)="currentPage = 'productos'" class="add-res-tab" *ngIf="profile === 'administrador' || profile === 'cocina'">Productos</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'productos')}" *ngIf="profile === 'administrador' || profile === 'cocina'"> <a
+                      (click)="currentPage = 'productos'" class="add-res-tab" >Productos</a>
                   </li>
-
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}" *ngIf="profile === 'administrador' || profile === 'cocina'"> <a
                       (click)="currentPage = 'cocina'" class="add-res-tab">Cocina</a>
                   </li>
@@ -91,6 +90,9 @@
                   </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'caja')}" *ngIf="profile === 'administrador' || profile === 'cajero'"> <a
                       (click)="currentPage = 'caja'" class="add-res-tab">Caja</a>
+                  </li>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'prueba')}" *ngIf="profile === 'administrador' || profile === 'cocina'"> <a
+                      (click)="currentPage = 'prueba'" class="add-res-tab">Prueba</a>
                   </li>
                 </ul>
               </div>
@@ -129,6 +131,9 @@
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'caja'">
                         <app-vistapago></app-vistapago>
+                      </div>
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'prueba'">
+                        <app-vistaprueba></app-vistaprueba>
                       </div>
 
                       <!-- GESTION VISTAS -->

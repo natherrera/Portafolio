@@ -1,7 +1,7 @@
 import { Cocina } from "../../mock-core/models/cocina.model";
 
 export const COCINA_DATA: Cocina[] = [
-    {id: '1', mesa: '1', idCliente:'Pasillo',  fecha:"12/05/2020", hora: '16:30',estadoPreparacion: 'En proceso'},
+    {id: '1', mesa: '1', idCliente:'idcliente1',  fecha:"12/05/2020", hora: '16:30',estadoPreparacion: 'En proceso'},
     {id: '2', mesa: '2', idCliente: 'Entrada', fecha:"12/05/2020", hora: '16:30', estadoPreparacion: 'Listo'},
     {id: '3', mesa: '3', idCliente: 'Ventana', fecha:"12/05/2020", hora: '16:30', estadoPreparacion: 'En proceso'},
     {id: '4', mesa: '4', idCliente: 'Pasillo', fecha:"12/05/2020", hora: '16:30', estadoPreparacion: 'Listo'},

@@ -10,17 +10,15 @@ import { StorageService } from "../../../services/storage.service";
 export class DashboardComponent implements OnInit
 {
   user: any;
-  profile: any;
+  profile: string;
   currentPage: string;
+
   constructor (private storageService: StorageService) { }
 
-  ngOnInit(): void
+  ngOnInit(): void //Solo se ejecuta la primera vez que el componente es renderizado
   {
     this.currentPage = 'pedidos';
     this.user = this.storageService.getCurrentUser();
     this.profile = this.user.profile.type;
   }
-
-
-
 }

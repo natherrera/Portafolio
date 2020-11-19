@@ -11,11 +11,13 @@ import { Cocina } from '../../../../../utils/mock-core/models/cocina.model';
   templateUrl: './vistacocina.component.html',
   styleUrls: ['./vistacocina.component.css']
 })
+
 export class VistacocinaComponent implements OnInit
 {
-  displayedColumnsCocina: string[] = ['select', 'id', 'mesa', 'idCliente', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
   dataSourceCocina = new MatTableDataSource<Cocina>(COCINA_DATA);
+  displayedColumnsCocina: string[] = ['select', 'id', 'mesa', 'idCliente', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
   selection = new SelectionModel<Cocina>(true, []);
+
 
   constructor (public dialog: MatDialog) { }
 
