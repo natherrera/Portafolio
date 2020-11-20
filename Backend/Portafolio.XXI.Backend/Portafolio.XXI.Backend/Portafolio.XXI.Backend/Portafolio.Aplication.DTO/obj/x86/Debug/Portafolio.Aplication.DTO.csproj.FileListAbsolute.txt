@@ -1,0 +1,21 @@
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csprojAssemblyReference.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.Aplication.DTO\obj\x86\Debug\Portafolio.Aplication.DTO.pdb

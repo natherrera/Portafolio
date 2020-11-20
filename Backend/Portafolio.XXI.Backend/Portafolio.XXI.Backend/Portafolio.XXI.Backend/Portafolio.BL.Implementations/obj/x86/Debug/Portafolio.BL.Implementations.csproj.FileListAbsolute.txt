@@ -1,0 +1,51 @@
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CopyComplete
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csprojAssemblyReference.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CopyComplete
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\x86\Debug\Portafolio.BL.Implementations.csproj.CopyComplete

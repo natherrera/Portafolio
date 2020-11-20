@@ -1,0 +1,267 @@
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Oracle.DataAccess.4.112.3.0.Fakes.fakesconfig
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.Bootstrappers.Unity.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Swashbuckle.Core.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.WebApi.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebActivatorEx.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebGrease.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll.config
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.pdb
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.xml
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csprojFakesResolveAssemblyReference.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CopyComplete
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.dll
+C:\Users\Fabian\Desktop\Nueva carpeta\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Oracle.DataAccess.4.112.3.0.Fakes.fakesconfig
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.Bootstrappers.Unity.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Swashbuckle.Core.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.WebApi.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebActivatorEx.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebGrease.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll.config
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.pdb
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.xml
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csprojFakesResolveAssemblyReference.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csprojAssemblyReference.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CopyComplete
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.dll
+C:\Users\HP\Documents\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Portafolio.XXI.Backend.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.XXI.Backend.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.Bootstrappers.Unity.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Swashbuckle.Core.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.WebApi.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebActivatorEx.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\WebGrease.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.HelperImpl.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Helper.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Portafolio.Infraestructure.Data.Implementation.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Antlr3.Runtime.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\EntityFramework.SqlServer.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Nancy.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Newtonsoft.Json.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Net.Http.Formatting.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Helpers.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Http.WebHost.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Mvc.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Optimization.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.Razor.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Abstractions.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Container.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Interception.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\Unity.Mvc.xml
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\bin\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.XXI.Backend\obj\x86\Debug\Services.Rest.csproj.CopyComplete
