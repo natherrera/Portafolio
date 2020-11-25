@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="BebestibleDTO.cs" />
     <Compile Include="ComestibleDTO.cs" />
+    <Compile Include="CrearInsumoDTO.cs" />
     <Compile Include="CrearMesaDTO.cs" />
     <Compile Include="CreateReserveDTO.cs" />
     <Compile Include="CreateUserDTO.cs" />
@@ -81,8 +82,10 @@
     <Compile Include="IngresarPedidoDTO.cs" />
     <Compile Include="InsertarTrabajadorInDTO.cs" />
     <Compile Include="InsertarTrabajadorOutDTO.cs" />
+    <Compile Include="InsumoOutDTO.cs" />
     <Compile Include="InsumoRecetaDTO.cs" />
     <Compile Include="ListaFinalPedidoDTO.cs" />
+    <Compile Include="ListaInsumoOutDTO.cs" />
     <Compile Include="ListaMesaOutDTO.cs" />
     <Compile Include="ListaPedidoDTO.cs" />
     <Compile Include="ListarReservaDTO.cs" />

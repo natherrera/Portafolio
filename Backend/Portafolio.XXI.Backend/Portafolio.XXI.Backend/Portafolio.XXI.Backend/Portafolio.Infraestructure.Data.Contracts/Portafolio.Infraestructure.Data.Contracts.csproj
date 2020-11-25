@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="IAutenticationDAO.cs" />
     <Compile Include="IDemoDAO.cs" />
+    <Compile Include="IInsumoDAO.cs" />
     <Compile Include="IMesaDAO.cs" />
     <Compile Include="IPedidoDAO.cs" />
     <Compile Include="IProductoDAO.cs" />

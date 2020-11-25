@@ -121,6 +121,14 @@ namespace Portafolio.XXI.Backend
                 typeof(TrabajadorDAO),
                 new Interceptor<InterfaceInterceptor>()
                 )
+                .RegisterType(typeof(IInsumo),
+                typeof(InsumoBL),
+                new Interceptor<InterfaceInterceptor>()
+                )
+                .RegisterType(typeof(IInsumoDAO),
+                typeof(InsumoDAO),
+                new Interceptor<InterfaceInterceptor>()
+                )
                 ;
         }
     }

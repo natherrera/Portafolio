@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="AutentificationBL.cs" />
     <Compile Include="DemoBL.cs" />
+    <Compile Include="InsumoBL.cs" />
     <Compile Include="MesaBL.cs" />
     <Compile Include="PedidoBL.cs" />
     <Compile Include="ProductoBL.cs" />

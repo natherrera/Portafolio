@@ -11,4 +11,5 @@ namespace Portafolio.Aplication.DTO
         public int cantidad { get; set; }
         public int unidadMedidaId { get; set; }
     }
+
 }
