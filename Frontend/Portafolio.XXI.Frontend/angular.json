@@ -141,5 +141,8 @@
       }
     }
   },
-  "defaultProject": "quickmunch"
+  "defaultProject": "quickmunch",
+  "cli": {
+    "analytics": false
+  }
 }
