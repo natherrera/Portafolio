@@ -1,6 +1,6 @@
 import { Insumo } from "../../mock-core/models/insumo.model";
 
-export const INSUMO_DATA: Insumo[] = [
+export const insumos: Insumo[] = [
     {id: '1', nombreInsumo: 'Tomate', marca:'Rocky',  tipoInsumo:"Alimento", costo: 1490, unidadMedida: 'Kilogramo'},
     {id: '2', nombreInsumo: 'Palta', marca:'Paltahass',  tipoInsumo:"Alimento", costo: 4.490, unidadMedida: 'Kilogramo'},
     {id: '3', nombreInsumo: 'Lechuga Española', marca:'Dole',  tipoInsumo:"Alimento", costo: 990, unidadMedida: 'Gramo'},

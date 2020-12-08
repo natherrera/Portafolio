@@ -5,6 +5,7 @@ import { AuthenticationService } from "../../../services/authentication.service"
 import { StorageService } from "../../../services/storage.service";
 import { Session } from "../../../utils/mock-core/models/session.model";
 import { products } from '../../../utils/mock-responses/producto/productsResponse';
+import { insumos } from '../../../utils/mock-responses/insumo/insumoResponse';
 
 @Component({
   selector: 'app-login',
@@ -56,6 +57,7 @@ export class LoginComponent implements OnInit
     this.storageService.setCurrentSession(data);
     this.user = this.storageService.getCurrentUser();
     this.storageService.setCurrentProducts(products);
+    this.storageService.setCurrentInsumo(insumos);
     this.profile = this.user.profile.type;
     switch (this.profile) {
       case 'cliente':

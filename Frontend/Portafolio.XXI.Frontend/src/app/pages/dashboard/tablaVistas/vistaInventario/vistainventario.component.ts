@@ -3,7 +3,7 @@ import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogContentInsumoComponent} from '../../modalVistas/DialogContentInsumo/dialogContentInsumo.component';
-import { INSUMO_DATA } from '../../../../../utils/mock-responses/insumo/insumoResponse';
+import { insumos } from '../../../../../utils/mock-responses/insumo/insumoResponse';
 import { Insumo } from '../../../../../utils/mock-core/models/insumo.model';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { StorageService } from 'src/services/storage.service';

@@ -5,7 +5,7 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
 import { products } from "../../mock-responses/producto/productsResponse";
-import { INSUMO_DATA } from "../../mock-responses/insumo/insumoResponse";
+import { insumos } from "../../mock-responses/insumo/insumoResponse";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor
@@ -28,6 +28,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
 
     function handleRoute()
     {
+      console.log("handleRoute");
       switch (true)
       {
         case url.endsWith('/api/authenticate/login') && method === 'POST':
@@ -60,13 +61,14 @@ export class FakeBackendInterceptor implements HttpInterceptor
         case url.match(/\/api\/products\/delete\/\d+$/) && method === 'DELETE':
           return deleteProduct();
 
-        case url.endsWith('api/INSUMO_DATA') && method === 'GET':
+        case url.endsWith('api/insumos') && method === 'GET':
+          console.log("getInsumos");
           return getInsumos();
         // case url.match(/\/api\/INSUMO_DATA\/\d+$/) && method === 'GET':
         //   return getInsumosById();
-        case url.endsWith('api/INSUMO_DATA/create') && method === 'POST':
+        case url.endsWith('api/insumos/create') && method === 'POST':
           return createInsumos();
-        case url.match(/\/api\/INSUMO_DATA\/delete\/\d+$/) && method === 'DELETE':
+        case url.match(/\/api\/insumos\/delete\/\d+$/) && method === 'DELETE':
           // return deleteInsumo();
 
         default:
@@ -205,20 +207,20 @@ export class FakeBackendInterceptor implements HttpInterceptor
     // Insumo
     function getInsumos()
     {
-      return ok(INSUMO_DATA);
+      return ok(insumos);
     }
 
     function createInsumos()
     {
       const { id } = body;
-      let found = INSUMO_DATA.find(x => x.id === id);
+      let found = insumos.find(x => x.id === id);
       if (found)
       {
         return error(3, 'El insumo ingresado ya se encuentra registrado');
       }
 
-      INSUMO_DATA.push({...body});
-      localStorage.setItem('INSUMO_DATA', JSON.stringify(INSUMO_DATA));
+      insumos.push({...body});
+      localStorage.setItem('insumos', JSON.stringify(insumos));
 
       return ok();
     }

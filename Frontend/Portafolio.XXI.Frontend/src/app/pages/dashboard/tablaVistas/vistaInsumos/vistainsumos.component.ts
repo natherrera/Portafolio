@@ -3,7 +3,7 @@ import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogContentInsumoComponent} from '../../modalVistas/DialogContentInsumo/dialogContentInsumo.component';
-import { INSUMO_DATA } from '../../../../../utils/mock-responses/insumo/insumoResponse';
+import { insumos } from '../../../../../utils/mock-responses/insumo/insumoResponse';
 import { Insumo } from '../../../../../utils/mock-core/models/insumo.model';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { StorageService } from 'src/services/storage.service';
@@ -42,16 +42,16 @@ export class VistainsumosComponent implements OnInit
   {
     if (this.crearInsumoForm.valid)
     {
-      this.storageService.insertProduct(this.crearInsumoForm.value);
+      this.storageService.insertInsumo(this.crearInsumoForm.value);
     }
   }
 
   getInsumos() {
-    this.insumos = JSON.parse(this.storageService.getCurrentProducts());
+    this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
     this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
   }
 
-  openDialog(element: any) {
+  openDialog(tipo: string, element: any) {
     let DialogContentComponent = DialogContentInsumoComponent;
     
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
