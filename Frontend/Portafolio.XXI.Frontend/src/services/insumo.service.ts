@@ -9,15 +9,19 @@ export class UserService {
         return this.http.get(`api/insumo`);
     }
 
-    crearMesa(insumo: object) {
+    createInsumos(insumo: object) {
         return this.http.post(`api/insumo/crear`, insumo);
     }
 
-    setMesaState(id: string, tipoInsumo: string) {
-        return this.http.post(`api/insumo/actualizar`, {id, tipoInsumo});
+    setInsumo(id: number, costo: number, unidadMedida: string) {
+        return this.http.post(`api/insumo/actualizar`, {id, costo, unidadMedida});
     }
 
-    deleteMesa(id: number) {
-        return this.http.delete(`api/insumo/${id}`);
+    getInsumosById(id: number) {
+        return this.http.get(`api/insumo/${id}`);
+    }
+
+    deleteInsumo(id: number) {
+        return this.http.delete(`api/insumo/delete${id}`);
     }
 }

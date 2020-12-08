@@ -5,6 +5,7 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
 import { products } from "../../mock-responses/producto/productsResponse";
+import { INSUMO_DATA } from "../../mock-responses/insumo/insumoResponse";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor
@@ -58,6 +59,15 @@ export class FakeBackendInterceptor implements HttpInterceptor
           return createProduct();
         case url.match(/\/api\/products\/delete\/\d+$/) && method === 'DELETE':
           return deleteProduct();
+
+        case url.endsWith('api/INSUMO_DATA') && method === 'GET':
+          return getInsumos();
+        // case url.match(/\/api\/INSUMO_DATA\/\d+$/) && method === 'GET':
+        //   return getInsumosById();
+        case url.endsWith('api/INSUMO_DATA/create') && method === 'POST':
+          return createInsumos();
+        case url.match(/\/api\/INSUMO_DATA\/delete\/\d+$/) && method === 'DELETE':
+          // return deleteInsumo();
 
         default:
           return next.handle(request);
@@ -189,6 +199,42 @@ export class FakeBackendInterceptor implements HttpInterceptor
       localStorage.setItem('products', JSON.stringify(filteredProducts));
       return ok();
     }
+
+    
+
+    // Insumo
+    function getInsumos()
+    {
+      return ok(INSUMO_DATA);
+    }
+
+    function createInsumos()
+    {
+      const { id } = body;
+      let found = INSUMO_DATA.find(x => x.id === id);
+      if (found)
+      {
+        return error(3, 'El insumo ingresado ya se encuentra registrado');
+      }
+
+      INSUMO_DATA.push({...body});
+      localStorage.setItem('INSUMO_DATA', JSON.stringify(INSUMO_DATA));
+
+      return ok();
+    }
+
+    // function getInsumosById()
+    // {
+    //   const insumo = INSUMO_DATA.filter(x => x.id === idFromUrl());
+    //   return ok(insumo);
+    // }
+
+    // function deleteInsumo()
+    // {
+    //   const filteredInsumos = INSUMO_DATA.filter(x => x.id !== idFromUrl());
+    //   localStorage.setItem('INSUMO_DATA', JSON.stringify(filteredInsumos));
+    //   return ok();
+    // }
 
     function ok(body?)
     {

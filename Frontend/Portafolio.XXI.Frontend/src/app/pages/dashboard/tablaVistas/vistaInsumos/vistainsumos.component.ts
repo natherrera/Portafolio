@@ -16,14 +16,19 @@ import { StorageService } from 'src/services/storage.service';
 export class VistainsumosComponent implements OnInit
 {
   displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'costo', 'unidadMedida', 'modificar'];
-  dataSourceInsumo = new MatTableDataSource<Insumo>(INSUMO_DATA);
+  dataSourceInsumo: any;
   selection = new SelectionModel<Insumo>(true, []);
   public crearInsumoForm: FormGroup;
+  public insumo: any = {};
+  public insumos: any = [];
+
+
   constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
 
 
   ngOnInit(): void
   {
+    this.getInsumos();
     this.crearInsumoForm = this.formBuilder.group({
       nombreInsumo: ['', Validators.required],
       marca: ['', Validators.required],
@@ -35,10 +40,18 @@ export class VistainsumosComponent implements OnInit
 
   public crearInsumo()
   {
-    console.log('crear insumo');
+    if (this.crearInsumoForm.valid)
+    {
+      this.storageService.insertProduct(this.crearInsumoForm.value);
+    }
   }
 
-  openDialog(tipo: string, element: any) {
+  getInsumos() {
+    this.insumos = JSON.parse(this.storageService.getCurrentProducts());
+    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+  }
+
+  openDialog(element: any) {
     let DialogContentComponent = DialogContentInsumoComponent;
     
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
