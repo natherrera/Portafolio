@@ -5,6 +5,7 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
 import { products } from "../../mock-responses/producto/productsResponse";
+import { insumos } from "../../mock-responses/insumo/insumoResponse";
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor
@@ -27,6 +28,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
 
     function handleRoute()
     {
+      console.log("handleRoute");
       switch (true)
       {
         case url.endsWith('/api/authenticate/login') && method === 'POST':
@@ -58,6 +60,16 @@ export class FakeBackendInterceptor implements HttpInterceptor
           return createProduct();
         case url.match(/\/api\/products\/delete\/\d+$/) && method === 'DELETE':
           return deleteProduct();
+
+        case url.endsWith('api/insumos') && method === 'GET':
+          console.log("getInsumos");
+          return getInsumos();
+        // case url.match(/\/api\/INSUMO_DATA\/\d+$/) && method === 'GET':
+        //   return getInsumosById();
+        case url.endsWith('api/insumos/create') && method === 'POST':
+          return createInsumos();
+        case url.match(/\/api\/insumos\/delete\/\d+$/) && method === 'DELETE':
+          // return deleteInsumo();
 
         default:
           return next.handle(request);
@@ -189,6 +201,42 @@ export class FakeBackendInterceptor implements HttpInterceptor
       localStorage.setItem('products', JSON.stringify(filteredProducts));
       return ok();
     }
+
+    
+
+    // Insumo
+    function getInsumos()
+    {
+      return ok(insumos);
+    }
+
+    function createInsumos()
+    {
+      const { id } = body;
+      let found = insumos.find(x => x.id === id);
+      if (found)
+      {
+        return error(3, 'El insumo ingresado ya se encuentra registrado');
+      }
+
+      insumos.push({...body});
+      localStorage.setItem('insumos', JSON.stringify(insumos));
+
+      return ok();
+    }
+
+    // function getInsumosById()
+    // {
+    //   const insumo = INSUMO_DATA.filter(x => x.id === idFromUrl());
+    //   return ok(insumo);
+    // }
+
+    // function deleteInsumo()
+    // {
+    //   const filteredInsumos = INSUMO_DATA.filter(x => x.id !== idFromUrl());
+    //   localStorage.setItem('INSUMO_DATA', JSON.stringify(filteredInsumos));
+    //   return ok();
+    // }
 
     function ok(body?)
     {

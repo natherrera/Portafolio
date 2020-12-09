@@ -15,7 +15,7 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class VistamesasComponent implements OnInit
 {
-  displayedColumnsMesas: string[] = ['select', 'id', 'mesa', 'ubicacion', 'estado', 'modificar'];
+  displayedColumnsMesas: string[] = ['select', 'id', 'mesa', 'capacidad', 'ubicacion', 'estado', 'modificar'];
   dataSourceMesas = new MatTableDataSource<Mesas>(MESAS_DATA);
   selection = new SelectionModel<Mesas>(true, []);
   public crearMesaForm: FormGroup;

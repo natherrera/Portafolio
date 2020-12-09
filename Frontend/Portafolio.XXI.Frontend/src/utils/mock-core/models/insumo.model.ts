@@ -1,6 +1,9 @@
 export interface Insumo {
     id: string;
     nombreInsumo: string;
-    tipo: string;
+    marca: string;
+    tipoInsumo: string;
+    // cantidad: number;
+    costo: number;
     unidadMedida: string;
 }

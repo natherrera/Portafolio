@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -54,6 +54,7 @@ import { Advertisementbanner1Component } from './layouts/advertisementbanner1/ad
 import { Advertisementbanner2Component } from './layouts/advertisementbanner2/advertisementbanner2.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DialogContentInsumoComponent } from './pages/dashboard/modalVistas/DialogContentInsumo/dialogContentInsumo.component';
 import { DialogContentMesaComponent } from './pages/dashboard/modalVistas/DialogContentMesa/dialogContentMesa.component';
 import { DialogContentCocinaComponent } from './pages/dashboard/modalVistas/DialogContentCocina/dialogContentCocina.component';
 import { DialogContentPagoComponent } from './pages/dashboard/modalVistas/DialogContentPago/dialogContentPago.component';
@@ -109,6 +110,7 @@ import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPr
     Advertisementbanner2Component,
     ContactComponent,
     DashboardComponent,
+    DialogContentInsumoComponent,
     DialogContentMesaComponent,
     DialogContentCocinaComponent,
     DialogContentPagoComponent,

@@ -20,6 +20,7 @@ export class StorageService {
   }
 
   insertProduct(product: any):void {
+      console.log("insertProduct");
     // NOTE: DELETE
     product.id = Math.round(Math.random() * 10);
     product.valor = 10000;
@@ -37,18 +38,18 @@ export class StorageService {
     return this.localStorageService.getItem('products');
   }
 
-  insertInsumo(insumo: any): void {
-    var insumoList = JSON.parse(localStorage.getItem('insumos'));
+  insertInsumo(insumo: any):void {
+    var insumoList = JSON.parse(localStorage.getItem('insumo'));
     insumoList.push(insumo);
-    localStorage.setItem('insumos', JSON.stringify(insumoList));
+    localStorage.setItem('insumo', JSON.stringify(insumoList));
   }
 
   setCurrentInsumo(insumo: any): void {
-    this.localStorageService.setItem('insumos', JSON.stringify(insumo));
+    this.localStorageService.setItem('insumo', JSON.stringify(insumo));
   }
 
-  getCurrentInsumos(): void {
-    return this.localStorageService.getItem('insumos');
+  getCurrentInsumo() {
+    return this.localStorageService.getItem('insumo');
   }
 
   setCurrentAttention(orderTable: any): void {

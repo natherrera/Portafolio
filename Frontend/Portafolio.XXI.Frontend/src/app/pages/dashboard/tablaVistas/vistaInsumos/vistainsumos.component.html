@@ -1,8 +1,149 @@
-<mat-tab-group animationDuration="0ms">
-  <mat-tab label="Gestión Insumos">
-    Gestión insumos
-  </mat-tab>
-  <mat-tab label="Crear insumo">
-    Crear insumo
-  </mat-tab>
-</mat-tab-group>
+<div class="insumo-container">
+  <mat-tab-group animationDuration="0ms">
+    <!-- TABLA GESTION INSUMO -->
+    <mat-tab label="Gestión de insumos">
+      <table mat-table [dataSource]="dataSourceInsumo" class="mat-elevation-z8">
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle(dataSourceInsumo) : null"
+              [checked]="selection.hasValue() && isAllSelected(dataSourceInsumo)"
+              [indeterminate]="selection.hasValue() && !isAllSelected(dataSourceInsumo)"
+              [aria-label]="checkboxLabel(dataSourceInsumo)">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+              [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row, dataSourceInsumo)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Nombre Column -->
+        <ng-container matColumnDef="nombreInsumo">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreInsumo}} </td>
+        </ng-container>
+
+        <!-- Marca Column -->
+        <ng-container matColumnDef="marca">
+          <th mat-header-cell *matHeaderCellDef> Marca </th>
+          <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+        </ng-container>
+
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="tipoInsumo">
+          <th mat-header-cell *matHeaderCellDef> Tipo </th>
+          <td mat-cell *matCellDef="let element"> {{element.tipoInsumo}} </td>
+        </ng-container>
+
+        <!-- Costo Column -->
+        <ng-container matColumnDef="costo">
+          <th mat-header-cell *matHeaderCellDef> Costo </th>
+          <td mat-cell *matCellDef="let element"> {{element.costo}} </td>
+        </ng-container>
+
+        <!-- Unidad Medida Column -->
+        <ng-container matColumnDef="unidadMedida">
+          <th mat-header-cell *matHeaderCellDef> Unidad Medida </th>
+          <td mat-cell *matCellDef="let element"> {{element.unidadMedida}} </td>
+        </ng-container>
+
+        <!-- Modificar Column -->
+        <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef> Modificar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button color="primary" (click)="openDialog('modificar', element)">
+              Modificar
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsInsumo"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsInsumo;" (click)="selection.toggle(row)">
+        </tr>
+      </table>
+
+    </mat-tab>
+    <!-- TABLA CREAR INSUMO -->
+    <mat-tab label="Crear insumo">
+      <form id="crearInsumo-form" #cmForm="ngForm" [formGroup]="crearInsumoForm" (ngSubmit)="crearInsumo()"
+      novalidate>
+        <div class="row">
+          <div class="col-12" style="margin-top: 1em">
+            <!-- <h5 class="text-light-black fw-700">General Information</h5> -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Nombre insumo<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreInsumo">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Marca<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="marca">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Tipo insumo
+              </label>
+              <br>
+              <mat-form-field appearance="fill">
+                  <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                  <mat-select formControlName="tipoInsumo" required>
+                      <mat-option  value="1">
+                          Alimento
+                      </mat-option>
+                      <mat-option  value="2">
+                          Aseo
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Costo</label>
+              <input type="number" name="#" class="form-control form-control-submit" formControlName="costo">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Unidad medida
+              </label>
+              <br>
+              <mat-form-field appearance="fill">
+                  <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                  <mat-select formControlName="unidadMedida" required>
+                      <mat-option  value="1">
+                          Kilogramo
+                      </mat-option>
+                      <mat-option  value="2">
+                          Gramo
+                      </mat-option>
+                      <mat-option  value="3">
+                          Litro
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <button type="submit" class="btn-second btn-submit">Crear insumo</button>
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+</div>
