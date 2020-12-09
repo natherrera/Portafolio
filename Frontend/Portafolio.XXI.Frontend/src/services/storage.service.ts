@@ -29,7 +29,7 @@ export class StorageService {
     productList.push(product);
     localStorage.setItem('products', JSON.stringify(productList));
   }
-
+  
   setCurrentProducts(products: any): void {
     this.localStorageService.setItem('products', JSON.stringify(products));
   }

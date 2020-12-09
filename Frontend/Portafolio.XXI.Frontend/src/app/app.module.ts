@@ -71,6 +71,7 @@ import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReser
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
 import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserva.component';
 import { VistapruebaComponent } from './pages/dashboard/tablaVistas/vistaPrueba/vistaprueba.component';
+import { VistacotizacionComponent } from './pages/dashboard/tablaVistas/vistacotizacion/vistacotizacion.component';
 import { DialogModificarPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/modificar/dialogModificarPrueba.component';
 import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/ver/dialogVerPrueba.component';
 
@@ -127,7 +128,8 @@ import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPr
     VistainsumosComponent,
     VistareservasComponent,
     VistapruebaComponent,
-    CancelarreservaComponent
+    CancelarreservaComponent,
+    VistacotizacionComponent
   ],
   imports: [
     BrowserModule,
