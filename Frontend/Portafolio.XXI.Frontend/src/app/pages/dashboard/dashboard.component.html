@@ -79,8 +79,8 @@
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cocina')}" *ngIf="profile === 'administrador' || profile === 'cocina'"> <a
                       (click)="currentPage = 'cocina'" class="add-res-tab">Cocina</a>
                   </li>
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}" *ngIf="profile === 'administrador'"> <a
-                      (click)="currentPage = 'personal'" class="add-res-tab">Personal</a>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'trabajador')}" *ngIf="profile === 'administrador'"> <a
+                      (click)="currentPage = 'trabajador'" class="add-res-tab">Trabajador</a>
                   </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}" *ngIf="profile === 'administrador' || profile === 'cocina'" > <a
                       (click)="currentPage = 'insumos'" class="add-res-tab">Insumos</a>
@@ -117,9 +117,9 @@
                         <app-vistacocina></app-vistacocina>
                       </div>
 
-                      <div class="container-fluid padding-30" *ngIf="currentPage === 'personal'">
-                        <app-vistapersonal></app-vistapersonal>
-                      </div>
+                      <!-- <div class="container-fluid padding-30" *ngIf="currentPage === 'trabajador'">
+                        <app-vistatrabajador></app-vistatrabajador>
+                      </div> -->
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'insumos'">
                         <app-vistainsumos></app-vistainsumos>

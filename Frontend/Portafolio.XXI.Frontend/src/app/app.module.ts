@@ -65,7 +65,7 @@ import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/
 import { DialogModificarComponent } from './pages/dashboard/modalVistas/DialogPedido/modificar/dialogModificar.component';
 import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/ver/dialogVer.component';
 import { VistaproductoComponent } from './pages/dashboard/tablaVistas/vistaProducto/vistaproducto.component';
-import { VistapersonalComponent } from './pages/dashboard/tablaVistas/vistaPersonal/vistapersonal.component';
+// import { VistatrabajadorComponent } from './pages/dashboard/tablaVistas/vistaTrabajador/vistatrabajador.component';
 import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
@@ -123,7 +123,7 @@ import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPr
     VistapagoComponent,
     VistapedidoComponent,
     VistaproductoComponent,
-    VistapersonalComponent,
+    VistatrabajadorComponent,
     VistainsumosComponent,
     VistareservasComponent,
     VistapruebaComponent,
