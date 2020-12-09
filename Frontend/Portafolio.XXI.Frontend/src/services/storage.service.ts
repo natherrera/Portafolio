@@ -28,13 +28,27 @@ export class StorageService {
     productList.push(product);
     localStorage.setItem('products', JSON.stringify(productList));
   }
-
+  
   setCurrentProducts(products: any): void {
     this.localStorageService.setItem('products', JSON.stringify(products));
   }
 
   getCurrentProducts() {
     return this.localStorageService.getItem('products');
+  }
+
+  insertInsumo(insumo: any): void {
+    var insumoList = JSON.parse(localStorage.getItem('insumos'));
+    insumoList.push(insumo);
+    localStorage.setItem('insumos', JSON.stringify(insumoList));
+  }
+
+  setCurrentInsumo(insumo: any): void {
+    this.localStorageService.setItem('insumos', JSON.stringify(insumo));
+  }
+
+  getCurrentInsumos(): void {
+    return this.localStorageService.getItem('insumos');
   }
 
   setCurrentAttention(orderTable: any): void {

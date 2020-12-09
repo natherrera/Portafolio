@@ -45,7 +45,9 @@
               "src/assets/js/jquery.nice-select.min.js",
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/sticksy.js",
-              "src/assets/js/quickmunch.js"
+              "src/assets/js/quickmunch.js",
+              "node_modules/html2canvas/dist/html2canvas.min.js",
+              "node_modules/jspdf/dist/jspdf.min.js"
             ]
           },
           "configurations": {
@@ -141,5 +143,8 @@
       }
     }
   },
-  "defaultProject": "quickmunch"
+  "defaultProject": "quickmunch",
+  "cli": {
+    "analytics": false
+  }
 }
