@@ -7,7 +7,8 @@
                 <div class="col-lg-7 align-self-center">
                     <div class="right-side-content">
                         <h1 class="text-custom-white fw-600">Anticipate y has hoy tu reserva</h1>
-                        <h3 class="text-custom-white fw-400">No te quedes sin tu mesa, encuentra el día y la hora que más te acomode.</h3>
+                        <h3 class="text-custom-white fw-400">No te quedes sin tu mesa, encuentra el día y la hora que
+                            más te acomode.</h3>
                         <a routerLink="/reservas" class="btn-second btn-submit">Reservar</a>
                     </div>
                 </div>
@@ -37,7 +38,7 @@
                                 </div>
                             </div>
                             <div id="collapseCero" class="collapse show">
-                                <div class=" no-padding" >
+                                <div class=" no-padding">
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
@@ -45,8 +46,10 @@
                                                 </label>
                                                 <br>
                                                 <mat-form-field appearance="fill">
-                                                    <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required._mat-animation-noopable>
-                                                        <mat-option *ngFor="let opcion of tipoOrdenList" [value]="opcion.value">
+                                                    <mat-select (selectionChange)="handleChangeTipoAtencion($event)"
+                                                        required._mat-animation-noopable>
+                                                        <mat-option *ngFor="let opcion of tipoOrdenList"
+                                                            [value]="opcion.value">
                                                             {{opcion.viewValue}}
                                                         </mat-option>
                                                     </mat-select>
@@ -60,7 +63,7 @@
                                                 <br>
                                                 <mat-form-field appearance="fill">
                                                     <mat-select (selectionChange)="handleChangeMesa($event)" required>
-                                                        <mat-option *ngFor="let mesa of mesasDisponibles" [value]="mesa.id">
+                                                        <mat-option *ngFor="let mesa of listaMesas" [value]="mesa.id">
                                                             {{mesa.mesa}} - {{mesa.ubicacion}}
                                                         </mat-option>
                                                     </mat-select>
@@ -189,7 +192,8 @@
             </div>
             <div class="col-lg-3">
                 <app-restaurantrightsidebar [wishList]="wishList" [subTotal]="subTotal"
-                    [deleteProductWishList]="deleteProductWishList" [message]="message" [orden]="orden" route="/orderdetails">
+                    [deleteProductWishList]="deleteProductWishList" [message]="message" [orden]="orden"
+                    route="/orderdetails">
                 </app-restaurantrightsidebar>
             </div>
             <div class="col-lg-1"></div>

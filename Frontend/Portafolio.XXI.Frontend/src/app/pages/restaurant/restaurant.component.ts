@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { StorageService } from '../../../services/storage.service';
 import { FormBuilder, Validators } from "@angular/forms";
+import { MESAS_DATA } from '../../../utils/mock-responses/mesas/mesasResponse';
+
 
 @Component({
   selector: 'app-restaurant',
@@ -23,6 +25,7 @@ export class RestaurantComponent implements OnInit
   public mesa: string;
   public wishList: Array<any> = [];
   public orden: any = {};
+  listaMesas: any = MESAS_DATA;
   selectedTypeAttention: string;
   tipoOrdenList: Array<Object> = [{value:'local',viewValue:'Atención en el local'}, {value:'retiro',viewValue:'Retiro en tienda'}];
   mesasDisponibles: Array<Object> = [{id: "1", mesa: "1", ubicacion: "entrada", estado: true},{id: "2", mesa: "2", ubicacion: "pasillo", estado: true},{id: "3", mesa: "3", ubicacion: "pasillo", estado: true},{id: "4", mesa: "4", ubicacion: "ventana", estado: true}]

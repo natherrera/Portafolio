@@ -14,11 +14,8 @@
                 <br>
                 <mat-form-field appearance="fill">
                   <mat-select formControlName="proveedor" required>
-                    <mat-option value="1">
-                      Verdulería
-                    </mat-option>
-                    <mat-option value="2">
-                      Panadería
+                    <mat-option *ngFor="let proveedor of listaProveedores" [value]="proveedor.nombreProveedor">
+                      {{proveedor.nombreProveedor}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -54,11 +51,8 @@
                   <br>
                   <mat-form-field appearance="fill">
                     <mat-select formControlName="insumo" required>
-                      <mat-option value="Harina">
-                        Harina
-                      </mat-option>
-                      <mat-option value="Lechuga">
-                        Lechuga
+                      <mat-option *ngFor="let insumo of listaInsumos" [value]="insumo.nombreInsumo">
+                        {{insumo.nombreInsumo}}
                       </mat-option>
                     </mat-select>
                   </mat-form-field>
@@ -99,24 +93,6 @@
 
         </form>
         <div class="col-md-12" *ngIf="hasData">
-          <div id="htmlData" #htmlData>
-            <h1>COTIZACION RESTAURANT SIGLO XXI</h1>
-            <p>Proveedor: {{this.infoCotizacionForm.value.proveedor}}</p>
-            <p>Fecha estimada de entrega: {{this.infoCotizacionForm.value.fechaEntrega}}</p>
-            <table class="table table-bordered mt-4">
-              <tr class="table-primary">
-                <th>Insumo</th>
-                <th>Cantidad</th>
-                <th>Unidad de medida</th>
-              </tr>
-              <tr *ngFor="let element of listaInsumos">
-
-                <td>{{element.insumo}}</td>
-                <td>{{element.cantidad}}</td>
-                <td>{{element.unidadMedida}}</td>
-              </tr>
-            </table>
-          </div>
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablacotizacion">
             <ng-container *ngFor="let col of displayedColumns">
               <ng-container matColumnDef="{{ col }}">
@@ -127,6 +103,26 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
+          <div id="htmlData" style="visibility: hidden;" #htmlData>
+            <h1 style="font-size: 1em;">COTIZACIÓN RESTAURANT SIGLO XXI</h1>
+            <p>Proveedor: {{this.infoCotizacionForm.value.proveedor}}</p>
+            <p>Fecha estimada de entrega: {{this.fecha}}</p>
+            <table>
+              <tr style="font-size: 14px" class="table-primary">
+                <th style="font-size: 14px">Insumo</th>
+                <th style="font-size: 14px">Cantidad</th>
+
+              </tr>
+              <tr style="font-size: 14px" *ngFor="let element of listaInsumos">
+
+                <td style="font-size: 14px">{{element.insumo}}</td>
+                <td style="font-size: 14px">{{element.cantidad}} {{element.unidadMedida}}</td>
+              </tr>
+            </table>
+            <p>Porfavor enviar cotización lista a administración@sigloxxi.cl.</p>
+            <p>Gracias</p>
+
+          </div>
         </div>
       </div>
     </div>

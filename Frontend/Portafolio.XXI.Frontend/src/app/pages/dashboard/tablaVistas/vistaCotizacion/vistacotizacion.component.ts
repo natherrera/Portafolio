@@ -3,8 +3,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { StorageService } from 'src/services/storage.service';
 import { MatTableDataSource } from '@angular/material/table';
+import {insumos} from '../../../../../utils/mock-responses/insumo/insumoResponse';
+import {PROVEEDOR} from '../../../../../utils/mock-responses/proveedor/proveedorResponse';
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import moment from 'moment';
 
 @Component({
   selector: 'app-vistacotizacion',
@@ -17,6 +19,7 @@ export class VistacotizacionComponent implements OnInit
   @ViewChild('htmlData') content: ElementRef; 
   
   constructor(public dialog: MatDialog, private formBuilder: FormBuilder, private storageService: StorageService) { 
+    moment.locale('es');
   }
   agregarInsumoForm: FormGroup;
   infoCotizacionForm: FormGroup;
@@ -24,14 +27,17 @@ export class VistacotizacionComponent implements OnInit
   cotizacion: any = [];
   listaInsumos: any = [];
   dataSource: any = [];
+  fecha: string;
   hasData: boolean = false;
   pdfReady: boolean = false;
-  listaProveedores: any = [{id: 1, nombre: 'Verduleria Pepito'}, {id: 2, nombre: 'Panadería Numancia'}, ]
+  listaProveedores: any = []
   displayedColumns: string[] = ['insumo', 'cantidad', 'unidadMedida'];
   
 
   ngOnInit(): void
   {
+    this.listaInsumos = insumos;
+    this.listaProveedores = PROVEEDOR;
     this.dataSource = new MatTableDataSource([]);
     this.agregarInsumoForm = this.formBuilder.group({
       insumo: [''],
@@ -52,8 +58,9 @@ export class VistacotizacionComponent implements OnInit
       cantidad: form.cantidad,
       unidadMedida: form.unidadMedida
     }
-    this.listaInsumos.push(insumo);
-    this.dataSource = new MatTableDataSource(this.listaInsumos);
+    const wishlist = [];
+    wishlist.push(insumo);
+    this.dataSource = new MatTableDataSource(wishlist);
     this.agregarInsumoForm.reset();
     this.hasData = true;
   }
@@ -64,7 +71,9 @@ export class VistacotizacionComponent implements OnInit
 
   descargarPDf = () => {
     this.pdfReady = true;
-    let content=this.content.nativeElement;
+    this.fecha = moment(this.infoCotizacionForm.value.fechaEntrega).format('L')
+    setTimeout(() => {
+      let content=this.content.nativeElement;
     let doc = new jsPDF();  
     let _elementHandlers =  
     {  
@@ -78,8 +87,9 @@ export class VistacotizacionComponent implements OnInit
       'elementHandlers':_elementHandlers  
     });  
   
-    doc.save('test.pdf');  
+    doc.save('cotizacionsigloxxi.pdf'); 
+    this.pdfReady = false;
+    }, 1000);
   }
-
 
 }
