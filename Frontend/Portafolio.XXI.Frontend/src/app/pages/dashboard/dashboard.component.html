@@ -82,17 +82,8 @@
                     *ngIf="profile === 'administrador' || profile === 'cocina'"> <a (click)="currentPage = 'cocina'"
                       class="add-res-tab">Cocina</a>
                   </li>
-<<<<<<< HEAD
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'trabajador')}" *ngIf="profile === 'administrador'"> <a
                       (click)="currentPage = 'trabajador'" class="add-res-tab">Trabajador</a>
-=======
-                  <!-- <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}" *ngIf="profile === 'administrador'"> <a
-                      (click)="currentPage = 'personal'" class="add-res-tab">Personal</a>
-                  </li> -->
-                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}"
-                    *ngIf="profile === 'administrador' || profile === 'cocina'"> <a (click)="currentPage = 'insumos'"
-                      class="add-res-tab">Insumos</a>
->>>>>>> e43e6cba67688fd802c2bdd8b2c96817954003f9
                   </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'reservas')}"
                     *ngIf="profile === 'administrador' || profile === 'mesero'"> <a (click)="currentPage = 'reservas'"
@@ -129,13 +120,8 @@
                         <app-vistacocina></app-vistacocina>
                       </div>
 
-<<<<<<< HEAD
                       <!-- <div class="container-fluid padding-30" *ngIf="currentPage === 'trabajador'">
                         <app-vistatrabajador></app-vistatrabajador>
-=======
-                      <!-- <div class="container-fluid padding-30" *ngIf="currentPage === 'personal'">
-                        <app-vistapersonal></app-vistapersonal>
->>>>>>> e43e6cba67688fd802c2bdd8b2c96817954003f9
                       </div> -->
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'insumos'">
