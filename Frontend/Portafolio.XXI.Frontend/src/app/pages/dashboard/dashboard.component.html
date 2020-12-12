@@ -101,6 +101,10 @@
                     *ngIf="profile === 'administrador'"> <a (click)="currentPage = 'cotizacion'"
                       class="add-res-tab">Cotización</a>
                   </li>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'bodega')}"
+                    *ngIf="profile === 'administrador'"> <a (click)="currentPage = 'bodega'"
+                      class="add-res-tab">Bodega</a>
+                  </li>
                 </ul>
               </div>
               <div class="col-xl-10 col-lg-8">
@@ -142,6 +146,10 @@
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'cotizacion'">
                         <app-vistacotizacion></app-vistacotizacion>
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'bodega'">
+                        <app-vista-bodega></app-vista-bodega>
                       </div>
 
                       <!-- GESTION VISTAS -->

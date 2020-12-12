@@ -74,6 +74,9 @@ import { VistapruebaComponent } from './pages/dashboard/tablaVistas/vistaPrueba/
 import { VistacotizacionComponent } from './pages/dashboard/tablaVistas/vistacotizacion/vistacotizacion.component';
 import { DialogModificarPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/modificar/dialogModificarPrueba.component';
 import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPrueba/ver/dialogVerPrueba.component';
+import { VistaBodegaComponent } from './pages/dashboard/tablaVistas/vista-bodega/vista-bodega.component';
+import { DialogContentBodegaComponent } from './pages/dashboard/modalVistas/DialogContentBodega/DialogContentBodega.component';
+import { DialogContentActivoComponent } from './pages/dashboard/modalVistas/DialogContentBodega/activos/dialog-content-activo.component';
 
 @NgModule({
   declarations: [
@@ -129,7 +132,10 @@ import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPr
     VistareservasComponent,
     VistapruebaComponent,
     CancelarreservaComponent,
-    VistacotizacionComponent
+    VistacotizacionComponent,
+    VistaBodegaComponent,
+    DialogContentBodegaComponent,
+    DialogContentActivoComponent
   ],
   imports: [
     BrowserModule,
