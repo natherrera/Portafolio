@@ -5,6 +5,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {DialogContentCocinaComponent} from '../../modalVistas/DialogContentCocina/dialogContentCocina.component';
 import { COCINA_DATA } from '../../../../../utils/mock-responses/cocina/cocinaResponse';
 import { Cocina } from '../../../../../utils/mock-core/models/cocina.model';
+import { StorageService } from 'src/services/storage.service';
 
 @Component({
   selector: 'app-vistacocina',
@@ -15,16 +16,23 @@ import { Cocina } from '../../../../../utils/mock-core/models/cocina.model';
 export class VistacocinaComponent implements OnInit
 {
   dataSourceCocina = new MatTableDataSource<Cocina>(COCINA_DATA);
-  displayedColumnsCocina: string[] = ['select', 'id', 'mesa', 'idCliente', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
+  displayedColumnsCocina: string[] = ['id', 'mesa', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
   selection = new SelectionModel<Cocina>(true, []);
 
 
-  constructor (public dialog: MatDialog) { }
+  constructor (public dialog: MatDialog, private storageService: StorageService) { }
 
 
   ngOnInit(): void
   {
   }
+
+  
+  getPedidos() {
+    let pedidosList = JSON.parse(this.storageService.getCurrentPedidos());
+    this.dataSourceCocina = new MatTableDataSource<any>(pedidosList);
+  }
+
 
   openDialog(tipo: string, element: any) {
     let DialogContentComponent = DialogContentCocinaComponent;
