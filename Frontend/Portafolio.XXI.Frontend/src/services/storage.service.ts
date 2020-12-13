@@ -162,6 +162,20 @@ export class StorageService {
     return this.localStorageService.getItem('pedido');
   }
 
+  insertMesa(mesa: any):void {
+    var mesaList = JSON.parse(localStorage.getItem('mesas'));
+    mesaList.push(mesa);
+    localStorage.setItem('mesas', JSON.stringify(mesaList));
+  }
+
+  setCurrentMesas(mesa: any): void {
+    this.localStorageService.setItem('mesas', JSON.stringify(mesa));
+  }
+
+  getCurrentMesas() {
+    return this.localStorageService.getItem('mesas');
+  }
+
 
   logout(): void{
     this.removeCurrentSession();
