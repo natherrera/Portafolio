@@ -52,6 +52,42 @@ export class StorageService {
     return this.localStorageService.getItem('insumo');
   }
 
+  setCurrentTipoInsumo(tipoInsumo: any): void {
+    this.localStorageService.setItem('tipoInsumo', JSON.stringify(tipoInsumo));
+  }
+
+  getCurrentTipoInsumo() {
+    return this.localStorageService.getItem('tipoInsumo');
+  }
+
+  insertTrabajador(trabajador: any):void {
+  var trabajadorList = JSON.parse(localStorage.getItem('trabajador'));
+  trabajadorList.push(trabajador);
+  localStorage.setItem('trabajador', JSON.stringify(trabajadorList));
+  }
+
+  setCurrentTrabajador(trabajador: any): void {
+    this.localStorageService.setItem('trabajador', JSON.stringify(trabajador));
+  }
+
+  getCurrentTrabajador() {
+    return this.localStorageService.getItem('trabajador');
+  }
+
+  insertProveedor(proveedor: any):void {
+    var proveedorList = JSON.parse(localStorage.getItem('proveedor'));
+    proveedorList.push(proveedor);
+    localStorage.setItem('proveedor', JSON.stringify(proveedorList));
+  }
+
+  setCurrentProveedor(proveedor: any): void {
+    this.localStorageService.setItem('proveedor', JSON.stringify(proveedor));
+  }
+
+  getCurrentProveedor() {
+    return this.localStorageService.getItem('proveedor');
+  }
+
   setCurrentAttention(orderTable: any): void {
     this.localStorageService.setItem('solicitudAtencion', JSON.stringify(orderTable));
   }

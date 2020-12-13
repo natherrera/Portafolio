@@ -58,6 +58,8 @@ import { DialogContentInsumoComponent } from './pages/dashboard/modalVistas/Dial
 import { DialogContentMesaComponent } from './pages/dashboard/modalVistas/DialogContentMesa/dialogContentMesa.component';
 import { DialogContentCocinaComponent } from './pages/dashboard/modalVistas/DialogContentCocina/dialogContentCocina.component';
 import { DialogContentPagoComponent } from './pages/dashboard/modalVistas/DialogContentPago/dialogContentPago.component';
+import { DialogContentTrabajadorComponent } from './pages/dashboard/modalVistas/DialogContentTrabajador/dialogContentTrabajador.component';
+import { DialogContentProveedorComponent } from './pages/dashboard/modalVistas/DialogContentProveedor/dialogContentProveedor.component';
 import { VistamesasComponent } from './pages/dashboard/tablaVistas/vistaMesas/vistaMesas.component';
 import { VistacocinaComponent } from './pages/dashboard/tablaVistas/vistaCocina/vistaCocina.component';
 import { VistapagoComponent } from './pages/dashboard/tablaVistas/vistaPago/vistaPago.component';
@@ -65,7 +67,8 @@ import { VistapedidoComponent } from './pages/dashboard/tablaVistas/vistaPedido/
 import { DialogModificarComponent } from './pages/dashboard/modalVistas/DialogPedido/modificar/dialogModificar.component';
 import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/ver/dialogVer.component';
 import { VistaproductoComponent } from './pages/dashboard/tablaVistas/vistaProducto/vistaproducto.component';
-import { VistapersonalComponent } from './pages/dashboard/tablaVistas/vistaPersonal/vistapersonal.component';
+import { VistatrabajadorComponent } from './pages/dashboard/tablaVistas/vistaTrabajador/vistatrabajador.component';
+import { VistaproveedorComponent } from './pages/dashboard/tablaVistas/vistaproveedor/vistaproveedor.component';
 import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
@@ -122,12 +125,15 @@ import { DialogContentActivoComponent } from './pages/dashboard/modalVistas/Dial
     DialogVerComponent,
     DialogVerPruebaComponent,
     DialogContentProductoComponent,
+    DialogContentTrabajadorComponent,
+    DialogContentProveedorComponent,
     VistamesasComponent,
     VistacocinaComponent,
     VistapagoComponent,
     VistapedidoComponent,
     VistaproductoComponent,
-    VistapersonalComponent,
+    VistatrabajadorComponent,
+    VistaproveedorComponent,
     VistainsumosComponent,
     VistareservasComponent,
     VistapruebaComponent,

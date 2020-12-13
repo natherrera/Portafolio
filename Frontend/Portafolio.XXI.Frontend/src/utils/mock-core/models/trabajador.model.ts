@@ -1,6 +1,5 @@
 
-
-export interface Personal {
+export interface Trabajador {
     rut: string;
     nombre: string;
     apellidoMaterno: string;
@@ -8,4 +7,5 @@ export interface Personal {
     fechaNacimiento: string;
     sexo: string;
     usuario: string;
+    email: string;
 }

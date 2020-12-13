@@ -1,0 +1,46 @@
+<div class="proveedor-container">
+    <mat-tab-group animationDuration="0ms">
+        <!-- TABLA GESTION Proveedor -->
+
+        <!-- TABLA CREAR PROVEEDOR -->
+        <mat-tab label="Crear proveedor">
+            <form id="crearProveedor-form" #cmForm="ngForm" [formGroup]="crearProveedorForm" (ngSubmit)="crearProveedor()"
+            novalidate>
+            <div class="row">
+                <div class="col-12" style="margin-top: 1em">
+                <!-- <h5 class="text-light-black fw-700">General Information</h5> -->
+                </div>
+                <div class="col-md-6">
+                <div class="form-group">
+                    <label class="text-light-black fw-700">Nombre proveedor<sup class="fs-16">*</sup>
+                    </label>
+                    <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreProveedor">
+                </div>
+                </div>
+                <div class="col-md-12">
+                <div class="form-group">
+                    <label class="text-light-black fw-700">Tipo proveedor
+                    </label>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                        <mat-select formControlName="tipoProveedor" required>
+                            <mat-option  value="Productos">
+                                Productos
+                            </mat-option>
+                            <mat-option  value="Servicios">
+                                Servicios
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                </div>
+    
+                <div class="col-md-12">
+                <button type="submit" class="btn-second btn-submit">Crear proveedor</button>
+                </div>
+            </div>
+            </form>
+        </mat-tab>
+    </mat-tab-group>
+</div>

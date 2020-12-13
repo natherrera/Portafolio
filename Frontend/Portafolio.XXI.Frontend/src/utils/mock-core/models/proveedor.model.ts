@@ -1,7 +1,7 @@
 import { TipoProveedor } from './tipoProveedor.model';
 
 export interface Proveedor {
-    id: string;
+    id: Number;
     nombreProveedor: string;
     tipoProveedor: TipoProveedor;
 }

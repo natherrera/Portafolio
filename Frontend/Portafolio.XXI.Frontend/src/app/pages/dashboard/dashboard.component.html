@@ -82,9 +82,9 @@
                     *ngIf="profile === 'administrador' || profile === 'cocina'"> <a (click)="currentPage = 'cocina'"
                       class="add-res-tab">Cocina</a>
                   </li>
-                  <!-- <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'personal')}" *ngIf="profile === 'administrador'"> <a
-                      (click)="currentPage = 'personal'" class="add-res-tab">Personal</a>
-                  </li> -->
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'trabajador')}" *ngIf="profile === 'administrador'"> <a
+                      (click)="currentPage = 'trabajador'" class="add-res-tab">Trabajador</a>
+                  </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'insumos')}"
                     *ngIf="profile === 'administrador' || profile === 'cocina'"> <a (click)="currentPage = 'insumos'"
                       class="add-res-tab">Insumos</a>
@@ -97,6 +97,10 @@
                     *ngIf="profile === 'administrador' || profile === 'cajero'"> <a (click)="currentPage = 'caja'"
                       class="add-res-tab">Caja</a>
                   </li>
+                  <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'proveedor')}"
+                    *ngIf="profile === 'administrador'"> <a (click)="currentPage = 'proveedor'"
+                    class="add-res-tab">Proveedor</a>
+                </li>
                   <li class="add-res-tab" [ngClass]="{'active' : (currentPage === 'cotizacion')}"
                     *ngIf="profile === 'administrador'"> <a (click)="currentPage = 'cotizacion'"
                       class="add-res-tab">Cotización</a>
@@ -128,9 +132,9 @@
                         <app-vistacocina></app-vistacocina>
                       </div>
 
-                      <!-- <div class="container-fluid padding-30" *ngIf="currentPage === 'personal'">
-                        <app-vistapersonal></app-vistapersonal>
-                      </div> -->
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'trabajador'">
+                        <app-vistatrabajador></app-vistatrabajador>
+                      </div>
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'insumos'">
                         <app-vistainsumos></app-vistainsumos>
@@ -142,6 +146,10 @@
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'caja'">
                         <app-vistapago></app-vistapago>
+                      </div>
+
+                      <div class="container-fluid padding-30" *ngIf="currentPage === 'proveedor'">
+                        <app-vistaproveedor></app-vistaproveedor>
                       </div>
 
                       <div class="container-fluid padding-30" *ngIf="currentPage === 'cotizacion'">

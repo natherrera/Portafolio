@@ -15,8 +15,9 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class VistainsumosComponent implements OnInit
 {
-  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'costo', 'unidadMedida', 'modificar'];
+  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'cantidad', 'costo', 'unidadMedida', 'modificar'];
   dataSourceInsumo: any;
+  dataSourceTipoInsumo: any;//TODO TMV: Conseguir ecxplicación funcionamiento
   selection = new SelectionModel<Insumo>(true, []);
   public crearInsumoForm: FormGroup;
   public insumo: any = {};
@@ -33,6 +34,7 @@ export class VistainsumosComponent implements OnInit
       nombreInsumo: ['', Validators.required],
       marca: ['', Validators.required],
       tipoInsumo: ['', Validators.required],
+      cantidad: ['', Validators.required],
       costo: ['', Validators.required],
       unidadMedida: ['', Validators.required]
     })
@@ -47,8 +49,8 @@ export class VistainsumosComponent implements OnInit
   }
 
   getInsumos() {
-    this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
-    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+    let insumoList = JSON.parse(this.storageService.getCurrentInsumo());
+    this.dataSourceInsumo = new MatTableDataSource<any>(insumoList);
   }
 
   openDialog(tipo: string, element: any) {
@@ -79,5 +81,6 @@ export class VistainsumosComponent implements OnInit
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${+row.id + 1}`;
   }
 
+  
 
 }
