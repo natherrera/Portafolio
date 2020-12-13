@@ -21,7 +21,10 @@ export class CheckoutComponent implements OnInit
   public pedido = new PedidoCabecera();
   private currentDate = new Date();
   pedidos: any = [];
-  
+  insumos: any = [];
+  ordenes: any = [];
+  recetaPedidos: any = [];
+  insumosPedidos: any = [];
 
 
   constructor (
@@ -75,6 +78,7 @@ export class CheckoutComponent implements OnInit
     if (this.pagoForm.valid)
     {
       this.pedidos = JSON.parse(this.storageService.getCurrentPedidos());
+      this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
       this.estadoOrden = true;
       this.orden.estado = "Pagado";
       this.pedido.mesa = this.orden.mesa;
@@ -83,6 +87,25 @@ export class CheckoutComponent implements OnInit
       this.orden.hora = this.datePipe.transform(this.currentDate, "HH:MM");
       this.orden.id =  this.pedidos.length + 1;
       this.storageService.insertPedidos(this.orden);
+      this.ordenes = JSON.parse(this.storageService.getCurrentPedidos());
+      debugger;
+      this.ordenes[this.ordenes.length - 1].pedido.forEach(pedido => {
+        this.recetaPedidos.push(pedido.receta);
+      });
+      this.recetaPedidos.forEach(receta => {
+        receta.listaInsumos.forEach(insumoLista => {
+          this.insumosPedidos.push(insumoLista);
+        });
+      });
+      this.insumosPedidos.forEach(insumosPedido => {
+        this.insumos.forEach(insumo => {
+          if(insumo.id == insumosPedido.insumoId){
+            insumo.cantidad = insumo.cantidad - insumosPedido.cantidad;
+          }
+        });
+      });
+      this.storageService.setCurrentInsumo(this.insumos);
+      
     }
   }
 

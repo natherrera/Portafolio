@@ -29,7 +29,7 @@ export class VistacocinaComponent implements OnInit
 
   
   getPedidos() {
-    this.listaPedidos = JSON.parse(this.storageService.getCurrentPedido());
+    this.listaPedidos = JSON.parse(this.storageService.getCurrentPedidos());
     this.dataSourceCocina = new MatTableDataSource<any>(this.listaPedidos);
   }
 
