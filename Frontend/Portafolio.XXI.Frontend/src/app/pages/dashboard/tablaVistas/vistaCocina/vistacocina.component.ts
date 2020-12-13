@@ -3,8 +3,6 @@ import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogContentCocinaComponent} from '../../modalVistas/DialogContentCocina/dialogContentCocina.component';
-import { COCINA_DATA } from '../../../../../utils/mock-responses/cocina/cocinaResponse';
-import { Cocina } from '../../../../../utils/mock-core/models/cocina.model';
 import { StorageService } from 'src/services/storage.service';
 
 @Component({
@@ -15,9 +13,10 @@ import { StorageService } from 'src/services/storage.service';
 
 export class VistacocinaComponent implements OnInit
 {
-  dataSourceCocina = new MatTableDataSource<Cocina>(COCINA_DATA);
-  displayedColumnsCocina: string[] = ['id', 'mesa', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
-  selection = new SelectionModel<Cocina>(true, []);
+  listaPedidos: any;
+  dataSourceCocina = new MatTableDataSource<any>();
+  displayedColumnsCocina: string[] = ['id', 'mesa', 'fecha', 'hora', 'estado', 'modificar'];
+  selection = new SelectionModel<any>(true, []);
 
 
   constructor (public dialog: MatDialog, private storageService: StorageService) { }
@@ -25,12 +24,13 @@ export class VistacocinaComponent implements OnInit
 
   ngOnInit(): void
   {
+    this.getPedidos();
   }
 
   
   getPedidos() {
-    let pedidosList = JSON.parse(this.storageService.getCurrentPedidos());
-    this.dataSourceCocina = new MatTableDataSource<any>(pedidosList);
+    this.listaPedidos = JSON.parse(this.storageService.getCurrentPedido());
+    this.dataSourceCocina = new MatTableDataSource<any>(this.listaPedidos);
   }
 
 
