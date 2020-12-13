@@ -140,6 +140,14 @@ export class StorageService {
     return (session && session.token) ? session.token : null;
   };
 
+  setCurrentActivos(activo: any): void {
+    this.localStorageService.setItem('activos', JSON.stringify(activo));
+  }
+
+  getCurrentActivo(){
+    return this.localStorageService.getItem('activos');
+  }
+
   logout(): void{
     this.removeCurrentSession();
     this.router.navigate(['/login']);

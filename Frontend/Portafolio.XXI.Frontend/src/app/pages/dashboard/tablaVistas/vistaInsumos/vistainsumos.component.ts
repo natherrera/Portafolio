@@ -22,7 +22,6 @@ export class VistainsumosComponent implements OnInit
   public crearInsumoForm: FormGroup;
   public insumo: any = {};
   public insumos: any = [];
-  public tipoInsumos: any = [];
 
 
   constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
@@ -30,7 +29,6 @@ export class VistainsumosComponent implements OnInit
 
   ngOnInit(): void
   {
-    this.getTipoInsumo();
     this.getInsumos();
     this.crearInsumoForm = this.formBuilder.group({
       nombreInsumo: ['', Validators.required],
@@ -52,29 +50,7 @@ export class VistainsumosComponent implements OnInit
 
   getInsumos() {
     let insumoList = JSON.parse(this.storageService.getCurrentInsumo());
-
-    insumoList.forEach(insumo => {
-      let tipoInsumo = "";
-
-      this.tipoInsumos.forEach(tipoInsumo_ => {
-        if(tipoInsumo_.id == insumo.tipoInsumo){
-          tipoInsumo = tipoInsumo_.nombre;
-        }
-      });
-      insumo.tipoInsumo = tipoInsumo==""?insumo.tipoInsumo:tipoInsumo;
-
-      this.insumos.push(insumo);
-    });
-    
-
-    //this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
-    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
-  }
-
-  getTipoInsumo() {
-    this.tipoInsumos = JSON.parse(this.storageService.getCurrentTipoInsumo());
-    console.log(this.tipoInsumos);
-    this.dataSourceTipoInsumo = new MatTableDataSource<any>(this.tipoInsumos);
+    this.dataSourceInsumo = new MatTableDataSource<any>(insumoList);
   }
 
   openDialog(tipo: string, element: any) {

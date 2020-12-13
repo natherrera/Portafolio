@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Modificar Activo</h1>
+<div mat-dialog-content>
+  <p>Activo: {{data.nombreActivo}}</p>
+  <mat-form-field style="padding-right: 8px;">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombreActivo">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Cantidad</mat-label>
+    <input matInput [(ngModel)]="data.cantidad">
+  </mat-form-field>
+
+    <mat-form-field style="padding-right: 8px;">
+    <mat-label>Tipo</mat-label>
+    <mat-select [(ngModel)]="data.tipoActivo">
+        <mat-option value="Mobiliaria">Mobiliaria</mat-option>
+        <mat-option value="Utensilio">Utensilio</mat-option>
+    </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="onNoClick()">Modificar</button>
+</div>

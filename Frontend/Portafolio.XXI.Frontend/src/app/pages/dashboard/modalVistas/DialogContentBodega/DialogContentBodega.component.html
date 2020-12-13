@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Modificar Insumo</h1>
+<div mat-dialog-content>
+  <p>Insumo: {{data.nombreInsumo}}</p>
+  <mat-form-field style="padding-right: 8px;">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombreInsumo">
+  </mat-form-field>
+
+  <mat-form-field style="padding-right: 8px;">
+    <mat-label>Marca</mat-label>
+    <input matInput [(ngModel)]="data.marca">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Cantidad</mat-label>
+    <input matInput [(ngModel)]="data.cantidad">
+  </mat-form-field>
+  
+</div>
+<div mat-dialog-content>
+    <mat-form-field style="padding-right: 8px;">
+    <mat-label>Tipo</mat-label>
+    <mat-select [(ngModel)]="data.tipoInsumo">
+        <mat-option value="Comestible">Comestible</mat-option>
+        <mat-option value="Bebestible">Bebestible</mat-option>
+    </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field>
+    <mat-label>Unidad Medida</mat-label>
+    <mat-select [(ngModel)]="data.unidadMedida">
+        <mat-option value="Kilogramo">Kilogramo</mat-option>
+        <mat-option value="Litro">Litro</mat-option>
+    </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="onNoClick()">Modificar</button>
+</div>
