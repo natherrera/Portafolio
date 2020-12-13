@@ -128,7 +128,8 @@
         </table>
       </mat-tab>
 
-      <mat-tab label="Crear Cotizaciónn">
+      <!-- Salida Bodega-->
+      <mat-tab label="Salida Bodega">
         <div class="row">
           <div class="col-3">
             <form id="infoCotizacion-form" #icForm="ngForm" [formGroup]="infoCotizacionForm"
@@ -141,11 +142,6 @@
                     <label class="text-light-black fw-700">Responsable</label>
                     <mat-form-field appearance="fill">
                       <input matInput placeholder="Fabian Araneda Molina" [disabled]="true">
-                      <!-- <mat-select formControlName="proveedor" required>
-                        <mat-option *ngFor="let proveedor of listaProveedores" [value]="proveedor.nombreProveedor">
-                          {{proveedor.nombreProveedor}}
-                        </mat-option>
-                      </mat-select> -->
                     </mat-form-field>
                     <label class="text-light-black fw-700">Requirente</label>
                     <mat-form-field appearance="fill">
@@ -155,7 +151,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label class="text-light-black fw-700">Fecha de entrega
+                    <label class="text-light-black fw-700">Fecha de salida
                     </label>
                     <br>
                     <mat-form-field color="accent" appearance="fill">
@@ -176,13 +172,13 @@
               novalidate>
               <mat-card style="margin: 1em">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <div class="form-group">
                       <label class="text-light-black fw-700">Insumo
                       </label>
                       <br>
                       <mat-form-field appearance="fill">
-                        <mat-select formControlName="insumo" required>
+                        <mat-select formControlName="insumo" required [(ngModel)]="id">
                           <mat-option *ngFor="let insumo of insumos" [value]="insumo.nombreInsumo">
                             {{insumo.nombreInsumo}}
                           </mat-option>
@@ -190,39 +186,53 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <div class="form-group">
                       <label class="text-light-black fw-700">Cantidad<sup class="fs-16">*</sup>
                       </label>
                       <input type="number" name="#" class="form-control form-control-submit" formControlName="cantidad">
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <div class="form-group">
-                      <label class="text-light-black fw-700">Unidad de medida
+                      <button type="submit" mat-raised-button style="margin-top: 16%;">Agregar insumo</button>
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
+            </form>
+            <form id="agregarActivo-form" #aiForm="ngForm" [formGroup]="agregarActivoForm" (ngSubmit)="agregarActivo()"
+              novalidate>
+              <mat-card style="margin: 1em">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="text-light-black fw-700">Activo
                       </label>
                       <br>
                       <mat-form-field appearance="fill">
-                        <mat-select formControlName="unidadMedida" required>
-                          <mat-option value="gramos">
-                            gramos
-                          </mat-option>
-                          <mat-option value="kilos">
-                            kilos
-                          </mat-option>
-                          <mat-option value="litros">
-                            litros
+                        <mat-select formControlName="activo" required [(ngModel)]="id">
+                          <mat-option *ngFor="let activo of activos" [value]="activo.nombreActivo">
+                            {{activo.nombreActivo}}
                           </mat-option>
                         </mat-select>
                       </mat-form-field>
                     </div>
                   </div>
-                  <div class="col-md-12">
-                    <button type="submit" mat-raised-button>Agregar insumo</button>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="text-light-black fw-700">Cantidad<sup class="fs-16">*</sup>
+                      </label>
+                      <input type="number" name="#" class="form-control form-control-submit" formControlName="cantidadActivo">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <button type="submit" mat-raised-button style="margin-top: 16%;">Agregar Activo</button>
+                    </div>
                   </div>
                 </div>
               </mat-card>
-    
             </form>
             <div class="col-md-12" *ngIf="hasData">
               <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablacotizacion">
@@ -236,7 +246,6 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
               <div id="htmlData" style="visibility: hidden;" #htmlData>
-                <h1 style="font-size: 1em;">COTIZACIÓN RESTAURANT SIGLO XXI</h1>
                 <table>
                   <tr style="font-size: 14px" class="table-primary">
                     <th style="font-size: 14px">Insumo</th>
@@ -249,9 +258,34 @@
                     <td style="font-size: 14px">{{element.cantidad}} {{element.unidadMedida}}</td>
                   </tr>
                 </table>
-                <p>Porfavor enviar cotización lista a administración@sigloxxi.cl.</p>
                 <p>Gracias</p>
+              </div>
+            </div>
+            <div class="col-md-12" *ngIf="hasDataA">
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablacotizacion">
+                <ng-container *ngFor="let col of displayedColumns">
+                  <ng-container matColumnDef="{{ col }}">
+                    <th mat-header-cell *matHeaderCellDef> {{ col | titlecase}}</th>
+                    <td mat-cell *matCellDef="let element"> {{ element[col]}}</td>
+                  </ng-container>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <div id="htmlData" style="visibility: hidden;" #htmlData>
+                <table>
+                  <tr style="font-size: 14px" class="table-primary">
+                    <th style="font-size: 14px">Insumo</th>
+                    <th style="font-size: 14px">Cantidad</th>
     
+                  </tr>
+                  <tr style="font-size: 14px" *ngFor="let element of activos">
+    
+                    <td style="font-size: 14px">{{element.activo}}</td>
+                    <td style="font-size: 14px">{{element.cantidadActivo}}</td>
+                  </tr>
+                </table>
+                <p>Gracias</p>
               </div>
             </div>
           </div>

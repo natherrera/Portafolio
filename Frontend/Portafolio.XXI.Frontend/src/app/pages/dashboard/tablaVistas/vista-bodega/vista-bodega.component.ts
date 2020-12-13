@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { StorageService } from 'src/services/storage.service';
@@ -21,11 +21,23 @@ export class VistaBodegaComponent implements OnInit {
   displayedColumnsActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad', 'modificar', 'eliminar'];
   displayedColumns: string[] = ['insumo', 'cantidad', 'unidadMedida'];
   dataSource: any = [];
-  agregarInsumoForm: FormGroup;
-  infoCotizacionForm: FormGroup;
+  agregarInsumoForm: FormGroup = new FormGroup ({
+    insumo: new FormControl(),
+    cantidad: new FormControl()
+  });
+  agregarActivoForm: FormGroup = new FormGroup ({
+    activo: new FormControl(),
+    cantidadActivo: new FormControl()
+  });
+  infoCotizacionForm: FormGroup = new FormGroup ({
+    fechaEntrega: new FormControl()
+  });
   hasData: boolean;
+  hasDataA: boolean;
   public insumos: Insumo[] = [];
   public activos: any = [];
+  public idInsumos: string [] = [];
+  public id: string;
 
   constructor (
     public dialog: MatDialog,
@@ -85,11 +97,42 @@ export class VistaBodegaComponent implements OnInit {
       cantidad: form.cantidad,
       unidadMedida: form.unidadMedida
     }
+    debugger;
+    this.insumos.forEach(element => {
+      debugger;
+      if(element.nombreInsumo == this.id){
+        element.cantidad = element.cantidad - insumo.cantidad;
+      }
+    });
+    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+    this.storageService.setCurrentInsumo(this.insumos);
     const wishlist = [];
     wishlist.push(insumo);
     this.dataSource = new MatTableDataSource(wishlist);
     this.agregarInsumoForm.reset();
     this.hasData = true;
+  }
+
+  agregarActivo = () => {
+    const form = this.agregarActivoForm.value;
+    const activo = {
+      activo: form.activo,
+      cantidadActivo: form.cantidadActivo
+    }
+    debugger;
+    this.activos.forEach(element => {
+      debugger;
+      if(element.nombreActivo == this.id){
+        element.cantidad = element.cantidad - activo.cantidadActivo;
+      }
+    });
+    this.dataSourceActivo = new MatTableDataSource<any>(this.activos);
+    this.storageService.setCurrentInsumo(this.activos);
+    const wishlist = [];
+    wishlist.push(activo);
+    this.dataSource = new MatTableDataSource(wishlist);
+    this.agregarActivoForm.reset();
+    this.hasDataA = true;
   }
 
 }

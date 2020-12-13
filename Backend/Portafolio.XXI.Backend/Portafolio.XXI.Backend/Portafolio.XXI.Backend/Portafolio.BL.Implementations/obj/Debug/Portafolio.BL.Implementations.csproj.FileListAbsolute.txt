@@ -1,0 +1,41 @@
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.csprojResolveAssemblyReference.cache
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.dll
+c:\users\agibiz\documents\visual studio 2013\Projects\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.csproj.CopyComplete
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll.config
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Implementations.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Aplication.DTO.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.BL.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\bin\Portafolio.Infraestructure.Data.Contracts.pdb
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.csprojResolveAssemblyReference.cache
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.dll
+C:\Users\Fabian\Desktop\Portafolio.XXI.Backend\Portafolio.XXI.Backend\Portafolio.BL.Implementations\obj\Debug\Portafolio.BL.Implementations.pdb
