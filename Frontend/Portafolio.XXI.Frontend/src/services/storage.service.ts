@@ -148,6 +148,21 @@ export class StorageService {
     return this.localStorageService.getItem('activos');
   }
 
+  insertPedidos(pedido: any):void {
+    var pedidoList = JSON.parse(localStorage.getItem('pedido'));
+    pedidoList.push(pedido);
+    localStorage.setItem('pedido', JSON.stringify(pedidoList));
+  }
+
+  setCurrentPedido(pedido: any): void {
+    this.localStorageService.setItem('pedido', JSON.stringify(pedido));
+  }
+
+  getCurrentPedido() {
+    return this.localStorageService.getItem('pedido');
+  }
+
+
   logout(): void{
     this.removeCurrentSession();
     this.router.navigate(['/login']);
