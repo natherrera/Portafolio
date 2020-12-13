@@ -1,6 +1,7 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {fakeBackendProvider} from "./helper/fake-backend";
 import {StorageService} from "../../services/storage.service";
+import { Shared } from '../shared/shared';
 import {AuthorizatedGuard} from "./guards/authorizated.guard";
 
 @NgModule({
@@ -8,6 +9,7 @@ import {AuthorizatedGuard} from "./guards/authorizated.guard";
   imports: [],
   providers: [
     StorageService,
+    Shared,
     AuthorizatedGuard,
     fakeBackendProvider
   ],

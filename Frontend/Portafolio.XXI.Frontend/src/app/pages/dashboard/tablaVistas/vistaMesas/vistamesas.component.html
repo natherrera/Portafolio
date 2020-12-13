@@ -75,7 +75,13 @@
             <div class="form-group">
               <label class="text-light-black fw-700">Nombre mesa<sup class="fs-16">*</sup>
               </label>
-              <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreMesa">
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="mesa">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Capacidad</label>
+              <input type="number" name="#" class="form-control form-control-submit" formControlName="capacidad">
             </div>
           </div>
           <div class="col-md-12">
@@ -86,23 +92,34 @@
               <mat-form-field appearance="fill">
                   <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
                   <mat-select formControlName="ubicacion" required>
-                      <mat-option  value="1">
+                      <mat-option  value="Terraza">
                           Terraza
                       </mat-option>
-                      <mat-option  value="2">
+                      <mat-option  value="Interior">
                           Interior
                       </mat-option>
                   </mat-select>
               </mat-form-field>
           </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="form-group">
-              <label class="text-light-black fw-700">Capacidad</label>
-              <input type="number" name="#" class="form-control form-control-submit" formControlName="capacidad">
-            </div>
+              <label class="text-light-black fw-700">Estado
+              </label>
+              <br>
+              <mat-form-field appearance="fill">
+                  <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                  <mat-select formControlName="estado" required>
+                      <mat-option  value="Disponible">
+                        Disponible
+                      </mat-option>
+                      <mat-option  value="Ocupada">
+                        Ocupada
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
           </div>
-
+          </div>
           <div class="col-md-12">
             <button type="submit" class="btn-second btn-submit">Crear mesa</button>
           </div>
