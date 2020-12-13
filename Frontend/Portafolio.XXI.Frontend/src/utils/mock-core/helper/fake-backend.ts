@@ -6,6 +6,9 @@ import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
 import { products } from "../../mock-responses/producto/productsResponse";
 import { insumos } from "../../mock-responses/insumo/insumoResponse";
+import { tipoInsumo } from "../../mock-responses/tipoInsumo/tipoInsumoResponse";
+import { trabajadors } from 'src/utils/mock-responses/trabajador/trabajadorResponse';
+import { PROVEEDOR } from 'src/utils/mock-responses/proveedor/proveedorResponse';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor
@@ -68,8 +71,28 @@ export class FakeBackendInterceptor implements HttpInterceptor
         //   return getInsumosById();
         case url.endsWith('api/insumos/create') && method === 'POST':
           return createInsumos();
-        case url.match(/\/api\/insumos\/delete\/\d+$/) && method === 'DELETE':
-          // return deleteInsumo();
+        // case url.match(/\/api\/insumos\/delete\/\d+$/) && method === 'DELETE':
+        //   return deleteInsumo();
+
+        case url.endsWith('api/trabajador') && method === 'GET':
+          console.log("getTrabajador");
+          return getTrabajador();
+        // case url.match(/\/api\/trabajador\/\d+$/) && method === 'GET':
+        //   return getTrabajadorById();
+        case url.endsWith('api/trabajador/create') && method === 'POST':
+          return createTrabajador();
+        // case url.match(/\/api\/trabajador\/delete\/\d+$/) && method === 'DELETE':
+        //   return deleteTrabajador();
+
+        case url.endsWith('api/proveedor') && method === 'GET':
+          console.log("getProveedor");
+          return getProveedor();
+        // case url.match(/\/api\/\/\d+$/) && method === 'GET':
+        //   return getProveedorById();
+        case url.endsWith('api/proveedor/create') && method === 'POST':
+          return createTrabajador();
+        // case url.match(/\/api\/proveedor\/delete\/\d+$/) && method === 'DELETE':
+        //   return deleteProveedor();
 
         default:
           return next.handle(request);
@@ -203,7 +226,6 @@ export class FakeBackendInterceptor implements HttpInterceptor
     }
 
     
-
     // Insumo
     function getInsumos()
     {
@@ -225,16 +247,90 @@ export class FakeBackendInterceptor implements HttpInterceptor
       return ok();
     }
 
+    function getTipoInsumo()
+    {
+      localStorage.setItem('tipoInsumo', JSON.stringify(tipoInsumo));
+      return ok(tipoInsumo);
+    }
+
     // function getInsumosById()
     // {
-    //   const insumo = INSUMO_DATA.filter(x => x.id === idFromUrl());
-    //   return ok(insumo);
+    //   const insumos = insumos.filter(x => x.id === idFromUrl());
+    //   return ok(insumos);
     // }
 
     // function deleteInsumo()
     // {
-    //   const filteredInsumos = INSUMO_DATA.filter(x => x.id !== idFromUrl());
-    //   localStorage.setItem('INSUMO_DATA', JSON.stringify(filteredInsumos));
+    //   const filteredInsumos = insumos.filter(x => x.id !== idFromUrl();
+    //   localStorage.setItem('insumo', JSON.stringify(filteredInsumos));
+    //   return ok();
+    // }
+
+        // Trabajador
+    function getTrabajador()
+    {
+      return ok(trabajadors);
+    }
+
+    function createTrabajador()
+    {
+      const { rut } = body;
+      let found = trabajadors.find(x => x.rut === rut);
+      if (found)
+      {
+        return error(3, 'El trabajador ingresado ya se encuentra registrado');
+      }
+
+      trabajadors.push({...body});
+      localStorage.setItem('trabajador', JSON.stringify(trabajadors));
+
+      return ok();
+    }
+
+    // function getTrabajadorsById()
+    // {
+    //   const trabajador = trabajador.filter(x => x.rut === idFromUrl());
+    //   return ok(trabajador);
+    // }
+
+    // function deleteTrabajador()
+    // {
+    //   const filteredTrabajador = trabajador.filter(x => x.rut !== idFromUrl());
+    //   localStorage.setItem('trabajador', JSON.stringify(filteredTrabajador));
+    //   return ok();
+    //}
+
+    // PROVEEDOR
+    function getProveedor()
+    {
+      return ok(PROVEEDOR);
+    }
+
+    function createProveedor()
+    {
+      const { id } = body;
+      let found = PROVEEDOR.find(x => x.id === id);
+      if (found)
+      {
+        return error(3, 'El proveedor ingresado ya se encuentra registrado');
+      }
+
+      PROVEEDOR.push({...body});
+      localStorage.setItem('proveedor', JSON.stringify(PROVEEDOR));
+
+      return ok();
+    }
+
+    // function getProveedorById()
+    // {
+    //   const proveedor = PROVEEDOR.filter(x => x.id === idFromUrl());
+    //   return ok(proveedor);
+    // }
+
+    // function deleteProveedor()
+    // {
+    //   const filteredProveedor = PROVEEDOR.filter(x => x.id !== idFromUrl());
+    //   localStorage.setItem('proveedor', JSON.stringify(filteredProveedor));
     //   return ok();
     // }
 

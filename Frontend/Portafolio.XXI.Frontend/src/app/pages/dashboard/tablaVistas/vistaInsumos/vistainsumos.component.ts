@@ -15,12 +15,14 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class VistainsumosComponent implements OnInit
 {
-  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'costo', 'unidadMedida', 'modificar'];
+  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'cantidad', 'costo', 'unidadMedida', 'modificar'];
   dataSourceInsumo: any;
+  dataSourceTipoInsumo: any;//TODO TMV: Conseguir ecxplicación funcionamiento
   selection = new SelectionModel<Insumo>(true, []);
   public crearInsumoForm: FormGroup;
   public insumo: any = {};
   public insumos: any = [];
+  public tipoInsumos: any = [];
 
 
   constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
@@ -28,11 +30,13 @@ export class VistainsumosComponent implements OnInit
 
   ngOnInit(): void
   {
+    this.getTipoInsumo();
     this.getInsumos();
     this.crearInsumoForm = this.formBuilder.group({
       nombreInsumo: ['', Validators.required],
       marca: ['', Validators.required],
       tipoInsumo: ['', Validators.required],
+      cantidad: ['', Validators.required],
       costo: ['', Validators.required],
       unidadMedida: ['', Validators.required]
     })
@@ -47,8 +51,30 @@ export class VistainsumosComponent implements OnInit
   }
 
   getInsumos() {
-    this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
+    let insumoList = JSON.parse(this.storageService.getCurrentInsumo());
+
+    insumoList.forEach(insumo => {
+      let tipoInsumo = "";
+
+      this.tipoInsumos.forEach(tipoInsumo_ => {
+        if(tipoInsumo_.id == insumo.tipoInsumo){
+          tipoInsumo = tipoInsumo_.nombre;
+        }
+      });
+      insumo.tipoInsumo = tipoInsumo==""?insumo.tipoInsumo:tipoInsumo;
+
+      this.insumos.push(insumo);
+    });
+    
+
+    //this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
     this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+  }
+
+  getTipoInsumo() {
+    this.tipoInsumos = JSON.parse(this.storageService.getCurrentTipoInsumo());
+    console.log(this.tipoInsumos);
+    this.dataSourceTipoInsumo = new MatTableDataSource<any>(this.tipoInsumos);
   }
 
   openDialog(tipo: string, element: any) {
@@ -79,5 +105,6 @@ export class VistainsumosComponent implements OnInit
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${+row.id + 1}`;
   }
 
+  
 
 }

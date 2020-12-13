@@ -1,0 +1,169 @@
+
+<div class="trabajador-container">
+  <mat-tab-group animationDuration="0ms">
+    <!-- TABLA GESTION Trabajador -->
+    <mat-tab label="Gestión de trabajador">
+      <table mat-table [dataSource]="dataSourceTrabajador" class="mat-elevation-z8">
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle(dataSourceTrabajador) : null"
+              [checked]="selection.hasValue() && isAllSelected(dataSourceTrabajador)"
+              [indeterminate]="selection.hasValue() && !isAllSelected(dataSourceTrabajador)"
+              [aria-label]="checkboxLabel(dataSourceTrabajador)">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+              [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row, dataSourceTrabajador)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <!-- Rut Column -->
+        <ng-container matColumnDef="rut">
+          <th mat-header-cell *matHeaderCellDef> Rut </th>
+          <td mat-cell *matCellDef="let element"> {{element.rut}} </td>
+        </ng-container>
+
+        <!-- Nombre Column -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+
+        <!-- Apellido Materno Column -->
+        <ng-container matColumnDef="apellidoMaterno">
+          <th mat-header-cell *matHeaderCellDef> Apellido Materno </th>
+          <td mat-cell *matCellDef="let element"> {{element.apellidoMaterno}} </td>
+        </ng-container>
+
+        <!-- Apellido Paterno Column -->
+        <ng-container matColumnDef="apellidoPaterno">
+          <th mat-header-cell *matHeaderCellDef> Apellido Paterno</th>
+          <td mat-cell *matCellDef="let element"> {{element.apellidoPaterno}} </td>
+        </ng-container>
+
+        <!-- Fecha Nacimiento Column -->
+        <ng-container matColumnDef="fechaNacimiento">
+          <th mat-header-cell *matHeaderCellDef> Fecha Nacimiento </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
+        </ng-container>
+
+        <!-- Sexo Column -->
+        <ng-container matColumnDef="sexo">
+          <th mat-header-cell *matHeaderCellDef> Sexo </th>
+          <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
+        </ng-container>
+
+        <!-- Usuario Column -->
+        <ng-container matColumnDef="usuario">
+          <th mat-header-cell *matHeaderCellDef> Usuario </th>
+          <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <!-- Modificar Column -->
+        <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef> Modificar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button color="primary" (click)="openDialog('modificar', element)">
+              Modificar
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsTrabajador"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsTrabajador;" (click)="selection.toggle(row)">
+        </tr>
+      </table>
+
+    </mat-tab>
+    <!-- TABLA CREAR TRABAJADOR -->
+    <mat-tab label="Crear trabajador">
+      <form id="crearTrabajador-form" #cmForm="ngForm" [formGroup]="crearTrabajadorForm" (ngSubmit)="crearTrabajador()"
+      novalidate>
+        <div class="row">
+          <div class="col-12" style="margin-top: 1em">
+            <!-- <h5 class="text-light-black fw-700">General Information</h5> -->
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Rut <sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="rut">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Nombre<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="nombre">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Apellido Materno<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="apellidoMaterno">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Apellido Paterno<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="apellidoPaterno">
+            </div>
+          </div>
+          <!-- Cambiar por formato fecha -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Fecha Nacimiento<sup class="fs-16">*</sup>
+              </label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="fechaNacimiento">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Sexo
+              </label>
+              <br>
+              <mat-form-field appearance="fill">
+                  <!-- <mat-select (selectionChange)="handleChangeTipoAtencion($event)" required> -->
+                  <mat-select formControlName="sexo" required>
+                      <mat-option  value="1">
+                          Femenino
+                      </mat-option>
+                      <mat-option  value="2">
+                          Masculino
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Usuario</label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="usuario">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="text-light-black fw-700">Email</label>
+              <input type="text" name="#" class="form-control form-control-submit" formControlName="email">
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <button type="submit" class="btn-second btn-submit">Crear trabajador</button>
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+</div>
