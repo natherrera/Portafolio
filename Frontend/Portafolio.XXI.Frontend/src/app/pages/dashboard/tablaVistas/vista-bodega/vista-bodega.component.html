@@ -235,7 +235,7 @@
               </mat-card>
             </form>
             <div class="col-md-12" *ngIf="hasData">
-              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablacotizacion">
+              <table mat-table [dataSource]="dataSourceInsumo2" class="mat-elevation-z8" id="tablainsumos">
                 <ng-container *ngFor="let col of displayedColumns">
                   <ng-container matColumnDef="{{ col }}">
                     <th mat-header-cell *matHeaderCellDef> {{ col | titlecase}}</th>
@@ -245,24 +245,22 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
-              <div id="htmlData" style="visibility: hidden;" #htmlData>
+              <!-- <div id="htmlData" style="visibility: hidden;" #htmlData>
                 <table>
                   <tr style="font-size: 14px" class="table-primary">
                     <th style="font-size: 14px">Insumo</th>
                     <th style="font-size: 14px">Cantidad</th>
-    
                   </tr>
-                  <tr style="font-size: 14px" *ngFor="let element of insumos">
-    
+                  <tr style="font-size: 14px" *ngFor="let element of wishlist">
                     <td style="font-size: 14px">{{element.insumo}}</td>
                     <td style="font-size: 14px">{{element.cantidad}} {{element.unidadMedida}}</td>
                   </tr>
                 </table>
                 <p>Gracias</p>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-12" *ngIf="hasDataA">
-              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablacotizacion">
+              <table mat-table [dataSource]="dataSourceActivo2" class="mat-elevation-z8" id="tablacotizacion">
                 <ng-container *ngFor="let col of displayedColumns">
                   <ng-container matColumnDef="{{ col }}">
                     <th mat-header-cell *matHeaderCellDef> {{ col | titlecase}}</th>
@@ -272,21 +270,6 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
-              <div id="htmlData" style="visibility: hidden;" #htmlData>
-                <table>
-                  <tr style="font-size: 14px" class="table-primary">
-                    <th style="font-size: 14px">Insumo</th>
-                    <th style="font-size: 14px">Cantidad</th>
-    
-                  </tr>
-                  <tr style="font-size: 14px" *ngFor="let element of activos">
-    
-                    <td style="font-size: 14px">{{element.activo}}</td>
-                    <td style="font-size: 14px">{{element.cantidadActivo}}</td>
-                  </tr>
-                </table>
-                <p>Gracias</p>
-              </div>
             </div>
           </div>
         </div>

@@ -19,8 +19,9 @@ export class VistaBodegaComponent implements OnInit {
   dataSourceSalida: any;
   displayedColumnsInsumo: string[] = ['id', 'nombreInsumo', 'marca', 'tipoInsumo',  'unidadMedida', 'cantidad', 'modificar', 'eliminar'];
   displayedColumnsActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad', 'modificar', 'eliminar'];
-  displayedColumns: string[] = ['insumo', 'cantidad', 'unidadMedida'];
-  dataSource: any = [];
+  displayedColumns: string[] = ['Nombre', 'Cantidad'];
+  dataSourceInsumo2: any = [];
+  dataSourceActivo2: any = [];
   agregarInsumoForm: FormGroup = new FormGroup ({
     insumo: new FormControl(),
     cantidad: new FormControl()
@@ -38,6 +39,7 @@ export class VistaBodegaComponent implements OnInit {
   public activos: any = [];
   public idInsumos: string [] = [];
   public id: string;
+  public wishlist: any = [];
 
   constructor (
     public dialog: MatDialog,
@@ -48,7 +50,6 @@ export class VistaBodegaComponent implements OnInit {
 
   ngOnInit(): void
   {
-    debugger;
     this.getData();
     this.agregarInsumoForm = this.formBuilder.group({
       insumo: [''],
@@ -91,24 +92,24 @@ export class VistaBodegaComponent implements OnInit {
 
   agregarInsumo = () =>
   {
+    debugger;
     const form = this.agregarInsumoForm.value;
     const insumo = {
       insumo: form.insumo,
       cantidad: form.cantidad,
       unidadMedida: form.unidadMedida
     }
-    debugger;
     this.insumos.forEach(element => {
-      debugger;
       if(element.nombreInsumo == this.id){
         element.cantidad = element.cantidad - insumo.cantidad;
+        insumo.unidadMedida = element.unidadMedida;
       }
     });
     this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
     this.storageService.setCurrentInsumo(this.insumos);
-    const wishlist = [];
-    wishlist.push(insumo);
-    this.dataSource = new MatTableDataSource(wishlist);
+    this.wishlist = [];
+    this.wishlist.push(insumo);
+    this.dataSourceInsumo2 = new MatTableDataSource(this.wishlist);
     this.agregarInsumoForm.reset();
     this.hasData = true;
   }
@@ -130,7 +131,7 @@ export class VistaBodegaComponent implements OnInit {
     this.storageService.setCurrentInsumo(this.activos);
     const wishlist = [];
     wishlist.push(activo);
-    this.dataSource = new MatTableDataSource(wishlist);
+    this.dataSourceActivo2 = new MatTableDataSource(wishlist);
     this.agregarActivoForm.reset();
     this.hasDataA = true;
   }
