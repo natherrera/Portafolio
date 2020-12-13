@@ -39,7 +39,6 @@ export class VistamesasComponent implements OnInit
     {
       let mesa = this.crearMesaForm.value;
       mesa.id = this.shared.crearId(this.listaMesas);
-      debugger
       this.storageService.insertMesa(mesa);
       this.crearMesaForm.reset();
       this.getMesas();
