@@ -6,8 +6,9 @@ import {MatDialog} from '@angular/material/dialog';
 import {DialogModificarComponent} from '../../modalVistas/DialogPedido/modificar/dialogModificar.component';
 import {DialogVerComponent} from '../../modalVistas/DialogPedido/ver/dialogVer.component';
 import { PEDIDO_DATA } from '../../../../../utils/mock-responses/pedidos/pedidosResponse';
-import { Pedido } from '../../../../../utils/mock-core/models/pedido.model';
+import { PedidoCabecera } from '../../../../../utils/mock-core/models/pedido.model';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import { StorageService } from 'src/services/storage.service';
 
 @Component({
   selector: 'app-vistapedido',
@@ -22,16 +23,25 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class VistapedidoComponent implements OnInit
 {
-  displayedColumnsPedido: string[] = ['select', 'id', 'mesa', 'tipoEntrega', 'idCliente', 'fecha','hora', 'estadoPreparacion','subtotal', 'total', 'modificar', 'ver'];
-  dataSourcePedido = new MatTableDataSource<Pedido>(PEDIDO_DATA);
+  displayedColumnsPedido: string[] = ['id', 'mesa', 'tipoAtencion', 'fecha','hora', 'estadoPreparacion', 'subTotal', 'ver'];
+  dataSourcePedido = new MatTableDataSource<PedidoCabecera>(PEDIDO_DATA);
+  pedidos: any = [];
+  selection = new SelectionModel<PedidoCabecera>(true, []);
 
-  selection = new SelectionModel<Pedido>(true, []);
-
-  constructor (public dialog: MatDialog) { }
+  constructor (
+    public dialog: MatDialog,
+    private storageService: StorageService
+    ) { }
 
 
   ngOnInit(): void
   {
+    this.getData();
+  }
+
+  getData() {
+    this.pedidos = JSON.parse(this.storageService.getCurrentPedidos());
+    this.dataSourcePedido = new MatTableDataSource<any>(this.pedidos);
   }
 
   openDialog(element: any, type: string) {

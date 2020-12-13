@@ -7,17 +7,18 @@ import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 })
 export class DialogVerComponent implements OnInit
 {
-  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogVerComponent>)
+  constructor (
+    @Inject(MAT_DIALOG_DATA) public data: any, 
+    public dialogRef: MatDialogRef<DialogVerComponent>)
   { }
 
   productos: any = [];
-  displayedColumns: string[] = ['nombreProducto', 'tipo', 'cantidad', 'total'];
+  displayedColumns: string[] = ['nombreProducto', 'cantidad'];
 
   ngOnInit(): void
   {
-    this.data.bebestibles.map((e) => e.tipo = "bebestibles" );
-    this.data.comestibles.map((e) => e.tipo = "comestibles" );
-    this.productos = this.data.bebestibles.concat(this.data.comestibles);
+    debugger;
+    this.productos = this.data.pedido;
   }
 
   onNoClick(): void {

@@ -31,4 +31,8 @@ export class OrderdetailsComponent implements OnInit
     );
   }
 
+  setPedidos(){
+    this.storageService.insertPedidos(this.orden);
+  }
+
 }

@@ -2,6 +2,7 @@ import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {fakeBackendProvider} from "./helper/fake-backend";
 import {StorageService} from "../../services/storage.service";
 import {AuthorizatedGuard} from "./guards/authorizated.guard";
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [  ],
@@ -9,7 +10,8 @@ import {AuthorizatedGuard} from "./guards/authorizated.guard";
   providers: [
     StorageService,
     AuthorizatedGuard,
-    fakeBackendProvider
+    fakeBackendProvider,
+    DatePipe
   ],
   bootstrap: []
 })

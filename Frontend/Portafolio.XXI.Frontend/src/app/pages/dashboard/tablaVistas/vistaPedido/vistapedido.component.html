@@ -3,21 +3,6 @@
     <!-- TABLA GESTION MESAS -->
     <mat-tab label="Gestión pedido">
       <table mat-table [dataSource]="dataSourcePedido" class="mat-elevation-z8">
-        <!-- Checkbox Column -->
-        <ng-container matColumnDef="select">
-          <th mat-header-cell *matHeaderCellDef>
-            <mat-checkbox (change)="$event ? masterToggle(dataSourcePedido) : null"
-              [checked]="selection.hasValue() && isAllSelected(dataSourcePedido)"
-              [indeterminate]="selection.hasValue() && !isAllSelected(dataSourcePedido)"
-              [aria-label]="checkboxLabel(dataSourcePedido)">
-            </mat-checkbox>
-          </th>
-          <td mat-cell *matCellDef="let row">
-            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-              [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row, dataSourcePedido)">
-            </mat-checkbox>
-          </td>
-        </ng-container>
 
         <!-- Id Column -->
         <ng-container matColumnDef="id">
@@ -32,15 +17,9 @@
         </ng-container>
 
         <!-- Tipo pago Column -->
-        <ng-container matColumnDef="tipoEntrega">
-          <th mat-header-cell *matHeaderCellDef> Tipo pago </th>
-          <td mat-cell *matCellDef="let element"> {{element.tipoEntrega}} </td>
-        </ng-container>
-
-        <!-- Id cliente Column -->
-        <ng-container matColumnDef="idCliente">
-          <th mat-header-cell *matHeaderCellDef> Id cliente </th>
-          <td mat-cell *matCellDef="let element"> {{element.idCliente}} </td>
+        <ng-container matColumnDef="tipoAtencion">
+          <th mat-header-cell *matHeaderCellDef> Tipo Atención </th>
+          <td mat-cell *matCellDef="let element"> {{element.tipoAtencion}} </td>
         </ng-container>
 
         <!-- Fecha Column -->
@@ -56,32 +35,26 @@
         </ng-container>
         <!-- Hora Column -->
         <ng-container matColumnDef="estadoPreparacion">
-          <th mat-header-cell *matHeaderCellDef>Estado preparación </th>
-          <td mat-cell *matCellDef="let element"> {{element.estadoPreparacion}} </td>
+          <th mat-header-cell *matHeaderCellDef>Estado </th>
+          <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
         </ng-container>
 
-        <!-- Estado Column -->
-        <ng-container matColumnDef="subtotal">
-          <th mat-header-cell *matHeaderCellDef> Subtotal </th>
-          <td mat-cell *matCellDef="let element"> {{element.subtotal}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="total">
+        <ng-container matColumnDef="subTotal">
           <th mat-header-cell *matHeaderCellDef> Total </th>
-          <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+          <td mat-cell *matCellDef="let element">${{element.subtotal}} </td>
         </ng-container>
 
         <!-- Modificar Column -->
-        <ng-container matColumnDef="modificar">
-          <th mat-header-cell *matHeaderCellDef></th>
+        <!-- <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef>Modificar</th>
           <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary"
               (click)="openDialog(element, 'modificar')">Modificar</button>
           </td>
-        </ng-container>
+        </ng-container> -->
 
         <!-- Ver Column -->
         <ng-container matColumnDef="ver">
-          <th mat-header-cell *matHeaderCellDef> </th>
+          <th mat-header-cell *matHeaderCellDef>Ver Productos</th>
           <td mat-cell *matCellDef="let element">
             <button mat-stroked-button color="accent" (click)="openDialog(element, 'ver')">Ver</button>
           </td>
@@ -91,12 +64,6 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumnsPedido;" (click)="selection.toggle(row)">
         </tr>
       </table>
-    </mat-tab>
-    <!-- TABLA GESTION COCINA -->
-    <mat-tab label="Crear pedido">
-      <div>
-        Crear pedido
-      </div>
     </mat-tab>
   </mat-tab-group>
 </div>

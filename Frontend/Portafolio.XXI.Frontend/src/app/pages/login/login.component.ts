@@ -10,6 +10,7 @@ import { tipoInsumo } from '../../../utils/mock-responses/tipoInsumo/tipoInsumoR
 import { trabajadors } from 'src/utils/mock-responses/trabajador/trabajadorResponse';
 import { PROVEEDOR } from 'src/utils/mock-responses/proveedor/proveedorResponse';
 import { activos } from '../../../utils/mock-responses/activos/activosResponse';
+import { PEDIDO_DATA } from 'src/utils/mock-responses/pedidos/pedidosResponse';
 
 @Component({
   selector: 'app-login',
@@ -66,6 +67,7 @@ export class LoginComponent implements OnInit
     this.storageService.setCurrentTrabajador(trabajadors);
     this.storageService.setCurrentProveedor(PROVEEDOR);
     this.storageService.setCurrentActivos(activos);
+    this.storageService.setCurrentPedidos(PEDIDO_DATA);
     this.profile = this.user.profile.type;
     switch (this.profile) {
       case 'cliente':

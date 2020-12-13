@@ -154,11 +154,11 @@ export class StorageService {
     localStorage.setItem('pedido', JSON.stringify(pedidoList));
   }
 
-  setCurrentPedido(pedido: any): void {
+  setCurrentPedidos(pedido: any): void {
     this.localStorageService.setItem('pedido', JSON.stringify(pedido));
   }
 
-  getCurrentPedido() {
+  getCurrentPedidos() {
     return this.localStorageService.getItem('pedido');
   }
 

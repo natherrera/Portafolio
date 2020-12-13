@@ -1,10 +1,10 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import
-{
-  Router,
-} from '@angular/router';
+import { Router } from '@angular/router';
 import * as moment from 'moment';
+import { StorageService } from 'src/services/storage.service';
+import { PedidoCabecera } from 'src/utils/mock-core/models/pedido.model';
 
 @Component({
   selector: 'app-checkout',
@@ -18,9 +18,18 @@ export class CheckoutComponent implements OnInit
   fecha: any;
   formaPago: string;
   estadoOrden: boolean = false;
+  public pedido = new PedidoCabecera();
+  private currentDate = new Date();
+  pedidos: any = [];
+  
 
 
-  constructor (private router: Router, private formBuilder: FormBuilder,)
+  constructor (
+    private router: Router, 
+    private formBuilder: FormBuilder,
+    private storageService: StorageService,
+    private datePipe: DatePipe
+    )
   {
     const navigation = this.router.getCurrentNavigation();
     const data = navigation.extras;
@@ -38,8 +47,23 @@ export class CheckoutComponent implements OnInit
   ngOnInit(): void
   {
     console.log(this.orden)
+    this.getCurrentDateInApiFormat();
   }
 
+  getCurrentDateInApiFormat(): string{
+    let day:any = this.currentDate.getDate();
+    let month:any = this.currentDate.getMonth() + 1;
+    let year:any = this.currentDate.getFullYear();
+    let dateInApiFormat: string;
+    if(day<10){
+      day = "0" + day.toString();
+    }
+    if(month<10){
+      month = "0" + month.toString();
+    }
+    dateInApiFormat = day + "-" + month + "-" + year.toString();
+    return dateInApiFormat;
+  }
   setEstadoOrden = (forma: string) =>
   {
     this.estadoOrden = true;
@@ -50,9 +74,15 @@ export class CheckoutComponent implements OnInit
   {
     if (this.pagoForm.valid)
     {
+      this.pedidos = JSON.parse(this.storageService.getCurrentPedidos());
       this.estadoOrden = true;
       this.orden.estado = "Pagado";
+      this.pedido.mesa = this.orden.mesa;
       this.orden = Object.assign(this.orden, this.pagoForm.value);
+      this.orden.fecha = this.datePipe.transform(this.currentDate, "dd-MM-yyyy");
+      this.orden.hora = this.datePipe.transform(this.currentDate, "HH:MM");
+      this.orden.id =  this.pedidos.length + 1;
+      this.storageService.insertPedidos(this.orden);
     }
   }
 
