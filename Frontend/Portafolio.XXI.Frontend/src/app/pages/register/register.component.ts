@@ -24,10 +24,10 @@ export class RegisterComponent implements OnInit
     private userService: UserService,
     private alertService: AlertService)
   {
-    if (this.authenticationService.currentUserValue)
-    {
-      this.router.navigate(['/']);
-    }
+    // if (this.authenticationService.currentUserValue)
+    // {
+    //   this.router.navigate(['/']);
+    // }
   }
 
   ngOnInit(): void
