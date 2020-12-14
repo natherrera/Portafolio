@@ -44,6 +44,7 @@ export class RestaurantComponent implements OnInit
   }
 
   handleChangeTipoAtencion = (e) => {
+    debugger;
    this.tipoAtencion = e.value;
    this.orden.tipoAtencion = e.value;
   }
@@ -107,6 +108,7 @@ export class RestaurantComponent implements OnInit
   private getProducts()
   {
     this.productService.getAllProducts().subscribe(
+
       data => this.storageAndFilterData(data),
       error =>
       {
@@ -118,7 +120,7 @@ export class RestaurantComponent implements OnInit
 
   private storageAndFilterData(data: any)
   {
-
+  debugger;
     this.storageService.setCurrentProducts(data);
     this.products = data;
     this.drinks = data.filter(x => x.tipoProducto === 'Bebestible');

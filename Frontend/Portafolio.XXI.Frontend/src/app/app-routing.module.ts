@@ -26,11 +26,6 @@ import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserv
 
 const appRoutes: Routes = [
   {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
-  {
     path: 'home',
     component: Homepage4Component,
     canActivate: [AuthorizatedGuard]
@@ -57,6 +52,9 @@ const appRoutes: Routes = [
   { path: 'reservas', component: ContactComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cancelar-reserva', component: CancelarreservaComponent },
+  {
+    path: '', redirectTo: 'login', pathMatch: 'full'
+  },
 ];
 
 export const Routing = RouterModule.forRoot(appRoutes);

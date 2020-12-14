@@ -2,10 +2,11 @@ export const products = [
     {
         "id": 1,
         "nombreProducto": "Hamburguesa",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-        "valor": 12500,
+        "descripcion": "Hambuguesa Italiana de vacuno",
+        "valor": 3500,
+        "costo": 1925,
         "tipoProducto": "Comestible",
-        "imagen": "assets/img/dish/150x151/dish-6.jpg",
+        "imagen": "assets/img/dish/150x151/dish-1.jpg",
         "receta": {
             recetaid: 1,
             instrucciones: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -35,7 +36,7 @@ export const products = [
                     cantidad: 0.1
                 },
                 {
-                    insumoId: 1,
+                    insumoId: 11,
                     insumoNombre: "Mayonesa",
                     unidadMedida: "Kilogramo",
                     cantidad: 0.01
@@ -59,10 +60,11 @@ export const products = [
     {
         "id": 2,
         "nombreProducto": "Ensalada Cesar",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-        "valor": 10500,
+        "descripcion": "Ensalada Cesar original (sin pollo)",
+        "valor": 6000,
+        "costo": 1869,
         "tipoProducto": "Comestible",
-        "imagen": "assets/img/dish/150x151/dish-6.jpg",
+        "imagen": "assets/img/dish/150x151/dish-2.jpg",
         "receta": {
             recetaid: 2,
             idProducto: 2,
@@ -106,7 +108,7 @@ export const products = [
                 },
                 {
                     insumoId: 15,
-                    insumoNombre: "Limon",
+                    insumoNombre: "Sal",
                     unidadMedida: "Kilogramo",
                     cantidad: 0.2
                 },
@@ -121,28 +123,76 @@ export const products = [
 
     },
     {
-        "id": 5,
-        "nombreProducto": "Sushi",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
+        "id": 3,
+        "nombreProducto": "Cazuela",
+        "descripcion": "Exquisita cazuela de vacuno de asado de tira",
         "valor": 10500,
+        "costo": 0,
         "tipoProducto": "Comestible",
-        "imagen": "assets/img/dish/150x151/dish-6.jpg",
+        "imagen": "assets/img/dish/150x151/dish-3.jpg",
         "receta": {
             recetaid: 3,
             instrucciones: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             listaInsumos: [
                 {
-                    insumoId: 1,
-                    insumoNombre: "Prueba insumo nombre",
+                    insumoId: 18,
+                    insumoNombre: "Asado de Tira",
                     unidadMedida: "Kilogramo",
-                    cantidad: 3
+                    cantidad: 0.25
                 },
                 {
-                    insumoId: 2,
-                    instrucciones: "Lorem ",
-                    insumoNombre: "Prueba insumo nombre",
+                    insumoId: 19,
+                    insumoNombre: "Cebolla",
                     unidadMedida: "Kilogramo",
-                    cantidad: 200
+                    cantidad: 0.02
+                },
+                {
+                    insumoId: 20,
+                    insumoNombre: "Ajo",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.005
+                },
+                {
+                    insumoId: 5,
+                    insumoNombre: "Papa",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.15
+                },
+                {
+                    insumoId: 21,
+                    insumoNombre: "Zanahoria",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.05
+                },
+                {
+                    insumoId: 22,
+                    insumoNombre: "Arroz",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.02
+                },
+                {
+                    insumoId: 23,
+                    insumoNombre: "Perejil",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.01
+                },
+                {
+                    insumoId: 24,
+                    insumoNombre: "Zapallo Camote",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.25
+                },
+                {
+                    insumoId: 25,
+                    insumoNombre: "Choclo",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.15
+                },
+                {
+                    insumoId: 26,
+                    insumoNombre: "Caldo Pollo",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 0.01
                 },
             ]
         }
@@ -150,19 +200,28 @@ export const products = [
     {
         "id": 3,
         "nombreProducto": "Coca Cola",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-        "valor": 2500,
+        "descripcion": "Bebida de fantasía",
+        "valor": 1000,
         "tipoProducto": "Bebestible",
-        "imagen": "assets/img/dish/150x151/dish-6.jpg",
+        "imagen": "assets/img/dish/150x151/drink-1.jpg",
+        "receta": null
+    },
+    {
+        "id": 3,
+        "nombreProducto": "Coca Cola Zero",
+        "descripcion": "Bebida de fantasía",
+        "valor": 1000,
+        "tipoProducto": "Bebestible",
+        "imagen": "assets/img/dish/150x151/drink-2.jpg",
         "receta": null
     },
     {
         "id": 4,
         "nombreProducto": "Zumo de naranja",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
-        "valor": 3500,
+        "descripcion": "Zumo de pulpa natural",
+        "valor": 2500,
         "tipoProducto": "Bebestible",
-        "imagen": "assets/img/dish/150x151/dish-6.jpg",
+        "imagen": "assets/img/dish/150x151/drink-3.jpg",
         "receta": null
     }
 

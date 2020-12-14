@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit
   user: any;
   profile: string;
   currentPage: string;
+  ganancias: number = 0;
 
   constructor (private storageService: StorageService) { }
 
@@ -20,5 +21,9 @@ export class DashboardComponent implements OnInit
     this.currentPage = 'pedidos';
     this.user = this.storageService.getCurrentUser();
     this.profile = this.user.profile.type;
+  }
+
+  obtenerGanancias(){
+    
   }
 }

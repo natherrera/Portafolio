@@ -80,6 +80,7 @@ import { DialogVerPruebaComponent } from './pages/dashboard/modalVistas/DialogPr
 import { VistaBodegaComponent } from './pages/dashboard/tablaVistas/vista-bodega/vista-bodega.component';
 import { DialogContentBodegaComponent } from './pages/dashboard/modalVistas/DialogContentBodega/DialogContentBodega.component';
 import { DialogContentActivoComponent } from './pages/dashboard/modalVistas/DialogContentBodega/activos/dialog-content-activo.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,8 @@ import { DialogContentActivoComponent } from './pages/dashboard/modalVistas/Dial
     MatListModule,
     MatCardModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     Location, {
