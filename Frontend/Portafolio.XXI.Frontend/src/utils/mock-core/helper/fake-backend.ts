@@ -6,7 +6,7 @@ import { USERS } from "../../mock-responses/users/usersResponse";
 import { orders } from "../../mock-responses/orders/ordersResponse";
 import { products } from "../../mock-responses/producto/productsResponse";
 import { insumos } from "../../mock-responses/insumo/insumoResponse";
-import { tipoInsumo } from "../../mock-responses/tipoInsumo/tipoInsumoResponse";
+// import { tipoInsumo } from "../../mock-responses/tipoInsumo/tipoInsumoResponse";
 import { trabajadors } from 'src/utils/mock-responses/trabajador/trabajadorResponse';
 import { PROVEEDOR } from 'src/utils/mock-responses/proveedor/proveedorResponse';
 
@@ -90,7 +90,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
         // case url.match(/\/api\/\/\d+$/) && method === 'GET':
         //   return getProveedorById();
         case url.endsWith('api/proveedor/create') && method === 'POST':
-          return createTrabajador();
+          return createProveedor();
         // case url.match(/\/api\/proveedor\/delete\/\d+$/) && method === 'DELETE':
         //   return deleteProveedor();
 
@@ -247,11 +247,11 @@ export class FakeBackendInterceptor implements HttpInterceptor
       return ok();
     }
 
-    function getTipoInsumo()
-    {
-      localStorage.setItem('tipoInsumo', JSON.stringify(tipoInsumo));
-      return ok(tipoInsumo);
-    }
+    // function getTipoInsumo()
+    // {
+    //   localStorage.setItem('tipoInsumo', JSON.stringify(tipoInsumo));
+    //   return ok(tipoInsumo);
+    // }
 
     // function getInsumosById()
     // {

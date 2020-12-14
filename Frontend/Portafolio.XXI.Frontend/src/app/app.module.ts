@@ -68,7 +68,7 @@ import { DialogModificarComponent } from './pages/dashboard/modalVistas/DialogPe
 import { DialogVerComponent } from './pages/dashboard/modalVistas/DialogPedido/ver/dialogVer.component';
 import { VistaproductoComponent } from './pages/dashboard/tablaVistas/vistaProducto/vistaproducto.component';
 import { VistatrabajadorComponent } from './pages/dashboard/tablaVistas/vistaTrabajador/vistatrabajador.component';
-import { VistaproveedorComponent } from './pages/dashboard/tablaVistas/vistaproveedor/vistaproveedor.component';
+import { VistaproveedorComponent } from './pages/dashboard/tablaVistas/vistaProveedor/vistaproveedor.component';
 import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';

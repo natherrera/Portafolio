@@ -7,9 +7,9 @@ import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 })
 export class DialogContentProveedorComponent implements OnInit
 {
-  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogContentProveedorComponent>)
-  { }
+  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogContentProveedorComponent>){ }
 
+  tipoProveedor: string;
 
   ngOnInit(): void
   {
@@ -21,7 +21,7 @@ export class DialogContentProveedorComponent implements OnInit
   }
 
   handleClickModificar = () => {
-
+    this.tipoProveedor = this.tipoProveedor;
     this.dialogRef.close();
   }
 

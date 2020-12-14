@@ -17,7 +17,6 @@ export class VistainsumosComponent implements OnInit
 {
   displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'cantidad', 'costo', 'unidadMedida', 'modificar'];
   dataSourceInsumo: any;
-  dataSourceTipoInsumo: any;//TODO TMV: Conseguir ecxplicación funcionamiento
   selection = new SelectionModel<Insumo>(true, []);
   public crearInsumoForm: FormGroup;
   public insumo: any = {};
@@ -45,6 +44,7 @@ export class VistainsumosComponent implements OnInit
     if (this.crearInsumoForm.valid)
     {
       this.storageService.insertInsumo(this.crearInsumoForm.value);
+      this.crearInsumoForm.reset();
     }
   }
 

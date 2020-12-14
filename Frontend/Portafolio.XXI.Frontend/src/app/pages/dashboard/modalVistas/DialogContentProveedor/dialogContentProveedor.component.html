@@ -1,11 +1,15 @@
-<h1 mat-dialog-title>Modificar proveedor</h1>
+<h1 mat-dialog-title>Modificar insumo</h1>
 <div mat-dialog-content>
-  
+  <p>Nombre: {{data.nombreProveedor}}</p>
+  <mat-form-field>
+    <mat-label>Tipo</mat-label>
+    <mat-select [(ngModel)]="tipoProveedor">
+      <mat-option value="Producto">Producto</mat-option>
+      <mat-option value="Servicio">Servicio</mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Cancelar</button>
-    <button mat-button cdkFocusInitial (click)="handleClickModificar()">Modificar</button>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="handleClickModificar()">Modificar</button>
 </div>
-  
-
-
