@@ -14,7 +14,6 @@ export class DialogContentProveedorComponent implements OnInit
 
   ngOnInit(): void
   {
-    console.log(this.data)
   }
 
   onNoClick(): void {
@@ -22,7 +21,7 @@ export class DialogContentProveedorComponent implements OnInit
   }
 
   handleClickModificar = () => {
-    this.tipoProveedor = this.tipoProveedor;
+    this.data.tipoProveedor = this.tipoProveedor;
     this.dialogRef.close();
   }
 
