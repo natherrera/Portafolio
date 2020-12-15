@@ -1,6 +1,6 @@
 import { Insumo } from "../../mock-core/models/insumo.model";
 
-export let insumos: Insumo[] = [
+export const insumos: Insumo[] = [
     {id: '1', nombreInsumo: 'Tomate', marca:'Rocky',  tipoInsumo:"Alimento", costo: 1490, unidadMedida: 'Kilogramo', cantidad: 10},
     {id: '2', nombreInsumo: 'Palta', marca:'Paltahass',  tipoInsumo:"Alimento", costo: 4.490, unidadMedida: 'Kilogramo', cantidad: 10},
     {id: '3', nombreInsumo: 'Lechuga Española', marca:'Dole',  tipoInsumo:"Alimento", costo: 990, unidadMedida: 'Kilogramo', cantidad: 10},
@@ -17,5 +17,5 @@ export let insumos: Insumo[] = [
     {id: '14', nombreInsumo: 'Limon', marca:'Dole',  tipoInsumo:"Alimento", costo: 500, unidadMedida: 'Kilogramo', cantidad: 10},
     {id: '15', nombreInsumo: 'Sal', marca:'Lobos',  tipoInsumo:"Alimento", costo: 500, unidadMedida: 'Kilogramo', cantidad: 10},
     {id: '16', nombreInsumo: 'Crutones', marca:'Castaño',  tipoInsumo:"Alimento", costo: 1000, unidadMedida: 'Kilogramo', cantidad: 10},
-    {id: '16', nombreInsumo: 'Pimenton Paprika', marca:'Gourmet',  tipoInsumo:"Alimento", costo: 5000, unidadMedida: 'Kilogramo', cantidad: 10},
+    {id: '17', nombreInsumo: 'Pimenton Paprika', marca:'Gourmet',  tipoInsumo:"Alimento", costo: 5000, unidadMedida: 'Kilogramo', cantidad: 10},
 ];

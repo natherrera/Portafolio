@@ -42,12 +42,13 @@ export class VistaproveedorComponent implements OnInit
     {
       this.storageService.insertProveedor(this.crearProveedorForm.value);
       this.crearProveedorForm.reset();
+      this.getProveedor();
     }
   }
 
   getProveedor() {
-    let proveedorList = JSON.parse(this.storageService.getCurrentProveedor());
-    this.dataSourceProveedor = new MatTableDataSource<any>(proveedorList);
+    this.PROVEEDOR = JSON.parse(this.storageService.getCurrentProveedor());
+    this.dataSourceProveedor = new MatTableDataSource<any>(this.PROVEEDOR);
   }
 
   openDialog(tipo: string, element: any) {

@@ -41,6 +41,8 @@ export class VistaproductoComponent implements OnInit
     if (this.crearProductoForm.valid)
     {
       this.storageService.insertProduct(this.crearProductoForm.value);
+      this.crearProductoForm.reset();
+      this.getProducts();
     }
   }
 

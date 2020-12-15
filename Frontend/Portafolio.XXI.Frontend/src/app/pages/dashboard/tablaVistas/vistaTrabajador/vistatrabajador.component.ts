@@ -47,6 +47,8 @@ export class VistatrabajadorComponent implements OnInit
     if (this.crearTrabajadorForm.valid)
     {
       this.storageService.insertTrabajador(this.crearTrabajadorForm.value);
+      this.crearTrabajadorForm.reset();
+      this.getTrabajador();
     }
   }
 

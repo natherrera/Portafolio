@@ -133,16 +133,22 @@ export const products = [
             listaInsumos: [
                 {
                     insumoId: 1,
-                    insumoNombre: "Prueba insumo nombre",
+                    insumoNombre: "Arroz",
                     unidadMedida: "Kilogramo",
-                    cantidad: 3
+                    cantidad: 100
                 },
                 {
                     insumoId: 2,
-                    instrucciones: "Lorem ",
-                    insumoNombre: "Prueba insumo nombre",
+                    instrucciones: " ",
+                    insumoNombre: "Camaron",
                     unidadMedida: "Kilogramo",
                     cantidad: 200
+                },
+                {
+                    insumoId: 1,
+                    insumoNombre: "Queso crema",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 50
                 },
             ]
         }
