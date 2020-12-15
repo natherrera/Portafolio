@@ -1,4 +1,56 @@
 <div class="bodega-container">
+    <div style="text-align: end;">
+      <button type="button" class="btn btn-primary" (click)="descargarPDf()">Descargar PDF</button>
+    </div>
+    <div class="d-none" id="stock" #stock>
+      <h2>Inusmos</h2>
+      <table id="tablaInsumos">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre Insumo</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Unid. Medida</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let insumo of insumos">
+            <td>{{insumo.id}}</td>
+            <td>{{insumo.nombreInsumo}}</td>
+            <td>{{insumo.marca}}</td>
+            <td>{{insumo.tipoInsumo}}</td>
+            <td>{{insumo.unidadMedida}}</td>
+            <td>${{insumo.costo}}</td>
+            <td>{{insumo.cantidad}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h2>Activos</h2>
+      <table id="tablaInsumos">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre Activo</th>
+            <th>Tipo</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let activo of activos">
+            <td>{{activo.id}}</td>
+            <td>{{activo.nombreActivo}}</td>
+            <td>{{activo.tipoActivo}}</td>
+            <td>${{activo.costo}}</td>
+            <td>{{activo.cantidad}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <mat-tab-group animationDuration="0ms">
       <!-- TABLA GESTION INSUMO -->
       <mat-tab label="Stock Insumos">

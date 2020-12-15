@@ -177,6 +177,57 @@
             </div>
         </div>
     </div>
+    <div class="d-none" id="boleta" #boleta>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">SigloXXI RestoBar</td>
+                    <td>Fecha: {{fechaBoleta}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">RUT:</td>
+                    <td style="text-align: center;">12.345.678-9</td>
+                </tr>
+                <hr>
+                <tr>
+                    <td style="text-align: center;">Boleta Numero: </td>
+                    <td style="text-align: center;">{{nroBoleta}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <td>Resumen</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unitario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let producto of orden.pedido">
+                                <td style="width: 15%;">Codigo: {{producto.id}}</td>
+                                <td style="width: 15%;">Producto: {{producto.nombreProducto}}</td>
+                                <td style="width: 10%;">Cantidad {{producto.cantidad}}</td>
+                                <td style="width: 10%;">Valor Unitario {{producto.valor}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                <hr>
+                <tr>
+                    <td style="text-align: center;">Dirección: Calle 123</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Comuna: Santiago</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <!-- <app-footer2></app-footer2> -->

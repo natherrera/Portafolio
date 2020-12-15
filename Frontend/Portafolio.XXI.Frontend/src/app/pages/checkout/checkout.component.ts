@@ -1,7 +1,8 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import jsPDF from 'jspdf';
 import * as moment from 'moment';
 import { ToastrService } from 'ngx-toastr';
 import { StorageService } from 'src/services/storage.service';
@@ -14,6 +15,7 @@ import { PedidoCabecera } from 'src/utils/mock-core/models/pedido.model';
 })
 export class CheckoutComponent implements OnInit
 {
+  @ViewChild('boleta') content: ElementRef; 
   public pagoForm: FormGroup;
   orden: any = {};
   fecha: any;
@@ -31,6 +33,8 @@ export class CheckoutComponent implements OnInit
   fechaVencimiento: string = "";
   cardNumber: string = "";
   codSeguridad: string = "";
+  fechaBoleta: string ="";
+  nroBoleta:number= 0;
 
   constructor (
     private router: Router, 
@@ -55,8 +59,13 @@ export class CheckoutComponent implements OnInit
 
   ngOnInit(): void
   {
-    // console.log(this.orden)
+    debugger;
     this.getCurrentDateInApiFormat();
+    this.pedidos = JSON.parse(this.storageService.getCurrentPedidos());
+    this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
+    this.productos = JSON.parse(this.storageService.getCurrentProducts());
+    this.ganancia = JSON.parse(this.storageService.getCurrentGanancia()) != null && JSON.parse(this.storageService.getCurrentGanancia()) != undefined ? JSON.parse(this.storageService.getCurrentProducts()) : 0;
+    this.nroBoleta = this.pedidos.length + 1;
   }
 
   fechaTarjeta(){
@@ -96,6 +105,7 @@ export class CheckoutComponent implements OnInit
       month = "0" + month.toString();
     }
     dateInApiFormat = day + "-" + month + "-" + year.toString();
+    this.fechaBoleta = dateInApiFormat;
     return dateInApiFormat;
   }
   setEstadoOrden = (forma: string) =>
@@ -108,10 +118,6 @@ export class CheckoutComponent implements OnInit
   {
     if(this.fechaVencimiento.length == 5)
     {
-      this.pedidos = JSON.parse(this.storageService.getCurrentPedidos());
-      this.insumos = JSON.parse(this.storageService.getCurrentInsumo());
-      this.productos = JSON.parse(this.storageService.getCurrentProducts());
-      this.ganancia = JSON.parse(this.storageService.getCurrentGanancia()) != null && JSON.parse(this.storageService.getCurrentGanancia()) != undefined ? JSON.parse(this.storageService.getCurrentProducts()) : 0;
       this.estadoOrden = true;
       this.orden.estado = "Pagado";
       this.pedido.mesa = this.orden.mesa;
@@ -141,14 +147,30 @@ export class CheckoutComponent implements OnInit
       });
       this.storageService.setCurrentInsumo(this.insumos);
       this.storageService.setCurrentGanancia(this.ganancia);
+      this.descargarPDf();
     }
     else{
       this.toastr.error("Datos de pago invalidos!");
     }
-    // if (this.pagoForm.valid)
-    // {
-      
-    // }
+  }
+
+  descargarPDf = () => {
+    setTimeout(() => {
+      let content=this.content.nativeElement;
+      let doc = new jsPDF();  
+      let _elementHandlers =  
+      {  
+        '#editor':function(element,renderer){  
+          return true;  
+        }  
+      };  
+      doc.fromHTML(content.innerHTML,15,15,{  
+  
+      'width':190,  
+      'elementHandlers':_elementHandlers  
+    });  
+    doc.save('BoletakSigloXXI.pdf'); 
+    }, 1000);
   }
 
 }

@@ -100,7 +100,7 @@ export class StorageService {
     this.localStorageService.setItem('reserva', JSON.stringify(reserva));
   }
 
-  getCurrentReserva(): void {
+  getCurrentReserva() {
     return this.localStorageService.getItem('reserva');
   }
 

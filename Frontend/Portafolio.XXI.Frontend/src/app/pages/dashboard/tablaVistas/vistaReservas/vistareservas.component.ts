@@ -13,7 +13,7 @@ import { Cocina } from '../../../../../utils/mock-core/models/cocina.model';
 })
 export class VistareservasComponent implements OnInit
 {
-  displayedColumnsCocina: string[] = ['select', 'id', 'mesa', 'idCliente', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
+  displayedColumnsCocina: string[] = ['id', 'mesa', 'idCliente', 'fecha', 'hora', 'estadoPreparacion', 'modificar'];
   dataSourceCocina = new MatTableDataSource<Cocina>(COCINA_DATA);
   selection = new SelectionModel<Cocina>(true, []);
 
@@ -31,25 +31,5 @@ export class VistareservasComponent implements OnInit
       // console.log('Resultado de modal de ' + tipo + ':', result)
     });
   }
-
-  isAllSelected(dataSource: any) {
-    const numSelected = this.selection.selected.length;
-    const numRows = dataSource.data.length;
-    return numSelected === numRows;
-  }
-
-  masterToggle(dataSource: any) {
-    this.isAllSelected(dataSource) ?
-        this.selection.clear() :
-        dataSource.data.forEach(row => this.selection.select(row));
-  }
-
-  checkboxLabel(row?: any, dataSource?: any ): string {
-    if (!row) {
-      return `${this.isAllSelected(dataSource) ? 'select' : 'deselect'} all`;
-    }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${+row.id + 1}`;
-  }
-
 
 }

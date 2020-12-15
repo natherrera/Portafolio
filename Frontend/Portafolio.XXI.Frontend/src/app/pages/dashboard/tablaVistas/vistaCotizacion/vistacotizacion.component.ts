@@ -74,14 +74,14 @@ export class VistacotizacionComponent implements OnInit
     this.fecha = moment(this.infoCotizacionForm.value.fechaEntrega).format('L')
     setTimeout(() => {
       let content=this.content.nativeElement;
-    let doc = new jsPDF();  
-    let _elementHandlers =  
-    {  
-      '#editor':function(element,renderer){  
-        return true;  
-      }  
-    };  
-    doc.fromHTML(content.innerHTML,15,15,{  
+      let doc = new jsPDF();  
+      let _elementHandlers =  
+      {  
+        '#editor':function(element,renderer){  
+          return true;  
+        }  
+      };  
+      doc.fromHTML(content.innerHTML,15,15,{  
   
       'width':190,  
       'elementHandlers':_elementHandlers  

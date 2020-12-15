@@ -35,28 +35,34 @@
         <div class="container-bg">
           <div class="col-12">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card-metricas">
-                  <span class="box-text">Pedidos en proceso</span>
-                  <span class="box-nro">10</span>
+                  <span class="box-text text-center"><strong>Pedidos Diarios</strong></span>
+                  <span class="box-text text-left">Totales: <span class="box-nro amounDash">{{totalPedido}}</span></span>
+                  <span class="box-text text-left">Listos: <span class="box-nro amounDash">{{entregados}}</span></span>
+                  <span class="box-text text-left">En proceso: <span class="box-nro amounDash">{{pendiente}}</span></span>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card-metricas">
-                  <span class="box-text">Ganancias diarias</span>
-                  <span class="box-nro">${{ganancias}}</span>
+                  <span class="box-text text-center"><strong>Libro Diario</strong></span>
+                  <span class="box-text text-left">Ganancias: <span class="box-nro amounDash">${{ganancias}}</span></span>
+                  <span class="box-text text-left">Costo: <span class="box-nro amounDash">${{costo}}</span></span>
+                  <span class="box-text text-left">Ventas: <span class="box-nro amounDash">${{ventas}}</span></span>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card-metricas">
                   <span class="box-text">Total pedidos hoy</span>
                   <span class="box-nro">10</span>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
+                </div> 
+              </div> -->
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card-metricas">
-                  <span class="box-text">Reservas hoy</span>
-                  <span class="box-nro">10</span>
+                  <span class="box-text text-center"><strong>Reservas Diaras</strong></span>
+                  <span class="box-text text-left">Total: <span class="box-nro amounDash">{{totalReservas}}</span></span>
+                  <!-- <span class="box-text text-left">Canceladas: <span class="box-nro amounDash">{{totalReservas}}</span></span> -->
+                  <span class="box-text text-left"> <span class="box-nro amounDash"> </span></span>
                 </div>
               </div>
             </div>
