@@ -210,10 +210,10 @@
                         </thead>
                         <tbody>
                             <tr  *ngFor="let producto of orden.pedido">
-                                <td style="width: 15%;">Codigo: {{producto.id}}</td>
-                                <td style="width: 15%;">Producto: {{producto.nombreProducto}}</td>
-                                <td style="width: 10%;">Cantidad {{producto.cantidad}}</td>
-                                <td style="width: 10%;">Valor Unitario {{producto.valor}}</td>
+                                <td style="width: 15%;">{{producto.id}}</td>
+                                <td style="width: 15%;">{{producto.nombreProducto}}</td>
+                                <td style="width: 10%;">{{producto.cantidad}}</td>
+                                <td style="width: 10%;">{{producto.valor}}</td>
                             </tr>
                         </tbody>
                     </table>
