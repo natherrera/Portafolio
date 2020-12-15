@@ -20,7 +20,7 @@ export class StorageService {
   }
 
   insertProduct(product: any):void {
-      console.log("insertProduct");
+      // console.log("insertProduct");
     // NOTE: DELETE
     product.id = Math.round(Math.random() * 10);
     product.valor = 10000;
@@ -174,6 +174,14 @@ export class StorageService {
 
   getCurrentMesas() {
     return this.localStorageService.getItem('mesas');
+  }
+
+  setCurrentGanancia(ganancias: any): void{
+    this.localStorageService.setItem('ganancias', JSON.stringify(ganancias));
+  }
+
+  getCurrentGanancia(){
+    return this.localStorageService.getItem('ganancias');
   }
 
 

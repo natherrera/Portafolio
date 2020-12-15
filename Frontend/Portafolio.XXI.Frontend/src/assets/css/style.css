@@ -611,6 +611,16 @@ label.custom-checkbox .checkmark:after {
 .white-btn:focus {
     border-color: #ff0018;
 }
+.red-btn {
+    
+    color: #fff !important;
+    border-color: rgba(67, 41, 163, .2);
+    background: #ff0018;
+}
+.red-btn:hover,
+.red-btn:focus {
+    border-color: #ff0018;
+}
 .green-btn {
     color: #fff;
     background-color: #28a745;

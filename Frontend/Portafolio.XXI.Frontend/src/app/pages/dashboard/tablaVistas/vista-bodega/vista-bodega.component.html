@@ -139,11 +139,11 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="text-light-black fw-700">Responsable</label>
+                    <label class="text-light-black fw-700">Responsable<sup class="fs-16">*</sup></label>
                     <mat-form-field appearance="fill">
                       <input matInput placeholder="Fabian Araneda Molina" [disabled]="true">
                     </mat-form-field>
-                    <label class="text-light-black fw-700">Requirente</label>
+                    <label class="text-light-black fw-700">Requirente<sup class="fs-16">*</sup></label>
                     <mat-form-field appearance="fill">
                       <input matInput placeholder="Nombre Requirente">
                     </mat-form-field>
@@ -151,8 +151,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label class="text-light-black fw-700">Fecha de salida
-                    </label>
+                    <label class="text-light-black fw-700">Fecha de salida<sup class="fs-16">*</sup></label>
                     <br>
                     <mat-form-field color="accent" appearance="fill">
                       <input matInput [matDatepicker]="fechaEntrega" formControlName="fechaEntrega">
@@ -245,19 +244,6 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumnsInsumo2"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumnsInsumo2;"></tr>
               </table>
-              <!-- <div id="htmlData" style="visibility: hidden;" #htmlData>
-                <table>
-                  <tr style="font-size: 14px" class="table-primary">
-                    <th style="font-size: 14px">Insumo</th>
-                    <th style="font-size: 14px">Cantidad</th>
-                  </tr>
-                  <tr style="font-size: 14px" *ngFor="let element of wishlist">
-                    <td style="font-size: 14px">{{element.insumo}}</td>
-                    <td style="font-size: 14px">{{element.cantidad}} {{element.unidadMedida}}</td>
-                  </tr>
-                </table>
-                <p>Gracias</p>
-              </div> -->
             </div>
             <div class="col-md-12" *ngIf="hasDataA">
               <table mat-table [dataSource]="dataSourceActivo2" class="mat-elevation-z8" id="tablacotizacion">

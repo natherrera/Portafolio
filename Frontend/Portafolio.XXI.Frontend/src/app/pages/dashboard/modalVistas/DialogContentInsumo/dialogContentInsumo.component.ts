@@ -14,7 +14,7 @@ export class DialogContentInsumoComponent implements OnInit
  
   ngOnInit(): void
   {
-    console.log(this.data)
+    // console.log(this.data)
   }
 
   onNoClick(): void {

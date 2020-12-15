@@ -35,7 +35,6 @@ export class RegisterComponent implements OnInit
 
   ngOnInit(): void
   {
-    debugger;
     this.registrationForm = this.formBuilder.group({
       name: ['', Validators.required],
       lastname: ['', Validators.required],
@@ -48,7 +47,6 @@ export class RegisterComponent implements OnInit
 
   submitRegistration()
   {
-    debugger;
     console.log('object')
     this.submitted = true;
 

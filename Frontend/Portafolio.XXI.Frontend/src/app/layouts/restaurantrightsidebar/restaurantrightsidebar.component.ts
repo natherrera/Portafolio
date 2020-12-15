@@ -29,7 +29,6 @@ export class RestaurantrightsidebarComponent implements OnInit {
 
 
   handleClickConfirm(){
-    debugger;
     if(this.wishList.length > 0) {
       this.message = "";
       this.orden.pedido = this.wishList;

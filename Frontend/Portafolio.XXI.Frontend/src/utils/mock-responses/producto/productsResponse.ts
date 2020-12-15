@@ -202,27 +202,57 @@ export const products = [
         "nombreProducto": "Coca Cola",
         "descripcion": "Bebida de fantasía",
         "valor": 1000,
+        "costo": 400,
         "tipoProducto": "Bebestible",
         "imagen": "assets/img/dish/150x151/drink-1.jpg",
-        "receta": null
+        "receta": {
+            listaInsumos: [
+                {
+                    insumoId: 27,
+                    insumoNombre: "Coca Cola Original",
+                    unidadMedida: "Litro",
+                    cantidad: 0.375
+                },
+            ]
+        }
     },
     {
         "id": 3,
         "nombreProducto": "Coca Cola Zero",
         "descripcion": "Bebida de fantasía",
         "valor": 1000,
+        "costo": 400,
         "tipoProducto": "Bebestible",
         "imagen": "assets/img/dish/150x151/drink-2.jpg",
-        "receta": null
+        "receta": {
+            listaInsumos: [
+                {
+                    insumoId: 28,
+                    insumoNombre: "Coca Cola Zero",
+                    unidadMedida: "Litro",
+                    cantidad: 0.375
+                },
+            ]
+        }
     },
     {
         "id": 4,
         "nombreProducto": "Zumo de naranja",
         "descripcion": "Zumo de pulpa natural",
         "valor": 2500,
+        "costo": 1000,
         "tipoProducto": "Bebestible",
         "imagen": "assets/img/dish/150x151/drink-3.jpg",
-        "receta": null
+        "receta": {
+            listaInsumos: [
+                {
+                    insumoId: 29,
+                    insumoNombre: "Naranja",
+                    unidadMedida: "Litro",
+                    cantidad: 0.6
+                },
+            ]
+        }
     }
 
 ]

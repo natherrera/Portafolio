@@ -17,7 +17,6 @@ export class DialogVerComponent implements OnInit
 
   ngOnInit(): void
   {
-    debugger;
     this.productos = this.data.pedido;
   }
 

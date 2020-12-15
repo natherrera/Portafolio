@@ -68,13 +68,13 @@
                                                 </ul>
                                                 <div class="tab-content">
                                                     <div class="tab-pane active" id="newcreditcard">
-                                                        <form id="pago-form" #pForm="ngForm" [formGroup]="pagoForm"
-                                                        (ngSubmit)="pagar()" novalidate>
+                                                        <form id="pago-form" #pForm="ngForm" [formGroup]="pagoForm" novalidate>
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
-                                                                    <label class="text-light-white fw-700">Número de tarjeta</label>
+                                                                    <label class="text-light-white fw-700">N&uacute;mero de tarjeta</label>
                                                                     <div class="credit-card card-front p-relative">
-                                                                        <input type="text" name="#"
+                                                                        <input type="number" name="#" [(ngModel)]="cardNumber"
+                                                                            pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;"
                                                                             class="form-control form-control-submit"
                                                                             placeholder="1234 5678 9101 1234" formControlName="nroTarjeta" required>
                                                                     </div>
@@ -84,15 +84,17 @@
                                                                 <div class="form-group">
                                                                     <label class="text-light-white fw-700">Fecha de expiración</label>
                                                                     <input type="text" name="#"
-                                                                        class="form-control form-control-submit"
+                                                                        pattern="/^-?\d+\.?\d*$/" (keyup)="fechaTarjeta()" onKeyPress="if(this.value.length==5) return false;"
+                                                                        class="form-control form-control-submit" [(ngModel)]="fechaVencimiento"
                                                                         placeholder="12/21" formControlName="fechaExpiracion" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
-                                                                    <label class="text-light-white fw-700">Código de seguridad</label>
+                                                                    <label class="text-light-white fw-700" >Código de seguridad</label>
                                                                     <div class="credit-card card-back p-relative">
-                                                                        <input type="text" name="#"
+                                                                        <input type="number" name="#" [(ngModel)]="codSeguridad"
+                                                                            pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"
                                                                             class="form-control form-control-submit"
                                                                             placeholder="123" formControlName="codigoSeguridad" required>
                                                                     </div>
@@ -103,8 +105,10 @@
                                                                 <div class="col-3"></div>
                                                                 <div class="col-6">
                                                                     <div class="form-group">
-                                                                        <button type="submit"
-                                                                            class="btn-first green-btn text-custom-white full-width fw-500" (click)="pagar()" form="pago-form">Pagar</button>
+                                                                        <button type="submit" class="btn btn-success full-width fw-500" (click)="pagar()" form="pago-form">Pagar</button>
+                                                                        <button type="button"class="btn btn-danger full-width fw-500" form="pago-form" style="margin-top: 2%;">
+                                                                            <a routerLink="/orderdetails" style="color: white;">Cancelar</a>
+                                                                        </button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-3"></div>

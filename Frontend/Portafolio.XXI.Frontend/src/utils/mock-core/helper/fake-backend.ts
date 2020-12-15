@@ -31,7 +31,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
 
     function handleRoute()
     {
-      console.log("handleRoute");
+      // console.log("handleRoute");
       switch (true)
       {
         case url.endsWith('/api/authenticate/login') && method === 'POST':
@@ -65,7 +65,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
           return deleteProduct();
 
         case url.endsWith('api/insumos') && method === 'GET':
-          console.log("getInsumos");
+          // console.log("getInsumos");
           return getInsumos();
         // case url.match(/\/api\/INSUMO_DATA\/\d+$/) && method === 'GET':
         //   return getInsumosById();
@@ -75,7 +75,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
         //   return deleteInsumo();
 
         case url.endsWith('api/trabajador') && method === 'GET':
-          console.log("getTrabajador");
+          // console.log("getTrabajador");
           return getTrabajador();
         // case url.match(/\/api\/trabajador\/\d+$/) && method === 'GET':
         //   return getTrabajadorById();
@@ -85,7 +85,7 @@ export class FakeBackendInterceptor implements HttpInterceptor
         //   return deleteTrabajador();
 
         case url.endsWith('api/proveedor') && method === 'GET':
-          console.log("getProveedor");
+          // console.log("getProveedor");
           return getProveedor();
         // case url.match(/\/api\/\/\d+$/) && method === 'GET':
         //   return getProveedorById();

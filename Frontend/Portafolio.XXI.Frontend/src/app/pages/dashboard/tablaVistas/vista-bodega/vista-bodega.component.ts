@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
 import { StorageService } from 'src/services/storage.service';
 import { Insumo } from 'src/utils/mock-core/models/insumo.model';
 import { DialogContentActivoComponent } from '../../modalVistas/DialogContentBodega/activos/dialog-content-activo.component';
@@ -44,7 +45,8 @@ export class VistaBodegaComponent implements OnInit {
   constructor (
     public dialog: MatDialog,
     private storageService: StorageService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService
     ) { }
 
 
@@ -70,7 +72,6 @@ export class VistaBodegaComponent implements OnInit {
   }
 
   openDialog(tipo: string, element: any) {
-    debugger;
     let DialogContentComponent = null;
     DialogContentComponent = tipo == "alimento" ? DialogContentBodegaComponent : DialogContentActivoComponent;
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
@@ -92,26 +93,38 @@ export class VistaBodegaComponent implements OnInit {
 
   agregarInsumo = () =>
   {
-    debugger;
     const form = this.agregarInsumoForm.value;
     const insumo = {
       insumo: form.insumo,
       cantidad: form.cantidad,
       unidadMedida: form.unidadMedida
     }
+    var cantOk = true;
     this.insumos.forEach(element => {
       if(element.nombreInsumo == this.id){
-        element.cantidad = element.cantidad - insumo.cantidad;
-        insumo.unidadMedida = element.unidadMedida;
+        if(element.cantidad < insumo.cantidad){
+          cantOk = false;
+        }
+        else{
+          element.cantidad = element.cantidad - insumo.cantidad;
+          insumo.unidadMedida = element.unidadMedida;
+        }
+        
       }
     });
-    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
-    this.storageService.setCurrentInsumo(this.insumos);
-    const wishlist = [];
-    wishlist.push(insumo);
-    this.dataSourceInsumo2 = new MatTableDataSource(wishlist);
-    this.agregarInsumoForm.reset();
-    this.hasData = true;
+    if(cantOk){
+      this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+      this.storageService.setCurrentInsumo(this.insumos);
+      const wishlist = [];
+      wishlist.push(insumo);
+      this.dataSourceInsumo2 = new MatTableDataSource(wishlist);
+      this.agregarInsumoForm.reset();
+      this.hasData = true;
+    }
+    else{
+      this.toastr.error("La cantidad a despachar es mayor a la del stock");
+    }
+    
   }
 
   agregarActivo = () => {
@@ -120,9 +133,7 @@ export class VistaBodegaComponent implements OnInit {
       activo: form.activo,
       cantidadActivo: form.cantidadActivo
     }
-    debugger;
     this.activos.forEach(element => {
-      debugger;
       if(element.nombreActivo == this.id){
         element.cantidad = element.cantidad - activo.cantidadActivo;
       }
