@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <section class="final-order section-padding bg-light-theme" *ngIf="estadoReserva">
-    <div class="container-fluid" >
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
@@ -9,12 +9,18 @@
                         <div class="col-md-6">
                             <div class="right-side-content">
                                 <div class="section-header-left title">
-                                    <h3 class="text-light-black header-title">Tu reserva ha sido exitosa</h3>
-                                    <h5 class="fw-400">Te esperamos el {{fechareserva}}</h5>
+                                    <h3 style="width: 100%;margin-bottom: .5em;" class="text-light-black header-title">
+                                        Tu reserva ha sido exitosa</h3>
+                                    <h5 class="fw-400">Te esperamos el {{fechareserva}} a las {{hora}}</h5>
                                 </div>
                                 <div class="row">
                                     <div class="col-12" style="margin-top: 2em">
-                                        <button type="submit" routerLink="/cancelar-reserva"  class="btn-second btn-submit">Cancelar reserva</button>
+                                        <button type="button" routerLink="/cancelar-reserva"
+                                            style="background-color: transparent!important; border-color: black !important; color: black!important; margin-right: 1em"
+                                            class="btn-second btn-submit">Cancelar reserva</button>
+                                        <button type="button" routerLink="/restaurant" class="btn-second btn-submit"
+                                            style="background-color: blue!important; border-color: blue!important">Volver
+                                            a inicio</button>
                                     </div>
                                 </div>
                             </div>
@@ -38,17 +44,11 @@
             <div class="col-md-4">
                 <div class="main-banner">
                     <img src="assets/img/banner/reservation.jpg" class="img-fluid full-width main-img" alt="banner">
-                    <!-- <div class="overlay-2 main-padding">
-                        <img src="assets/img/logo-2.jpg" class="img-fluid" alt="logo">
-                    </div> -->
-                    <!-- <img src="assets/img/banner/burger.png" class="footer-img" alt="footer-img"> -->
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="section-2 main-page main-padding">
                     <div class="top-nav">
-                        <!-- <h5><a routerLink="/restaurant" class="text-light-green fw-700">Hacer un pedido</a></h5> -->
-                        <!-- <h5><a routerLink="/login" class="text-light-green fw-700">Sign in</a></h5> -->
                     </div>
                     <div class="login-box">
                         <div class="col-12">
@@ -80,8 +80,8 @@
                                                 <label class="text-light-black fw-700">Telefono
                                                 </label>
                                                 <input type="text" name="#" class="form-control form-control-submit"
-                                                    formControlName="telefono" [ngStyle]="{'border-color': error && 'red' }"
-                                                     required>
+                                                    formControlName="telefono"
+                                                    [ngStyle]="{'border-color': error && 'red' }" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -90,15 +90,16 @@
                                                 </label>
                                                 <input type="number" name="#" class="form-control form-control-submit"
                                                     formControlName="cantidadPersonas"
-                                                    [ngStyle]="{'border-color': error && 'red' }"
-                                                     required>
+                                                    [ngStyle]="{'border-color': error && 'red' }" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="text-light-black fw-700">Hora
                                                 </label>
-                                                <input type="time" class="form-control form-control-submit" formControlName="hora" id="appt" name="appt" min="09:00" max="18:00" required>
+                                                <input type="time" class="form-control form-control-submit"
+                                                    formControlName="hora" id="appt" name="appt" min="09:00" max="18:00"
+                                                    required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -107,8 +108,10 @@
                                                 </label>
                                                 <br>
                                                 <mat-form-field class="example-full-width" appearance="fill">
-                                                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="fecha">
-                                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                    <input matInput [min]="minDate" [max]="maxDate"
+                                                        [matDatepicker]="picker" formControlName="fecha">
+                                                    <mat-datepicker-toggle matSuffix [for]="picker">
+                                                    </mat-datepicker-toggle>
                                                     <mat-datepicker #picker></mat-datepicker>
                                                 </mat-form-field>
                                             </div>
@@ -127,8 +130,3 @@
         </div>
     </div>
 </div>
-<!--  -->
-<!-- <div class="contact-map">
-    <iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
-</div> -->
-<!-- <app-footer2></app-footer2> -->
