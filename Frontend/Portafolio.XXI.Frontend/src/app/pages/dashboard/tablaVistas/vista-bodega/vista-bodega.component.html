@@ -3,7 +3,7 @@
       <button type="button" class="btn btn-primary" (click)="descargarPDf()">Descargar PDF</button>
     </div>
     <div class="d-none" id="stock" #stock>
-      <h2>Inusmos</h2>
+      <h2>Insumos</h2>
       <table id="tablaInsumos">
         <thead>
           <tr>
@@ -193,11 +193,11 @@
                   <div class="form-group">
                     <label class="text-light-black fw-700">Responsable<sup class="fs-16">*</sup></label>
                     <mat-form-field appearance="fill">
-                      <input matInput placeholder="Fabian Araneda Molina" [disabled]="true">
+                      <input readonly matInput formControlName="responsable" [(ngModel)]="responsable" [disabled]="true">
                     </mat-form-field>
                     <label class="text-light-black fw-700">Requirente<sup class="fs-16">*</sup></label>
                     <mat-form-field appearance="fill">
-                      <input matInput placeholder="Nombre Requirente">
+                      <input matInput placeholder="Nombre Requirente" formControlName="requirente" [(ngModel)]="requirente">
                     </mat-form-field>
                   </div>
                 </div>
@@ -215,7 +215,7 @@
               </div>
             </form>
             <div class="col-md-12">
-              <button type="button" mat-raised-button color="primary">Guardar</button>
+              <button type="button" mat-raised-button color="primary" (click)="descargarSalida()">Guardar</button>
             </div>
           </div>
           <div class="col-9">
@@ -310,6 +310,44 @@
               </table>
             </div>
           </div>
+        </div>
+        <div #salida id="salida" class="d-none">
+          <h1>Salida Bodega</h1>
+          <label for="">Responsable: {{responsable}}</label>
+          <br>
+          <label for="">Requirente: {{requirente}}</label>
+          <br>
+          <label for="">Fecha Solicitada: {{fechaEntrega}}</label>
+          <h3>Insumos</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Insumo</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of wishlist">
+                <td>{{item.insumo}}</td>
+                <td>{{item.cantidad}} {{item.unidadMedida}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Activos</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Activo</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let element of wishlist2">
+                <td>{{element.activo}}</td>
+                <td>{{element.cantidadActivo}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </mat-tab>
     </mat-tab-group>

@@ -4,12 +4,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import jsPDF from 'jspdf';
 import moment from 'moment';
-import html2canvas from 'html2canvas';
 import { ToastrService } from 'ngx-toastr';
 import { StorageService } from 'src/services/storage.service';
 import { Insumo } from 'src/utils/mock-core/models/insumo.model';
 import { DialogContentActivoComponent } from '../../modalVistas/DialogContentBodega/activos/dialog-content-activo.component';
 import { DialogContentBodegaComponent } from '../../modalVistas/DialogContentBodega/DialogContentBodega.component';
+import { User } from 'src/utils/mock-core/models/user.model';
 
 @Component({
   selector: 'app-vista-bodega',
@@ -39,7 +39,9 @@ export class VistaBodegaComponent implements OnInit {
     cantidadActivo: new FormControl()
   });
   infoCotizacionForm: FormGroup = new FormGroup ({
-    fechaEntrega: new FormControl()
+    fechaEntrega: new FormControl(),
+    responsable: new FormControl(),
+    requirente: new FormControl(),
   });
   hasData: boolean;
   hasDataA: boolean;
@@ -48,6 +50,12 @@ export class VistaBodegaComponent implements OnInit {
   public idInsumos: string [] = [];
   public id: string;
   fecha: string;
+  public user: User;
+  responsable: string = "";
+  requirente: string = "";
+  fechaEntrega: string = "";
+  wishlist: any = [];
+  wishlist2: any = [];
 
   constructor (
     public dialog: MatDialog,
@@ -59,6 +67,8 @@ export class VistaBodegaComponent implements OnInit {
 
   ngOnInit(): void
   {
+    this.user = this.storageService.getCurrentUser();
+    this.responsable = this.user.name + " " + this.user.lastname;
     this.getData();
     this.agregarInsumoForm = this.formBuilder.group({
       insumo: [''],
@@ -68,6 +78,9 @@ export class VistaBodegaComponent implements OnInit {
     this.infoCotizacionForm = this.formBuilder.group({
       proveedor: [''],
       fechaEntrega: [''],
+      responsable: [''],
+      requirente: [''],
+
     });
   }
 
@@ -122,9 +135,8 @@ export class VistaBodegaComponent implements OnInit {
     if(cantOk){
       this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
       this.storageService.setCurrentInsumo(this.insumos);
-      const wishlist = [];
-      wishlist.push(insumo);
-      this.dataSourceInsumo2 = new MatTableDataSource(wishlist);
+      this.wishlist.push(insumo);
+      this.dataSourceInsumo2 = new MatTableDataSource(this.wishlist);
       this.agregarInsumoForm.reset();
       this.hasData = true;
     }
@@ -147,9 +159,8 @@ export class VistaBodegaComponent implements OnInit {
     });
     this.dataSourceActivo = new MatTableDataSource<any>(this.activos);
     this.storageService.setCurrentInsumo(this.activos);
-    const wishlist = [];
-    wishlist.push(activo);
-    this.dataSourceActivo2 = new MatTableDataSource(wishlist);
+    this.wishlist2.push(activo);
+    this.dataSourceActivo2 = new MatTableDataSource(this.wishlist2);
     this.agregarActivoForm.reset();
     this.hasDataA = true;
   }
@@ -171,6 +182,26 @@ export class VistaBodegaComponent implements OnInit {
       'elementHandlers':_elementHandlers  
     });  
     doc.save('StockSigloXXI.pdf'); 
+    }, 1000);
+  }
+
+  descargarSalida = () => {
+    this.fecha = moment(this.infoCotizacionForm.value.fechaEntrega).format('L')
+    setTimeout(() => {
+      let content=this.content.nativeElement;
+      let doc = new jsPDF();  
+      let _elementHandlers =  
+      {  
+        '#editor':function(element,renderer){  
+          return true;  
+        }  
+      };  
+      doc.fromHTML(content.innerHTML,15,15,{  
+  
+      'width':190,  
+      'elementHandlers':_elementHandlers  
+    });  
+    doc.save('SalidaBodega.pdf'); 
     }, 1000);
   }
 

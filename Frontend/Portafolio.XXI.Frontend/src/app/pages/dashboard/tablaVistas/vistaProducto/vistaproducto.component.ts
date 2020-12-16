@@ -94,9 +94,10 @@ export class VistaproductoComponent implements OnInit
         this.costo = this.costo + (item.costo * insumo.cantidad);
         this.insumo2.insumoId = this.productos.length + 1;
         this.insumo2.insumoNombre = item.nombreInsumo;
-        this.insumo2.unidadMedida = this.tipoId == "Comestuble" ? "Kilogramo" : "Litro";
+        this.insumo2.unidadMedida = this.tipoId == "Comestible" ? "Kilogramo" : "Litro";
         this.insumo2.cantidad = insumo.cantidad;
         this.listaInsumos.push(this.insumo2);
+        this.insumo2 = new Insumos2();
       }
     });
     this.dataSource = new MatTableDataSource(this.wishlist);
@@ -129,6 +130,7 @@ export class VistaproductoComponent implements OnInit
     this.selectedType = false;
     this.costo = 0;
     this.tipoId = "0";
+    this.dataSourceProducto = new MatTableDataSource(this.productos);
   }
 
 

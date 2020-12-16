@@ -45,13 +45,12 @@ export class DashboardComponent implements OnInit
       pedido.pedido.forEach(item => {
         this.costo = this.costo + (item.costo * item.cantidad);
       });
+      debugger;
       this.ventas = this.ventas + pedido.subtotal;
-      if(pedido.estado != "Entregado"){
+      if(pedido.estado != "Listo"){
         this.pendiente ++;
       }
-      else{
-        this.entregados ++;
-      }
     });
+    this.entregados = this.pedidos.length - this.pendiente;
   }
 }
