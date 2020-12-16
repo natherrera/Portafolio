@@ -19,6 +19,7 @@ import { User } from 'src/utils/mock-core/models/user.model';
 export class VistaBodegaComponent implements OnInit {
 
   @ViewChild('stock') content: ElementRef; 
+  @ViewChild('salida') content2: ElementRef; 
   dataSourceInsumo: any;
   dataSourceActivo: any;
   dataSourceSalida: any;
@@ -188,7 +189,7 @@ export class VistaBodegaComponent implements OnInit {
   descargarSalida = () => {
     this.fecha = moment(this.infoCotizacionForm.value.fechaEntrega).format('L')
     setTimeout(() => {
-      let content=this.content.nativeElement;
+      let content2 = this.content2.nativeElement;
       let doc = new jsPDF();  
       let _elementHandlers =  
       {  
@@ -196,7 +197,7 @@ export class VistaBodegaComponent implements OnInit {
           return true;  
         }  
       };  
-      doc.fromHTML(content.innerHTML,15,15,{  
+      doc.fromHTML(content2.innerHTML,15,15,{  
   
       'width':190,  
       'elementHandlers':_elementHandlers  
