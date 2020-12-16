@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit
   {
     this.user = this.storageService.getCurrentUser();
     this.profile = this.user.profile.type;
-    console.log(this.profile)
+    // console.log(this.profile)
   }
 
   public logout(): void{

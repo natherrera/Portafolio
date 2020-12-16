@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import jsPDF from 'jspdf';
+import moment from 'moment';
+import html2canvas from 'html2canvas';
+import { ToastrService } from 'ngx-toastr';
 import { StorageService } from 'src/services/storage.service';
 import { Insumo } from 'src/utils/mock-core/models/insumo.model';
 import { DialogContentActivoComponent } from '../../modalVistas/DialogContentBodega/activos/dialog-content-activo.component';
@@ -14,11 +18,14 @@ import { DialogContentBodegaComponent } from '../../modalVistas/DialogContentBod
 })
 export class VistaBodegaComponent implements OnInit {
 
+  @ViewChild('stock') content: ElementRef; 
   dataSourceInsumo: any;
   dataSourceActivo: any;
   dataSourceSalida: any;
   displayedColumnsInsumo: string[] = ['id', 'nombreInsumo', 'marca', 'tipoInsumo',  'unidadMedida', 'cantidad', 'modificar', 'eliminar'];
+  displayedInsumo: string[] = ['id', 'nombreInsumo', 'marca', 'tipoInsumo',  'unidadMedida', 'cantidad'];
   displayedColumnsActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad', 'modificar', 'eliminar'];
+  displayedActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad'];
   displayedColumnsInsumo2: string[] = ['insumo', 'cantidad'];
   displayedColumns: string[] = ['activo', 'cantidad'];
   dataSourceInsumo2: any = [];
@@ -40,11 +47,13 @@ export class VistaBodegaComponent implements OnInit {
   public activos: any = [];
   public idInsumos: string [] = [];
   public id: string;
+  fecha: string;
 
   constructor (
     public dialog: MatDialog,
     private storageService: StorageService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService
     ) { }
 
 
@@ -70,7 +79,6 @@ export class VistaBodegaComponent implements OnInit {
   }
 
   openDialog(tipo: string, element: any) {
-    debugger;
     let DialogContentComponent = null;
     DialogContentComponent = tipo == "alimento" ? DialogContentBodegaComponent : DialogContentActivoComponent;
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
@@ -92,26 +100,38 @@ export class VistaBodegaComponent implements OnInit {
 
   agregarInsumo = () =>
   {
-    debugger;
     const form = this.agregarInsumoForm.value;
     const insumo = {
       insumo: form.insumo,
       cantidad: form.cantidad,
       unidadMedida: form.unidadMedida
     }
+    var cantOk = true;
     this.insumos.forEach(element => {
       if(element.nombreInsumo == this.id){
-        element.cantidad = element.cantidad - insumo.cantidad;
-        insumo.unidadMedida = element.unidadMedida;
+        if(element.cantidad < insumo.cantidad){
+          cantOk = false;
+        }
+        else{
+          element.cantidad = element.cantidad - insumo.cantidad;
+          insumo.unidadMedida = element.unidadMedida;
+        }
+        
       }
     });
-    this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
-    this.storageService.setCurrentInsumo(this.insumos);
-    const wishlist = [];
-    wishlist.push(insumo);
-    this.dataSourceInsumo2 = new MatTableDataSource(wishlist);
-    this.agregarInsumoForm.reset();
-    this.hasData = true;
+    if(cantOk){
+      this.dataSourceInsumo = new MatTableDataSource<any>(this.insumos);
+      this.storageService.setCurrentInsumo(this.insumos);
+      const wishlist = [];
+      wishlist.push(insumo);
+      this.dataSourceInsumo2 = new MatTableDataSource(wishlist);
+      this.agregarInsumoForm.reset();
+      this.hasData = true;
+    }
+    else{
+      this.toastr.error("La cantidad a despachar es mayor a la del stock");
+    }
+    
   }
 
   agregarActivo = () => {
@@ -120,9 +140,7 @@ export class VistaBodegaComponent implements OnInit {
       activo: form.activo,
       cantidadActivo: form.cantidadActivo
     }
-    debugger;
     this.activos.forEach(element => {
-      debugger;
       if(element.nombreActivo == this.id){
         element.cantidad = element.cantidad - activo.cantidadActivo;
       }
@@ -135,5 +153,50 @@ export class VistaBodegaComponent implements OnInit {
     this.agregarActivoForm.reset();
     this.hasDataA = true;
   }
+
+  descargarPDf = () => {
+    this.fecha = moment(this.infoCotizacionForm.value.fechaEntrega).format('L')
+    setTimeout(() => {
+      let content=this.content.nativeElement;
+      let doc = new jsPDF();  
+      let _elementHandlers =  
+      {  
+        '#editor':function(element,renderer){  
+          return true;  
+        }  
+      };  
+      doc.fromHTML(content.innerHTML,15,15,{  
+  
+      'width':190,  
+      'elementHandlers':_elementHandlers  
+    });  
+    doc.save('StockSigloXXI.pdf'); 
+    }, 1000);
+  }
+
+  // downloadPDF(){
+  //   debugger;
+  //   const DATA = document.getElementById('stock');
+  //   const doc = new jsPDF('p','pt','a4');
+  //   const options = {
+  //     background: 'white',
+  //     scale: 3
+  //   };
+    
+  //   html2canvas(DATA, options).then((canvas) => {
+  //     const img = canvas.toDataURL('image/PNG');
+
+  //     const bufferX = 15;
+  //     const bufferY = 15;
+  //     const imgProps = (doc as any).getImageProperties(img);
+  //     const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
+  //     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+  //     doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+  //     return doc;
+  //   }).then((docResult) => {
+  //     docResult.save('StockSigloXXI.pdf');
+  //   });
+
+  // }
 
 }

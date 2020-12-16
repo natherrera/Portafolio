@@ -14,6 +14,10 @@ export class DialogContentProveedorComponent implements OnInit
 
   ngOnInit(): void
   {
+<<<<<<< HEAD
+=======
+    // console.log(this.data)
+>>>>>>> master
   }
 
   onNoClick(): void {

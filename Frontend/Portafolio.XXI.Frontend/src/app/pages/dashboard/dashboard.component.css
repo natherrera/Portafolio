@@ -57,3 +57,7 @@ tr.example-element-row:not(.example-expanded-row):active {
 .mat-tab-body-content {
   overflow: inherit !important;
 }
+
+.amounDash{
+  float: right;
+}

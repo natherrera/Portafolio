@@ -46,7 +46,7 @@
         <!-- Cantidad Column -->
         <ng-container matColumnDef="cantidad">
           <th mat-header-cell *matHeaderCellDef> Cantidad </th>
-          <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.cantidad | number}} </td>
         </ng-container>
 
         <!-- Costo Column -->

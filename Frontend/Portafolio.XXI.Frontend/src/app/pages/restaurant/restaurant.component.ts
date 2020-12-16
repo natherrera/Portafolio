@@ -107,6 +107,7 @@ export class RestaurantComponent implements OnInit
   private getProducts()
   {
     this.productService.getAllProducts().subscribe(
+
       data => this.storageAndFilterData(data),
       error =>
       {
@@ -118,7 +119,6 @@ export class RestaurantComponent implements OnInit
 
   private storageAndFilterData(data: any)
   {
-
     this.storageService.setCurrentProducts(data);
     this.products = data;
     this.drinks = data.filter(x => x.tipoProducto === 'Bebestible');
