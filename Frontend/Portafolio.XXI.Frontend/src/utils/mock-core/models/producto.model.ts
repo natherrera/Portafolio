@@ -10,10 +10,16 @@ export interface Producto {
 }
 
 export interface Receta {
-    idProducto: String;
+    idReceta: string;
+    nombre: string;
+    instrucciones: string;
     listaInsumos: Array<DetalleInsumo>;
 }
+
 export interface DetalleInsumo {
     insumo: Insumo;
     cantidad: number;
+    unidadMedida: string;
 }
+
+

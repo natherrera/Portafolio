@@ -70,7 +70,7 @@ export class VistaBodegaComponent implements OnInit {
   }
 
   openDialog(tipo: string, element: any) {
-    debugger;
+    
     let DialogContentComponent = null;
     DialogContentComponent = tipo == "alimento" ? DialogContentBodegaComponent : DialogContentActivoComponent;
     const dialogRef = this.dialog.open(DialogContentComponent, {data: element});
@@ -120,9 +120,7 @@ export class VistaBodegaComponent implements OnInit {
       activo: form.activo,
       cantidadActivo: form.cantidadActivo
     }
-    debugger;
     this.activos.forEach(element => {
-      debugger;
       if(element.nombreActivo == this.id){
         element.cantidad = element.cantidad - activo.cantidadActivo;
       }

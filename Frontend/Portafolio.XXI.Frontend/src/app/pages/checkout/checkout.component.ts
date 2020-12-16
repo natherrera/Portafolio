@@ -88,7 +88,6 @@ export class CheckoutComponent implements OnInit
       this.orden.id =  this.pedidos.length + 1;
       this.storageService.insertPedidos(this.orden);
       this.ordenes = JSON.parse(this.storageService.getCurrentPedidos());
-      debugger;
       this.ordenes[this.ordenes.length - 1].pedido.forEach(pedido => {
         this.recetaPedidos.push(pedido.receta);
       });

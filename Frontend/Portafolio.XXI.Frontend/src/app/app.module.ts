@@ -72,6 +72,7 @@ import { VistaproveedorComponent } from './pages/dashboard/tablaVistas/vistaProv
 import { VistainsumosComponent } from './pages/dashboard/tablaVistas/vistaInsumos/vistainsumos.component';
 import { VistareservasComponent } from './pages/dashboard/tablaVistas/vistaReservas/vistareservas.component';
 import { DialogContentProductoComponent } from './pages/dashboard/modalVistas/DialogContentProducto/dialogContentProducto.component';
+import { DialogContentRecetaComponent } from './pages/dashboard/modalVistas/DialogContentReceta/dialogContentReceta.component';
 import { CancelarreservaComponent } from './pages/cancelarreserva/cancelarreserva.component';
 import { VistapruebaComponent } from './pages/dashboard/tablaVistas/vistaPrueba/vistaprueba.component';
 import { VistacotizacionComponent } from './pages/dashboard/tablaVistas/vistacotizacion/vistacotizacion.component';
@@ -120,6 +121,7 @@ import { DialogContentActivoComponent } from './pages/dashboard/modalVistas/Dial
     DialogContentMesaComponent,
     DialogContentCocinaComponent,
     DialogContentPagoComponent,
+    DialogContentRecetaComponent,
     DialogModificarComponent,
     DialogModificarPruebaComponent,
     DialogVerComponent,

@@ -9,7 +9,6 @@ export class ProductService {
         return this.http.post(`api/products/create`, product);
     }
     
-
     getAllProducts() {
         return this.http.get(`api/products`);
     }
