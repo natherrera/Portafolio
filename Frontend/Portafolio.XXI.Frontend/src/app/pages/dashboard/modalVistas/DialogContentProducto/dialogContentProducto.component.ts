@@ -7,14 +7,20 @@ import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 })
 export class DialogContentProductoComponent implements OnInit
 {
-  constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogContentProductoComponent>)
+  insumos: any = [];
+  constructor (
+    @Inject(MAT_DIALOG_DATA) public data: any, 
+    public dialogRef: MatDialogRef<DialogContentProductoComponent>
+    )
   { }
 
 
 
   ngOnInit(): void
   {
-    // console.log(this.data)
+    console.log(this.data)
+    this.insumos = this.data.receta.listaInsumos;
+    console.log(this.insumos)
   }
 
   onNoClick(): void {

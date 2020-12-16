@@ -9,7 +9,7 @@ export const products = [
         "imagen": "assets/img/dish/150x151/dish-1.jpg",
         "receta": {
             recetaid: 1,
-            instrucciones: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            instrucciones: "Freír la hamburguesas, picar y moler la Palta (aguacate), los tomates en rodajas y no hay más ciencia, agrega los aliños que deseas y a disfrutar",
             listaInsumos: [
                 {
                     insumoId: 9,
@@ -126,8 +126,8 @@ export const products = [
         "id": 3,
         "nombreProducto": "Cazuela",
         "descripcion": "Exquisita cazuela de vacuno de asado de tira",
-        "valor": 10500,
-        "costo": 0,
+        "valor": 6000,
+        "costo": 2750,
         "tipoProducto": "Comestible",
         "imagen": "assets/img/dish/150x151/dish-3.jpg",
         "receta": {
@@ -217,7 +217,7 @@ export const products = [
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "nombreProducto": "Coca Cola Zero",
         "descripcion": "Bebida de fantasía",
         "valor": 1000,
@@ -236,7 +236,7 @@ export const products = [
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "nombreProducto": "Zumo de naranja",
         "descripcion": "Zumo de pulpa natural",
         "valor": 2500,

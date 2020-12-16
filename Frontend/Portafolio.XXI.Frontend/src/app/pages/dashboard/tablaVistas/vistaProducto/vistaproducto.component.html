@@ -1,21 +1,6 @@
 <mat-tab-group animationDuration="0ms">
   <mat-tab label="Gestión producto" (click)="getProducts()">
     <table mat-table [dataSource]="dataSourceProducto" class="mat-elevation-z8">
-      <!-- Checkbox Column -->
-      <ng-container matColumnDef="select">
-        <th mat-header-cell *matHeaderCellDef>
-          <mat-checkbox (change)="$event ? masterToggle(dataSourceProducto) : null"
-            [checked]="selection.hasValue() && isAllSelected(dataSourceProducto)"
-            [indeterminate]="selection.hasValue() && !isAllSelected(dataSourceProducto)"
-            [aria-label]="checkboxLabel(dataSourceProducto)">
-          </mat-checkbox>
-        </th>
-        <td mat-cell *matCellDef="let row">
-          <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-            [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row, dataSourceProducto)">
-          </mat-checkbox>
-        </td>
-      </ng-container>
 
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -27,9 +12,14 @@
         <td mat-cell *matCellDef="let element"> {{element.nombreProducto}} </td>
       </ng-container>
 
+      <ng-container matColumnDef="costo">
+        <th mat-header-cell *matHeaderCellDef> Costo </th>
+        <td mat-cell *matCellDef="let element"> ${{element.costo}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="valor">
         <th mat-header-cell *matHeaderCellDef> Valor </th>
-        <td mat-cell *matCellDef="let element"> {{element.valor}} </td>
+        <td mat-cell *matCellDef="let element"> ${{element.valor}} </td>
       </ng-container>
 
       <ng-container matColumnDef="tipoProducto">
@@ -43,19 +33,23 @@
       </ng-container>
 
       <ng-container matColumnDef="verReceta">
-        <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary" *ngIf="element.receta"
-            (click)="openDialog(element.receta)">Ver receta</button>
+        <th mat-header-cell *matHeaderCellDef>Receta</th>
+        <td mat-cell *matCellDef="let element"> 
+          <button mat-flat-button color="primary" *ngIf="element.tipoProducto == 'Comestible'"
+            (click)="openDialog(element)">Ver receta
+          </button>
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumnsProducto"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumnsProducto;" (click)="selection.toggle(row)">
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsProducto;">
       </tr>
     </table>
   </mat-tab>
+
+  <!-- Crear Producto -->
   <mat-tab label="Crear Producto">
-    <form id="crearProducto-form" #cmForm="ngForm" [formGroup]="crearProductoForm" (ngSubmit)="crearProducto()"
+    <form id="crearProducto-form" #cmForm="ngForm" [formGroup]="crearProductoForm"
       novalidate>
       <div class="row">
         <div class="col-12" style="margin-top: 1em">
@@ -64,38 +58,115 @@
           <div class="form-group">
             <label class="text-light-black fw-700">Nombre producto<sup class="fs-16">*</sup>
             </label>
-            <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreProducto">
+            <input type="text" name="#" class="form-control form-control-submit" formControlName="nombreProducto" [(ngModel)]="nuevoProducto.nombreProducto">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label class="text-light-black fw-700">Descripción<sup class="fs-16">*</sup>
             </label>
-            <input type="text" name="#" class="form-control form-control-submit" formControlName="descripcion">
+            <input type="text" name="#" class="form-control form-control-submit" formControlName="descripcion" [(ngModel)]="nuevoProducto.descripcion">
           </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-4">
           <div class="form-group">
             <label class="text-light-black fw-700">Tipo producto
             </label>
             <br>
             <mat-form-field appearance="fill">
-              <mat-select formControlName="tipoProducto" required>
-                <mat-option value="1">
+              <mat-select formControlName="tipoProducto" required [(ngModel)]="tipoId" (blur)="selecType(tipoId)">
+                <mat-option value="0" [disabled]="true">
+                  Seleccione
+                </mat-option>
+                <mat-option value="Comestible" >
                   Comestible
                 </mat-option>
-                <mat-option value="2">
+                <mat-option value="Bebestible">
                   Bebestible
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
         </div>
-        <h6>Ingresar Receta:<sup class="fs-16">*</sup> </h6>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="text-light-black fw-700">Valor venta<sup class="fs-16">*</sup>
+            </label>
+            <input type="number" name="#" class="form-control form-control-submit" formControlName="valorProducto" [(ngModel)]="nuevoProducto.valor">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="text-light-black fw-700">Costo<sup class="fs-16">*</sup>
+            </label>
+            <input *ngIf="!esBebida" readonly type="text" name="#" class="form-control form-control-submit" formControlName="costoProducto" [(ngModel)]="costo">
+            <input *ngIf="esBebida" type="text" name="#" class="form-control form-control-submit" formControlName="costoProducto" [(ngModel)]="costo">
+          </div>
+        </div>
+        <hr>
+        <div class="col-md-12" *ngIf="selectedType && !esBebida">
+          <div class="col-md-12">
+            <h6>Insumos del producto</h6>
+          </div>
+          <form id="agregarInsumo-form" #aiForm="ngForm" [formGroup]="agregarInsumoForm" (ngSubmit)="agregarInsumo()"
+            novalidate>
+            <mat-card style="margin: 1em">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="text-light-black fw-700">Insumo</label>
+                    <br>
+                    <mat-form-field appearance="fill">
+                      <mat-select formControlName="insumo" required >
+                        <mat-option *ngFor="let insumo of insumos" [value]="insumo.nombreInsumo">
+                          {{insumo.nombreInsumo}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="text-light-black fw-700">Cantidad Kilo/Litro<sup class="fs-16">*</sup>
+                    </label>
+                    <input type="number" name="#" class="form-control form-control-submit" formControlName="cantidad">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <button type="submit" mat-raised-button style="margin-top: 16%;">Agregar insumo</button>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </form>
+          <div class="col-md-12" *ngIf="hasData">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="tablainsumos">
+              <ng-container *ngFor="let col of displayedColumnsInsumo">
+                <ng-container matColumnDef="{{ col }}">
+                  <th mat-header-cell *matHeaderCellDef> {{ col | titlecase}}</th>
+                  <td mat-cell *matCellDef="let element"> {{ element[col]}}</td>
+                </ng-container>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsInsumo"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsInsumo;"></tr>
+            </table>
+          </div>
+          <hr>
+        <br>
+        <div class="col-md-12">
+            <h6>instrucciones de preparaci&oacute;n:<sup class="fs-16">*</sup> </h6>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea name="instrucciones" id="instrucciones" cols="30" rows="10" style="width: 99%;" formControlName="instrucciones" [(ngModel)]="instrucciones"></textarea>
+            </div>
+          </div>
+        </div>
         <!-- BOTON MODAL -->
         <!-- TABLA -->
         <div class="col-md-12">
-          <button type="submit" class="btn-second btn-submit">Crear mesa</button>
+          <button type="button" class="btn-second btn-submit" (click)="crearProducto()">Crear Producto</button>
         </div>
       </div>
     </form>

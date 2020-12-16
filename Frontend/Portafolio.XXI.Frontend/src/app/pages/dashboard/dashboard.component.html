@@ -43,7 +43,7 @@
                   <span class="box-text text-left">En proceso: <span class="box-nro amounDash">{{pendiente}}</span></span>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6" *ngIf="profile === 'administrador'">
                 <div class="card-metricas">
                   <span class="box-text text-center"><strong>Libro Diario</strong></span>
                   <span class="box-text text-left">Ganancias: <span class="box-nro amounDash">${{ganancias}}</span></span>
