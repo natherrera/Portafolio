@@ -1,54 +1,121 @@
 <div class="bodega-container">
-    <div style="text-align: end;">
-      <button type="button" class="btn btn-primary" (click)="descargarPDf()">Descargar PDF</button>
-    </div>
-    <div class="d-none" id="stock" #stock>
-      <h2>Insumos</h2>
-      <table id="tablaInsumos">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre Insumo</th>
-            <th>Marca</th>
-            <th>Tipo</th>
-            <th>Unid. Medida</th>
-            <th>Costo</th>
-            <th>Cantidad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let insumo of insumos">
-            <td>{{insumo.id}}</td>
-            <td>{{insumo.nombreInsumo}}</td>
-            <td>{{insumo.marca}}</td>
-            <td>{{insumo.tipoInsumo}}</td>
-            <td>{{insumo.unidadMedida}}</td>
-            <td>${{insumo.costo}}</td>
-            <td>{{insumo.cantidad}}</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <h2>Activos</h2>
-      <table id="tablaInsumos">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre Activo</th>
-            <th>Tipo</th>
-            <th>Costo</th>
-            <th>Cantidad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let activo of activos">
-            <td>{{activo.id}}</td>
-            <td>{{activo.nombreActivo}}</td>
-            <td>{{activo.tipoActivo}}</td>
-            <td>${{activo.costo}}</td>
-            <td>{{activo.cantidad}}</td>
-          </tr>
-        </tbody>
+  <div style="text-align: end;">
+    <button type="button" class="btn btn-primary" (click)="descargarPDf()">Descargar PDF</button>
+  </div>
+  <div class="d-none" id="stock" #stock>
+    <h2>Insumos</h2>
+    <table id="tablaInsumos">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre Insumo</th>
+          <th>Marca</th>
+          <th>Tipo</th>
+          <th>Unid. Medida</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let insumo of insumos">
+          <td>{{insumo.id}}</td>
+          <td>{{insumo.nombreInsumo}}</td>
+          <td>{{insumo.marca}}</td>
+          <td>{{insumo.tipoInsumo}}</td>
+          <td>{{insumo.unidadMedida}}</td>
+          <td>${{insumo.costo}}</td>
+          <td>{{insumo.cantidad}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h2>Activos</h2>
+    <table id="tablaInsumos">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre Activo</th>
+          <th>Tipo</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activo of activos">
+          <td>{{activo.id}}</td>
+          <td>{{activo.nombreActivo}}</td>
+          <td>{{activo.tipoActivo}}</td>
+          <td>${{activo.costo}}</td>
+          <td>{{activo.cantidad}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <mat-tab-group animationDuration="0ms">
+    <!-- TABLA GESTION INSUMO -->
+    <mat-tab label="Stock Insumos">
+      <table mat-table [dataSource]="dataSourceInsumo" class="mat-elevation-z8">
+
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Nombre Column -->
+        <ng-container matColumnDef="nombreInsumo">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreInsumo}} </td>
+        </ng-container>
+
+        <!-- Marca Column -->
+        <ng-container matColumnDef="marca">
+          <th mat-header-cell *matHeaderCellDef> Marca </th>
+          <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+        </ng-container>
+
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="tipoInsumo">
+          <th mat-header-cell *matHeaderCellDef> Tipo </th>
+          <td mat-cell *matCellDef="let element"> {{element.tipoInsumo}} </td>
+        </ng-container>
+
+        <!-- Unidad Medida Column -->
+        <ng-container matColumnDef="unidadMedida">
+          <th mat-header-cell *matHeaderCellDef> Unidad Medida </th>
+          <td mat-cell *matCellDef="let element"> {{element.unidadMedida}} </td>
+        </ng-container>
+
+        <!-- Cantidad Column -->
+        <ng-container matColumnDef="cantidad">
+          <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+          <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+        </ng-container>
+
+
+        <!-- Modificar Column -->
+        <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef> Modificar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button color="primary" (click)="openDialog('alimento', element)">
+              Modificar
+            </button>
+          </td>
+        </ng-container>
+
+        <!-- Eliminar Column -->
+        <ng-container matColumnDef="eliminar">
+          <th mat-header-cell *matHeaderCellDef> Desactivar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button color="warn" (click)="delete(element, 1)">
+              Desactivar
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsInsumo"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsInsumo;">
+        </tr>
       </table>
 
     </mat-tab>
@@ -125,11 +192,11 @@
                 <div class="form-group">
                   <label class="text-light-black fw-700">Responsable<sup class="fs-16">*</sup></label>
                   <mat-form-field appearance="fill">
-                    <input matInput placeholder="Fabian Araneda Molina" [disabled]="true">
+                    <input matInput [disabled]="true" formControlName="responsable" [(ngModel)]="responsable">
                   </mat-form-field>
                   <label class="text-light-black fw-700">Requirente<sup class="fs-16">*</sup></label>
                   <mat-form-field appearance="fill">
-                    <input matInput placeholder="Nombre Requirente">
+                    <input matInput placeholder="Nombre Requirente" formControlName="requirente" [(ngModel)]="requirente">
                   </mat-form-field>
                 </div>
               </div>
@@ -147,7 +214,7 @@
             </div>
           </form>
           <div class="col-md-12">
-            <button type="button" mat-raised-button color="primary">Guardar</button>
+            <button type="button" mat-raised-button color="primary" (click)="descargarSalida()">Guardar</button>
           </div>
         </div>
         <div class="col-9">
@@ -157,13 +224,15 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label class="text-light-black fw-700">Responsable<sup class="fs-16">*</sup></label>
+                    <label class="text-light-black fw-700">Insumo
+                    </label>
+                    <br>
                     <mat-form-field appearance="fill">
-                      <input readonly matInput formControlName="responsable" [(ngModel)]="responsable" [disabled]="true">
-                    </mat-form-field>
-                    <label class="text-light-black fw-700">Requirente<sup class="fs-16">*</sup></label>
-                    <mat-form-field appearance="fill">
-                      <input matInput placeholder="Nombre Requirente" formControlName="requirente" [(ngModel)]="requirente">
+                      <mat-select formControlName="insumo" required [(ngModel)]="id">
+                        <mat-option *ngFor="let insumo of insumos" [value]="insumo.nombreInsumo">
+                          {{insumo.nombreInsumo}}
+                        </mat-option>
+                      </mat-select>
                     </mat-form-field>
                   </div>
                 </div>
@@ -174,42 +243,9 @@
                     <input type="number" name="#" class="form-control form-control-submit" formControlName="cantidad">
                   </div>
                 </div>
-              </div>
-            </form>
-            <div class="col-md-12">
-              <button type="button" mat-raised-button color="primary" (click)="descargarSalida()">Guardar</button>
-            </div>
-          </div>
-          <div class="col-9">
-            <form id="agregarInsumo-form" #aiForm="ngForm" [formGroup]="agregarInsumoForm" (ngSubmit)="agregarInsumo()"
-              novalidate>
-              <mat-card style="margin: 1em">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="text-light-black fw-700">Insumo
-                      </label>
-                      <br>
-                      <mat-form-field appearance="fill">
-                        <mat-select formControlName="insumo" required [(ngModel)]="id">
-                          <mat-option *ngFor="let insumo of insumos" [value]="insumo.nombreInsumo">
-                            {{insumo.nombreInsumo}}
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="text-light-black fw-700">Cantidad<sup class="fs-16">*</sup>
-                      </label>
-                      <input type="number" name="#" class="form-control form-control-submit" formControlName="cantidad">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <button type="submit" mat-raised-button style="margin-top: 16%;">Agregar insumo</button>
-                    </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <button type="submit" mat-raised-button style="margin-top: 16%;">Agregar insumo</button>
                   </div>
                 </div>
               </div>
@@ -274,44 +310,45 @@
             </table>
           </div>
         </div>
-        <div #salida id="salida" class="d-none">
-          <h1>Salida Bodega</h1>
-          <label for="">Responsable: {{responsable}}</label>
-          <br>
-          <label for="">Requirente: {{requirente}}</label>
-          <br>
-          <label for="">Fecha Solicitada: {{fechaEntrega}}</label>
-          <h3>Insumos</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Insumo</th>
-                <th>Cantidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of wishlist">
-                <td>{{item.insumo}}</td>
-                <td>{{item.cantidad}} {{item.unidadMedida}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3>Activos</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Activo</th>
-                <th>Cantidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let element of wishlist2">
-                <td>{{element.activo}}</td>
-                <td>{{element.cantidadActivo}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
+      </div>
+      <div #salida id="salida" class="d-none">
+        <h1>Salida Bodega</h1>
+        <label for="">Responsable: {{responsable}}</label>
+        <br>
+        <label for="">Requirente: {{requirente}}</label>
+        <br>
+        <label for="">Fecha Solicitada: {{fechaEntrega}}</label>
+        <h3>Insumos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Insumo</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of wishlist">
+              <td>{{item.insumo}}</td>
+              <td>{{item.cantidad}} {{item.unidadMedida}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Activos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Activo</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let element of wishlist2">
+              <td>{{element.activo}}</td>
+              <td>{{element.cantidadActivo}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
