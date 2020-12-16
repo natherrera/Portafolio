@@ -192,7 +192,7 @@
                 <div class="form-group">
                   <label class="text-light-black fw-700">Responsable<sup class="fs-16">*</sup></label>
                   <mat-form-field appearance="fill">
-                    <input matInput [disabled]="true" formControlName="responsable" [(ngModel)]="responsable">
+                    <input matInput readonly [disabled]="true" formControlName="responsable" [(ngModel)]="responsable">
                   </mat-form-field>
                   <label class="text-light-black fw-700">Requirente<sup class="fs-16">*</sup></label>
                   <mat-form-field appearance="fill">
@@ -261,7 +261,7 @@
                     </label>
                     <br>
                     <mat-form-field appearance="fill">
-                      <mat-select formControlName="activo" required [(ngModel)]="id">
+                      <mat-select formControlName="activo" required [(ngModel)]="idA">
                         <mat-option *ngFor="let activo of activos" [value]="activo.nombreActivo">
                           {{activo.nombreActivo}}
                         </mat-option>
@@ -298,7 +298,7 @@
             </table>
           </div>
           <div class="col-md-12" *ngIf="hasDataA">
-            <table mat-table [dataSource]="dataSourceActivo2" class="mat-elevation-z8" id="tablacotizacion">
+            <table mat-table [dataSource]="dataSourceActivo2" class="mat-elevation-z8" id="tablaActivo">
               <ng-container *ngFor="let col of displayedColumns">
                 <ng-container matColumnDef="{{ col }}">
                   <th mat-header-cell *matHeaderCellDef> {{ col | titlecase}}</th>

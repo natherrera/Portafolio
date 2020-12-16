@@ -28,7 +28,7 @@ export class VistaBodegaComponent implements OnInit {
   displayedColumnsActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad', 'modificar', 'eliminar'];
   displayedActivo: string[] = ['id', 'nombreActivo', 'tipoActivo', 'cantidad'];
   displayedColumnsInsumo2: string[] = ['insumo', 'cantidad'];
-  displayedColumns: string[] = ['activo', 'cantidad'];
+  displayedColumns: string[] = ['activo', 'cantidadActivo'];
   dataSourceInsumo2: any = [];
   dataSourceActivo2: any = [];
   agregarInsumoForm: FormGroup = new FormGroup ({
@@ -50,6 +50,7 @@ export class VistaBodegaComponent implements OnInit {
   public activos: any = [];
   public idInsumos: string [] = [];
   public id: string;
+  public idA: string;
   fecha: string;
   public user: User;
   responsable: string = "";
@@ -148,22 +149,34 @@ export class VistaBodegaComponent implements OnInit {
   }
 
   agregarActivo = () => {
+    debugger;
     const form = this.agregarActivoForm.value;
     const activo = {
       activo: form.activo,
       cantidadActivo: form.cantidadActivo
     }
+    var cantOk = true;
     this.activos.forEach(element => {
-      if(element.nombreActivo == this.id){
-        element.cantidad = element.cantidad - activo.cantidadActivo;
+      if(element.nombreActivo == this.idA){
+        if(element.cantidad < activo.cantidadActivo){
+          cantOk = false;
+        }
+        else{
+          element.cantidad = element.cantidad - activo.cantidadActivo;
+        }
       }
     });
-    this.dataSourceActivo = new MatTableDataSource<any>(this.activos);
-    this.storageService.setCurrentInsumo(this.activos);
-    this.wishlist2.push(activo);
-    this.dataSourceActivo2 = new MatTableDataSource(this.wishlist2);
-    this.agregarActivoForm.reset();
-    this.hasDataA = true;
+    if(cantOk){
+      this.dataSourceActivo = new MatTableDataSource<any>(this.activos);
+      this.storageService.setCurrentInsumo(this.activos);
+      this.wishlist2.push(activo);
+      this.dataSourceActivo2 = new MatTableDataSource(this.wishlist2);
+      this.agregarActivoForm.reset();
+      this.hasDataA = true;
+    }
+    else{
+      this.toastr.error("La cantidad a despachar es mayor a la del stock");
+    }
   }
 
   descargarPDf = () => {
