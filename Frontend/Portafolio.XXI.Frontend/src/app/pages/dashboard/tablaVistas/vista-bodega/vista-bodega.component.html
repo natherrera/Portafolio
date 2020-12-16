@@ -327,9 +327,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of wishlist">
-              <td>{{item.insumo}}</td>
-              <td>{{item.cantidad}} {{item.unidadMedida}}</td>
+            <tr *ngFor="let wish of wishlist">
+              <td>{{wish.insumo}}</td>
+              <td>{{wish.cantidad}} {{wish.unidadMedida}}</td>
             </tr>
           </tbody>
         </table>
@@ -342,9 +342,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let element of wishlist2">
-              <td>{{element.activo}}</td>
-              <td>{{element.cantidadActivo}}</td>
+            <tr *ngFor="let wish2 of wishlist2">
+              <td>{{wish2.activo}}</td>
+              <td>{{wish2.cantidadActivo}}</td>
             </tr>
           </tbody>
         </table>
