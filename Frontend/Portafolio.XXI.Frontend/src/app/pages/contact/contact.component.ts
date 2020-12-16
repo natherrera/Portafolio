@@ -72,9 +72,10 @@ export class ContactComponent implements OnInit
     {
       this.reserva = this.reservaForm.value;
       this.reserva.esTotem = this.esTotem;
-      this.reserva.fecha = moment(this.fecha).format('L');
+      this.reserva.fecha = moment(this.reservaForm.value.fecha).format('DD/MM/YYYY');
       this.estadoReserva = true;
-      this.fechareserva = moment(this.fecha).format('LLLL')
+      this.hora = this.reservaForm.value.hora;
+      this.fechareserva = '' + this.reservaForm.value.fecha;
       this.storageService.setCurrentReserva(this.reservaForm.value);
     }
   }
