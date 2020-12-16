@@ -205,7 +205,7 @@ export const products = [
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "nombreProducto": "Coca Cola",
         "descripcion": "Bebida de fantasía",
         "valor": 1000,
@@ -224,7 +224,7 @@ export const products = [
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "nombreProducto": "Coca Cola Zero",
         "descripcion": "Bebida de fantasía",
         "valor": 1000,
@@ -243,7 +243,7 @@ export const products = [
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "nombreProducto": "Zumo de naranja",
         "descripcion": "Zumo de pulpa natural",
         "valor": 2500,
