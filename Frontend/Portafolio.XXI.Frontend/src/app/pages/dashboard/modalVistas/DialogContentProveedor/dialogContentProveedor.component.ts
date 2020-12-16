@@ -10,6 +10,7 @@ export class DialogContentProveedorComponent implements OnInit
   constructor (@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogContentProveedorComponent>)
   { }
 
+  tipoProveedor: string = this.data.tipoProveedor;
 
   ngOnInit(): void
   {
@@ -21,7 +22,7 @@ export class DialogContentProveedorComponent implements OnInit
   }
 
   handleClickModificar = () => {
-
+    this.data.tipoProveedor = this.tipoProveedor;
     this.dialogRef.close();
   }
 
