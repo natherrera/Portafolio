@@ -18,7 +18,7 @@ export interface DetalleProducto {
     idProducto: number;
     nombreProducto: string;
     cantidad: number;
-    total: number;s
+    total: number;
 }
 
 export class PedidoCabecera{

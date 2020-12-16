@@ -1,5 +1,5 @@
 export class TipoProveedor
 {
-    public id: number;
-    public type: string;
+    public id: string;
+    public nombre: string;
 }

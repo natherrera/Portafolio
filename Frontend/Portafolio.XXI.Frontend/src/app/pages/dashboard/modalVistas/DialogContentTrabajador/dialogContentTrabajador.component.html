@@ -1,37 +1,34 @@
 <h1 mat-dialog-title>Modificar trabajador</h1>
 <div mat-dialog-content>
-  <p>Rut: {{data.rut}}</p>
-  <mat-form-field>
+    <p>Rut: {{data.rut}}</p>
+    <mat-form-field style="padding-right: 8px;">
         <mat-label>Nombre</mat-label>
         <input matInput [(ngModel)]="nombre" type="text" placeholder="">
-  </mat-form-field>
-    <mat-form-field>
+    </mat-form-field>
+
+    <mat-form-field style="padding-right: 8px;">
         <mat-label>apellidoMaterno</mat-label>
         <input matInput [(ngModel)]="apellidoMaterno" type="text" placeholder="">
     </mat-form-field>
-    <mat-form-field>
+
+    <mat-form-field style="padding-right: 8px;">
         <mat-label>apellidoPaterno</mat-label>
-        <input matInput [(ngModel)]="apellidoMaterno" type="text" placeholder="">
+        <input matInput [(ngModel)]="apellidoPaterno" type="text" placeholder="">
     </mat-form-field>
-    <mat-form-field>
+</div>
+<div mat-dialog-content>
+    <mat-form-field style="padding-right: 8px;">
         <mat-label>fechaNacimiento</mat-label>
         <input matInput [(ngModel)]="fechaNacimiento" type="text" placeholder="">
     </mat-form-field>
+    
     <mat-form-field>
-        <mat-label>Sexo</mat-label>
-            <mat-select [(ngModel)]="sexo">
-                <mat-option value="Femenino">Femenino</mat-option>
-                <mat-option value="Masculino">Maculino</mat-option>
-            </mat-select>
-    </mat-form-field> <br>
-    <!-- <mat-form-field>
-        <mat-label>usuario</mat-label>
-        <input matInput [(ngModel)]="usuario" type="text" placeholder="">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>email</mat-label>
-        <input matInput [(ngModel)]="email" type="text" placeholder="">
-    </mat-form-field> -->
+    <mat-label>Sexo</mat-label>
+        <mat-select [(ngModel)]="sexo">
+            <mat-option value="Femenino">Femenino</mat-option>
+            <mat-option value="Masculino">Maculino</mat-option>
+        </mat-select>
+    </mat-form-field> 
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">Cancelar</button>

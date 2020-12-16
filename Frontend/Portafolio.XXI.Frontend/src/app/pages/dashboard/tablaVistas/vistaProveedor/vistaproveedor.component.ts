@@ -15,12 +15,13 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class VistaproveedorComponent implements OnInit
 {
-  displayedColumnsProveedor: string[] = ['select', 'id', 'nombreProveedor', 'modificar'];
+  displayedColumnsProveedor: string[] = ['select', 'id', 'nombreProveedor', 'tipoProveedor','modificar'];
   dataSourceProveedor: any;
   selection = new SelectionModel<Proveedor>(true, []);
   public crearProveedorForm: FormGroup;
   public proveedor: any = {};
   public PROVEEDOR: any = [];
+  
 
 
   constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
@@ -28,7 +29,6 @@ export class VistaproveedorComponent implements OnInit
 
   ngOnInit(): void
   {
-    //this.getTipoInsumo();
     this.getProveedor();
     this.crearProveedorForm = this.formBuilder.group({
       nombreProveedor: ['', Validators.required],
@@ -41,6 +41,8 @@ export class VistaproveedorComponent implements OnInit
     if (this.crearProveedorForm.valid)
     {
       this.storageService.insertProveedor(this.crearProveedorForm.value);
+      this.crearProveedorForm.reset();
+      this.getProveedor();
     }
   }
 

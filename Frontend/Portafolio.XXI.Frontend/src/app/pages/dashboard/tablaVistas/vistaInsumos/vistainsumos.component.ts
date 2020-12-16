@@ -7,6 +7,7 @@ import { insumos } from '../../../../../utils/mock-responses/insumo/insumoRespon
 import { Insumo } from '../../../../../utils/mock-core/models/insumo.model';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { StorageService } from 'src/services/storage.service';
+import { Shared } from '../../../../../utils/shared/shared';
 
 @Component({
   selector: 'app-vistainsumos',
@@ -15,14 +16,13 @@ import { StorageService } from 'src/services/storage.service';
 })
 export class VistainsumosComponent implements OnInit
 {
-  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'cantidad', 'costo', 'unidadMedida', 'modificar'];
-  dataSourceInsumo: any;
-  dataSourceTipoInsumo: any;//TODO TMV: Conseguir ecxplicación funcionamiento
-  selection = new SelectionModel<Insumo>(true, []);
   public crearInsumoForm: FormGroup;
   public insumo: any = {};
   public insumos: any = [];
 
+  displayedColumnsInsumo: string[] = ['select', 'id', 'nombreInsumo', 'marca', 'tipoInsumo', 'cantidad', 'costo', 'unidadMedida', 'modificar'];
+  dataSourceInsumo: any;
+  selection = new SelectionModel<Insumo>(true, []);
 
   constructor (public dialog: MatDialog, private formBuilder: FormBuilder,private storageService: StorageService,) { }
 
@@ -44,13 +44,16 @@ export class VistainsumosComponent implements OnInit
   {
     if (this.crearInsumoForm.valid)
     {
+
       this.storageService.insertInsumo(this.crearInsumoForm.value);
+      this.crearInsumoForm.reset();
+      this.getInsumos();
     }
   }
 
   getInsumos() {
-    let insumoList = JSON.parse(this.storageService.getCurrentInsumo());
-    this.dataSourceInsumo = new MatTableDataSource<any>(insumoList);
+    let insumos = JSON.parse(this.storageService.getCurrentInsumo());
+    this.dataSourceInsumo = new MatTableDataSource<any>(insumos);
   }
 
   openDialog(tipo: string, element: any) {

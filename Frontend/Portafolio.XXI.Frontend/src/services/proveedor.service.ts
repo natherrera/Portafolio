@@ -13,15 +13,15 @@ export class UserService {
         return this.http.post(`api/proveedor/crear`, proveedor);
     }
 
-    setProveedor(id: number, nombreProveedor: string) {
-        return this.http.post(`api/trabajador/actualizar`, {id, nombreProveedor});
+    setProveedor(id: string, tipoProveedor: string) {
+        return this.http.post(`api/proveedor/actualizar`, {id, tipoProveedor});
     }
 
-    getProveedorById(id: number) {
+    getProveedorById(id: string) {
         return this.http.get(`api/proveedor/${id}`);
     }
 
-    deleteProveedor(id: number) {
+    deleteProveedor(id: string) {
         return this.http.delete(`api/proveedor/delete${id}`);
     }
 }

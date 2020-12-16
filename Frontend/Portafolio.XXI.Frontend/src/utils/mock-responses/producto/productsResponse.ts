@@ -135,14 +135,15 @@ export const products = [
             instrucciones: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             listaInsumos: [
                 {
-                    insumoId: 18,
-                    insumoNombre: "Asado de Tira",
+                    insumoId: 1,
+                    insumoNombre: "Arroz",
                     unidadMedida: "Kilogramo",
-                    cantidad: 0.25
+                    cantidad: 100
                 },
                 {
-                    insumoId: 19,
-                    insumoNombre: "Cebolla",
+                    insumoId: 2,
+                    instrucciones: " ",
+                    insumoNombre: "Camaron",
                     unidadMedida: "Kilogramo",
                     cantidad: 0.02
                 },
@@ -193,6 +194,12 @@ export const products = [
                     insumoNombre: "Caldo Pollo",
                     unidadMedida: "Kilogramo",
                     cantidad: 0.01
+                },
+                {
+                    insumoId: 1,
+                    insumoNombre: "Queso crema",
+                    unidadMedida: "Kilogramo",
+                    cantidad: 50
                 },
             ]
         }
